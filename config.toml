@@ -12,6 +12,8 @@ theme = "blnk"
   home = ["HTML", "slide"]
   page = ["HTML", "slide"]
   post = ["HTML", "slide"]
+[markup.goldmark.renderer]
+  unsafe= true
 [params]
   author = "Simon Borer"
   description = "2020 Humber Accessibility/Usability Course"

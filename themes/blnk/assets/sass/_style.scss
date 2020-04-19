@@ -1,6 +1,7 @@
 html,
 body {
     font-size: 20px;
+    background: #faebd7;
 }
 
 h1,
@@ -9,7 +10,7 @@ h2 {
 }
 
 h1 {
-    background: #DE5028;
+    background: #232b2b;
     padding: .5rem 2rem;
     font-style: italic;
 }
@@ -69,6 +70,7 @@ figcaption {
 .slide-only {
     display: none;
 }
+
 .show-for-sr {
     font-size: 0;
 }
@@ -83,11 +85,12 @@ figcaption {
     margin-top: 1rem;
     margin-bottom: .5rem;
 }
+
 .post h3.h3 {
-    margin-top:1.5rem;
+    margin-top: 1.5rem;
 }
 
-.post .h2 + .h3 {
+.post .h2+.h3 {
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -107,13 +110,12 @@ figcaption {
 }
 
 .hero {
-    background-image: url('/images/connecting.jpg');
-    background-color: #000000;
+    background-color: #232b2b;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     height: 50vh;
-    color: #ffffff;
+    color: #faebd7;
     font-weight: 900;
     display: flex;
     justify-content: flex-end;
@@ -129,12 +131,12 @@ figcaption {
 }
 
 .page-list {
-    margin: 2rem 0;
-
+    margin: 2rem 0 4rem;
+    box-shadow: 0 0 6px rgba(35,43,43,.5);
     &__link {
         margin-top: 1rem;
         margin-right: .5rem;
-        color: #ffffff;
+        color: #faebd7;
         font-weight: bold;
 
         &:last-child {
@@ -142,25 +144,28 @@ figcaption {
         }
 
         &:hover {
-            color: #ffffff;
+            color: #faebd7;
             text-decoration: underline;
         }
 
         &:focus {
-            color: #ffffff;
+            color: #faebd7;
             text-decoration: underline;
         }
     }
-
+    &__links {
+        padding: 0 1.5rem;
+    }
     &__heading {
         margin: 0;
         padding: 1rem;
-        background: #DE5028;
         text-align: center;
+        background: #232b2b;
     }
 
     &__summary {
         margin-top: 1rem;
+        padding: 0 1.5rem;
     }
 
     &__notification {
@@ -213,6 +218,8 @@ figcaption {
 @media (min-width: 1080px) {
     .page-title {
         font-size: 4vw;
+        padding-bottom: 2vw;
+        padding-right: 4vw;
 
         .hero--page & {
             font-size: 4vw;
@@ -279,11 +286,12 @@ ol ol li {
 .review {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background: rgba(23, 121, 186,.15);
+    background: rgba(23, 121, 186, .15);
     font-size: .8em;
     padding: 1rem;
-    box-shadow: -2px 2px 2px rgba(0,0,0,.25);
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, .25);
 }
+
 .post section:last-child {
     margin-bottom: 15rem;
 }

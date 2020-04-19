@@ -21,24 +21,5 @@
 {{ end }}
 {{ define "scripts" }}
 <script src="{{ .Site.BaseURL }}/js/prism.js"></script>
-<script src="{{ .Site.BaseURL }}/js/codemirror.js"></script>
-<script src="{{ .Site.BaseURL }}/js/css.js"></script>
-<script src="{{ .Site.BaseURL }}/js/javascript.js"></script>
-<script src="{{ .Site.BaseURL }}/js/htmlmixed.js"></script>
-<script type="text/javascript">
-function qsa(sel) {
-	return Array.apply(null, document.querySelectorAll(sel));
-}
-qsa('[data-code-mirror="html"]').forEach(function (editorEl) {
-	var mirror = CodeMirror.fromTextArea(editorEl, {
-		lineNumbers: true,
-		mode: 'htmlmixed',
-		theme: 'material'
-	});
-	if (editorEl.hasAttribute("data-code-mirror-height")) {
-		var setHeight = editorEl.getAttribute("data-code-mirror-height");
-		mirror.setSize(null, setHeight);
-	}
-});
-</script>
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 {{ end }}

@@ -5,955 +5,157 @@ publishdate: 2019-09-02T08:47:11+01:00
 featured_image: venn.png
 summary: "This week we'll cover coding INNER JOINs to retrieve rows from multiple tables; the use of a self-join; table aliases; JOIN with implicit INNER JOIN syntax; OUTER JOINs to retrieve rows form multiple tables; the various set operators."
 ---
-<section>
-    <h2 class="slide-only">Here's what we're going to do today:</h2>
-    <div class="grid-x">
-      <div class="cell large-10 large-offset-1">
-        <ol class="toc">
-            <li><strong>A temporary solution!</strong></li>
-            <li>
-              <strong>Review</strong>
-              <ul>
-                <li><a href="#labLessons">Lessons from the quiz/lab</a></li>
-                <li><a href="#whatsYourFunction">How do we use functions?</a></li>
-              </ul>
-            </li>
-            <li>
-              <strong>Joins!</strong>
-              <ul>
-                <li><a href="#joins">Selecting data from multiple tables</a></li>
-                <li><a href="#onClause">The <code>ON</code> clause</a></li>
-                <li><a href="#tableAliases">Table aliases</a></li>
-                <li><a href="#outerJoins">Outer joins</a></li>
-                <li><a href="#crossJoin">Cross joins</a></li>
-                <li><a href="#schema">Schema & ER diagrams</a></li>
-                <li><a href="#joiningMultiple">Joining multiple tables</a></li>
-                <li><a href="#selfJoin">Self joins</a></li>
-                <li><a href="#syntaxVariations">Syntax variations</a></li>
-                <li><a href="#other">Another table merge</a></li>
-              </ul>
-            </li>
-            <li><strong><a href="#lab">Lab</a></strong></li>
-        </ol>
-      </div>
-    </div>
+<section class="slide-only">
+    <h2>Here's what we're going today</h2>
+    <ol>
+        <li>Your midterm</li>
+        <li>OCAS is a go</li>
+        <li>Things that have come up</li>
+        <li>Theory
+            <ol>
+                <li>The DOM API</li>
+                <li>WAI-ARIA</li>
+                <li>Showing and hiding content</li>
+                <li>Keyboard control</li>
+                <li>Controlling focus</li>
+                <li>Personas</li>
+                <li>Task analysis</li>
+            </ol>
+        </li>
+        <li>Praxis
+            <ol>
+                <li>Write your own persona</li>
+                <li>Write a commuter task analysis with a partner</li>
+            </ol>
+        </li>
+    </ol>
 </section>
 <section class="slide-only">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Happy Monday!</h2>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">A fix for our woes</h2>
-      <p>Okay, I believe I have a solution to our MAMP woes.</p>
-      <p>In DBeaver, please create a new MySQL connection with the following values:</p>
-      <table>
-        <tr>
-          <td>Server host</td>
-          <td><strong>68.183.192.58</strong></td>
-        </tr>
-        <tr>
-          <td>Port</td>
-          <td><strong>3306</strong></td>
-        </tr>
-        <tr>
-          <td>Database</td>
-          <td><strong>dbcourse</strong></td>
-        </tr>
-        <tr>
-          <td>User name</td>
-          <td><strong>dbcoursestudent</strong></td>
-        </tr>
-        <tr>
-          <td>Password</td>
-          <td><strong>2020yall</strong></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Test your connection and finish it.</p>
-      <p>Open a new SQL editor and confirm with a query like</p>
-      <pre class="slide-only"><code class="language-sql">SELECT * FROM invoices</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="40" cols="50" class="post-only">SELECT * FROM invoices</textarea>
-    </div>
-  </div>
-</section>
-<section id="labLessons">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Lessons from the quiz/lab</h2>
-      <p>Overall, you all did well on the quiz. Let's review one thing from the quiz, and we'll look at the lab questions.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Seems like the only question that tripped people up was the following:</p>
-      <hr>
-      <ul class="no-bullet">
-        <li>✅ Databases have tables</li>
-        <li>✅ Rows have cells</li>
-        <li>❌ Columns have rows</li>
-        <li>✅ Rows are also known as records</li>
-      </ul>
-      <hr>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell">
-      <h2 class="h2">Question 1</h2>
-      <blockquote>
-        <ul>
-          <li>Write a query to display the vendor id, vendor name, vendor city and vendor state.</li>
-          <li>Only display vendors located in the following states: MI, OH, PA, NV, and TN.</li>
-          <li>Only display rows where the vendor city begins with either the letter C or the letter A.</li>
-          <li>The results are to be sorted first on the vendor state then by vendor city within the state.</li>
-        </ul>      
-      </blockquote>
-      <pre class="slide-only"><code class="language-sql">SELECT vendor_id, vendor_name, vendor_city, vendor_state 
-FROM vendors
-WHERE vendor_state IN ('MI','OH','PA','NV','TN')
-AND SUBSTR(VENDOR_CITY,1,1) IN ('C','A')
-/* or you could use 
-(vendor_city LIKE 'C%'
-OR vendor_city LIKE 'A%') */
-ORDER BY vendor_state, vendor_city</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="250" cols="50" class="post-only">SELECT vendor_id, vendor_name, vendor_city, vendor_state 
-FROM vendors
-WHERE vendor_state IN ('MI','OH','PA','NV','TN')
-AND SUBSTR(VENDOR_CITY,1,1) IN ('C','A')
-/* or you could use 
-(vendor_city LIKE 'C%'
-OR vendor_city LIKE 'A%') */
-ORDER BY vendor_state, vendor_city</textarea>
-    </div>
-  </div>
-</section>
-<hr>
-<section>
-  <div class="grid-x">
-    <div class="cell">
-      <div class="callout primary">
-        <h2 class="h2">Choosing between syntax options</h2>
-        <p>There are times when you have more than one option for how to phrase a query.</p>
-        <pre><code class="language-sql">SUBSTR(VENDOR_CITY,1,1) IN ('C','A')</code></pre>
-        <pre><code class="language-sql">(vendor_city LIKE 'C%'
-OR vendor_city LIKE 'A%')</code></pre>
-<hr>
-        <p>Things to consider:</p>
-        <ul>
-            <li>Brevity</li>
-            <li>Readability</li>
-            <li>Complexity</li>
-            <li>Performance</li>
-          </ul>  
-      </div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell">
-      <h2 class="h2">Question 2</h2>
-      <blockquote>
-        <ul>
-          <li>Write a query that will display the vendor name, vendor_address1, vendor city, vendor state.</li>
-          <li>Only display vendors where the vendor_address1 contains the text PO Box in any format (check the data first to see how PO box is written)...</li>
-          <li>...in the vendor state of CA.</li>
-          <li>The results are to be displayed in descending sequence on the vendor name.</li>
-        </ul>      
-      </blockquote>
-      <pre class="slide-only"><code class="language-sql">SELECT 
-  vendor_name, 
-  vendor_address1, 
-  vendor_city, 
-  vendor_state 
-FROM vendors
-WHERE vendor_address1 LIKE '%P%O% Box%'
-AND vendor_state = 'CA'
-ORDER BY vendor_name DESC</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="280" cols="50" class="post-only">SELECT 
-  vendor_name, 
-  vendor_address1, 
-  vendor_city, 
-  vendor_state 
-FROM vendors
-WHERE vendor_address1 LIKE '%P%O% Box%'
-AND vendor_state = 'CA'
-ORDER BY vendor_name DESC</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell">
-      <h2 class="h2">Question 3</h2>
-      <blockquote>
-        <ul>
-          <li>Write a query to show which vendors do not have a phone number.</li>
-          <li>Display the vendor name, vendor contact last name, and vendor contact first name and vendor phone.</li>
-          <li>Display the rows under vendor phone so it displays as N/A.</li>
-          <li>The results are to be displayed in sequence by the vendor’s last name then by the vendor’s first name both in ascending sequence.</li>
-        </ul>      
-      </blockquote>
-      <pre class="slide-only"><code class="language-sql">SELECT 
-  vendor_name AS Name, 
-  vendor_contact_last_name AS 'Last Name', 
-  vendor_contact_first_name AS 'First Name', 
-  COALESCE(vendor_phone, 'N/A') AS 'Vendor Phone'
-FROM vendors
-WHERE vendor_phone IS NULL
-ORDER BY vendor_contact_last_name, vendor_contact_first_name</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="250" cols="50" class="post-only">SELECT 
-  vendor_name AS Name, 
-  vendor_contact_last_name AS 'Last Name', 
-  vendor_contact_first_name AS 'First Name', 
-  COALESCE(vendor_phone, 'N/A') AS 'Vendor Phone'
-FROM vendors
-WHERE vendor_phone IS NULL
-ORDER BY vendor_contact_last_name, vendor_contact_first_name</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell">
-      <h2 class="h2">Question 4</h2>
-      <blockquote>
-        <ul>
-          <li>Write a query to display the vendor id, invoice total, payment total, and payment date.</li>
-          <li>Only show records where the invoice total is greater than 10,000.</li>
-          <li>Also only show records where the payment date has no value.</li>
-          <li>Display the results in ascending sequence based on invoice total.</li>
-        </ul>      
-      </blockquote>
-      <pre class="slide-only"><code class="language-sql">SELECT 
-    vendor_id, 
-    invoice_total,
-    payment_total,
-    payment_date
-FROM invoices
-WHERE invoice_total > 10000 
-    AND payment_date IS NULL
-ORDER BY invoice_total</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="280" cols="50" class="post-only">SELECT 
-    vendor_id, 
-    invoice_total,
-    payment_total,
-    payment_date
-FROM invoices
-WHERE invoice_total > 10000 
-    AND payment_date IS NULL
-ORDER BY invoice_total</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell">
-      <h2 class="h2">Question 5</h2>
-      <blockquote>
-        <ul>
-          <li>Write a query to display the 1) invoice number, 2) vendor id, 3) invoice date, and 4) the result of invoice total minus payment total plus credit total, adding the payment total and credit total first then subtracting that sum from invoice total.</li>
-          <li>Display the results using an alias called Balance Due.</li>
-          <li>Only display records from May of '14 or April of '14, and where the result of Balance Due is not equal to zero.</li>
-          <li>Display the results in ascending sequence on Balance Due (or the calculation of that column).</li>
-        </ul>      
-      </blockquote>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell">
-      <pre class="slide-only"><code class="language-sql">SELECT 
-    invoice_number,
-    vendor_id, 
-    invoice_date,
-    invoice_total - (payment_total + credit_total) 
-  AS "Balance Due"
-FROM invoices
-WHERE invoice_total - (payment_total + credit_total) <> 0 
-  AND invoice_date BETWEEN '2014-04-01' AND '2014-05-31'
-ORDER BY "Balance Due"</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="280" cols="50" class="post-only">SELECT 
-    invoice_number,
-    vendor_id, 
-    invoice_date,
-    invoice_total - (payment_total + credit_total) 
-  AS "Balance Due"
-FROM invoices
-WHERE invoice_total - (payment_total + credit_total) <> 0 
-  AND invoice_date BETWEEN '2014-04-01' AND '2014-05-31'
-ORDER BY "Balance Due"</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Let's review</h2>
-      <p>We select our data from our source (table, or, as we'll see today, tables). We then have the opportunity to filter our data, selecting only rows that match our criteria. Finally, we decide in what order to display the results, and what subset of data to limit our results to.</p>
-      <pre class="slide-only"><code class="language-sql">SELECT [data] AS [alias]
-FROM [source]
-WHERE [filter logic]
-ORDER BY [data]
-LIMIT 𝑛 OFFSET 𝑛</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="160" cols="50" class="post-only">SELECT [data] AS [alias]
-FROM [source]
-WHERE [filter logic]
-ORDER BY [data]
-LIMIT 𝑛 OFFSET 𝑛</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Remember</h2>
-      <p>Our data sources are often columns, but can be the product of a scalar function or arithmetic operators.</p>
-      <p>If your connection doesn't specify a database, you can reference it by prepending the database name followed by a dot.</p>
-      <p>Our <code>WHERE</code> statements can get complex - using logical operators, arithmetic operators, comparison operators, and SQL clauses like <code>IN</code> and <code>BETWEEN</code></p>
-      <pre class="slide-only"><code class="language-sql">SELECT [function(data)], [data + data]
-FROM [database].[table]
-WHERE ([filter logic] OR [more logic]) AND [even more logic]</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="130" cols="50" class="post-only">SELECT [function(data)], [data + data]
-FROM [database].[table]
-WHERE ([filter logic] OR [more logic]) 
-  AND [even more logic]</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Thank you again</h2>
-      <p>...for putting up with the pain of struggling with creating our own local servers.</p>
-      <p>As my way of saying thank you, here's a bunch of exercises that I'll help you through!</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1"><ol>
-      <li>Find the 5 most expensive bikes that were recovered.</li>
-      <li>Find first bike stolen in 2018 that has both the make and model listed.</li>
-      <li>Find all instances where the Primary Offence mentions an `EBIKE`.</li>
-      <li>This is a hard one: uppercase the first letter of the results in the `status` column.</li>
-    </ol></div>
-  </div>
-</section>
-<section id="joins">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">JOINS!<br><span role="img" aria-label="backhand index pointing right">👉</span><span role="img" aria-label="backhand index pointing left">👈</span></h2>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>A join is when you merge data from two (or more) different tables to create your results table.</p>  
-      <p>Remember that results tables are <strong>not</strong> the same as database tables. Using a join, we create a new results table that includes columns from each of the joined tables.</p>
-      <p>We match rows from each of the tables by selecting one column from each to match up.</p>
-      <pre class="slide-only"><code class="language-sql">SELECT [columns] 
-FROM [table] 
-  [INNER|OUTER (RIGHT|LEFT)] JOIN
-  [otherTable]
-  ON [table].[column] = [otherTable].[column]</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="160" cols="50" class="post-only">SELECT [columns] 
-FROM [table] 
-  [INNER|OUTER (RIGHT|LEFT)] JOIN
-  [otherTable]
-  ON [table].[column] = [otherTable].[column]</textarea>
-</div>
-</div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Usually, joins are what we call an 'inner join'. Inner join is the default. You don't even have to write <code class="language-sql">INNER JOIN</code>, you can just write <code class="language-sql">JOIN</code>.</p>
-      <p>The different types of joins refer to what data to include from which table.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Inner joins <strong>only</strong> include data from rows <strong>where a match is found in both tables.</strong></p>
-      <p>Left outer joins include data from rows where a match is found in both tables <strong>plus rows from the first table</strong>.
-      <p>Right outer joins include data from rows where a match is found in both tables <strong>plus rows from the second table</strong>.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <figure>
-        <img class="diagram" src="/images/join-example.png" alt="Simple demonstration of the results of different joins.">  
-      </figure>
-    </div>
-  </div>
-</section>
-<section id="onClause">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>We define a relationship between two tables by using the clause <code class="language-sql">ON</code> to reference a column from each table to be our matching key.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Let's see a table of invoices with the vendor name and the date they paid.</p>
-      <pre class="slide-only"><code class="language-sql">SELECT invoice_due_date AS "Due on", 
-  vendor_name AS "Due from", 
-  payment_date AS "Paid on" 
-FROM invoices
-JOIN vendors ON invoices.vendor_id = vendors.vendor_id</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="190" cols="50" class="post-only">SELECT invoice_due_date AS "Due on", 
-  vendor_name AS "Due from", 
-  payment_date AS "Paid on" 
-FROM invoices
-JOIN vendors 
-  ON invoices.vendor_id = vendors.vendor_id</textarea>
-</div>
-</div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>The invoice due date and the paid date come from the <code>invoices</code> table, but the vendor name comes from the vendors table. We can retrieve information about a vendor by looking up the vendor's id. This way the <code>invoices</code> table doesn't have to repeat information about every vendor - we just have to store it once in the <code>vendors</code> table.</p>
-      <p>This is an inner join, which means the results table will <em>only</em> show a row for invoices that have a vendor <strong>and</strong> vendors that have an invoice.</p>
-    </div>
-  </div>
-</section>
-<section id="tableAliases">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Let's run that code again, with a slight modification to produce an error! <span role="img" aria-label="fire">🔥</span><span role="img" aria-label="Person gesturing no">🙅</span><span role="img" aria-label="fire">🔥</span></p> 
-      <pre class="slide-only"><code class="language-sql">SELECT invoice_due_date AS "Due on", 
-  vendor_name AS "Due from", 
-  payment_date AS "Paid on",
-  vendor_id 
-FROM invoices
-JOIN vendors ON invoices.vendor_id = vendors.vendor_id</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="220" cols="50" class="post-only">SELECT invoice_due_date AS "Due on", 
-  vendor_name AS "Due from", 
-  payment_date AS "Paid on",
-  vendor_id 
-FROM invoices
-JOIN vendors 
-  ON invoices.vendor_id = vendors.vendor_id</textarea>
-      <p>...gives us the error <code>column ambiguously defined</code>.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>When two tables have the same column name, we have to specify what table the column is coming from. We do this by prefixing the column name with the table name and a dot.</p>
-      <p>To make this easier, we can alias our tables, similar to how we alias our columns, but without the need for the <code>AS</code> operator. We can simply add the alias with a space after the table name in the join syntax.</p>
-      <pre class="slide-only"><code class="language-sql">SELECT invoice_due_date, v.vendor_id, payment_date
-FROM invoices i
-JOIN vendors v 
-ON i.vendor_id = v.vendor_id</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="130" cols="50" class="post-only">SELECT invoice_due_date, v.vendor_id, payment_date
-FROM invoices i
-JOIN vendors v 
-ON i.vendor_id = v.vendor_id</textarea>
-    </div>
-  </div>
-</section>
-<section id="outerJoins">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>We've seen a list of all the invoices and their associated vendors. What if we wanted to include vendors that <em>didn't</em> have an invoice? That's where we'd use an outer join - in this case, a <code class="language-sql">RIGHT JOIN</code> because we want to include data that only appears on the <strong>right</strong> side of the <code>JOIN</code> clause.</p>
-      <pre class="slide-only"><code class="language-sql">SELECT invoice_due_date AS "Due on", 
-  vendor_name AS "Due from", 
-  payment_date AS "Paid on" 
-FROM invoices /* left side */ 
-RIGHT JOIN vendors /* right side */ 
-ON invoices.vendor_id = vendors.vendor_id
-ORDER BY "Due on" DESC</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="220" cols="50" class="post-only">SELECT invoice_due_date AS "Due on", 
-  vendor_name AS "Due from", 
-  payment_date AS "Paid on" 
-FROM invoices /* left side */ 
-RIGHT JOIN vendors /* right side */ 
-ON invoices.vendor_id = vendors.vendor_id
-ORDER BY "Due on" DESC</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Let's look at a few more examples!</p>
-      <p>A 'left' outer join, as you'd expect, works the same way as a right join, only it includes records that are only from the left side of the join.</p>
-      <pre class="slide-only"><code class="language-sql">SELECT department_name, d.department_number, last_name
-FROM departments d
-LEFT JOIN employees e
-ON d.department_number = e.department_number</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="130" cols="50" class="post-only">SELECT department_name, d.department_number, last_name
-FROM departments d
-LEFT JOIN employees e
-ON d.department_number = e.department_number</textarea>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">  
-      <p>A join creates a row by <strong>merging</strong> rows from different tables.</p>
-      <p>An inner join will <strong>only</strong> created a row <em>if</em> there are two rows to merge - only if a match can be found based on the <code>ON</code> clause.</p>
-      <p>A left join will create a row for <em>every</em> row in the first table, even if there is no match for a row from <strong>the second</strong> table. A right join will do the opposite - create a row in the results table for every row in the <em>second</em> table, even if there is no match from <strong>the first table.</strong></p>
-      <p>A full join creates a row for every row in <em>both</em> tables - whether or not they can be merged.</p> 
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p><img class="diagram" src="/images/basic-joins.png" alt="Four diagrams illustrating four types of JOIN"></p>  
-    </div>
-  </div>
-</section>
-<section id="crossJoin">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Cross joins - don't let them throw you off.</h2>
-      <p>There's another type of join, but don't get it confused with inner or outer joins. The cross join (or 'Cartesian join') <em>doesn't</em> merge rows - it multiplies them.</p>
-      <pre><code class="language-sql">SELECT department_name, first_name
-FROM departments, employees</code></pre>  
-      <p>For every row in the first table, it returns a copy appended with every row in the second table.</p>
-      <p><strong>This is not used often.</strong></p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Let's review our types of joins</h2>
-      <p>Say we have two tables: one for assignments, one for students.</p>
-    </div>
-  </div>
-  <div class="grid-x">
-    <div class="cell medium-10 medium-offset-1 slide-half-col">
-      <table class="base-table">
-        <thead>
-          <tr>
-            <td colspan="2" class="text-center"><strong>Assignments</strong></td>
-          </tr>
-          <tr>
-            <td>Class</td>
-            <td>Assignment</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Paper</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Lab</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Exam</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="cell medium-10 medium-offset-1 slide-half-col">
-      <table class="base-table">
-        <thead>
-          <tr>
-            <td colspan="2" class="text-center"><strong>Students</strong></td>
-          </tr>
-          <tr>
-            <td>Class</td>
-            <td>Student</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2</td>
-            <td>Birinder</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Amandeep</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Ryan</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3>Inner join</h3>
-      <pre class="slide-only"><code class="language-sql">SELECT student, assignment
-FROM assignments
-JOIN students
-ON assignments.class = students.class</code></pre>
-      <textarea data-code-mirror="sql" data-code-mirror-height="130" cols="50" class="post-only">SELECT student, assignment
-FROM assignments
-JOIN students
-ON assignments.class = students.class</textarea>
-      <table>
-        <tbody>
-          <tr>
-            <td>Birinder</td>
-            <td>Lab</td>
-          </tr>
-          <tr>
-            <td>Ryan</td>
-            <td>Exam</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3>Left (outer) join</h3>
-      <pre><code class="language-sql">SELECT student, assignment
-FROM assignments
-LEFT JOIN students
-ON assignments.class = students.class</code></pre>
-      <table>
-        <tbody>
-          <tr>
-            <td>Birinder</td>
-            <td>Lab</td>
-          </tr>
-          <tr>
-            <td><code>(null)</code></td>
-            <td>Lab</td>
-          </tr>
-          <tr>
-            <td>Ryan</td>
-            <td>Exam</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3>Right (outer) join</h3>
-      <pre><code class="language-sql">SELECT student, assignment
-FROM assignments
-RIGHT JOIN students
-ON assignments.class = students.class</code></pre>
-      <table>
-        <tbody>
-          <tr>
-            <td>Birinder</td>
-            <td>Lab</td>
-          </tr>
-          <tr>
-            <td>Amandeep</td>
-            <td><code>(null)</code></td>
-          </tr>
-          <tr>
-            <td>Ryan</td>
-            <td>Exam</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3>Mimicing a Full (outer) join</h3>
-      <p>Unlike most other SQL-driven RDBMS', MySQL does not feature a <code>FULL JOIN</code>. However, we can mimic it with the <code>UNION</code> clause, which combines queries (while omitting duplicate rows).</p>
-      <p>If we create a <code>UNION</code> between a right join and a left join, we get an identical result to a full join.</p>
-      <pre><code class="language-sql">SELECT student, assignment FROM assignments
-LEFT JOIN students
-  ON assignments.class = students.class
-UNION
-SELECT student, assignment FROM assignments
-RIGHT JOIN students
-  ON assignments.class = students.class</code></pre>
-      <table>
-        <tbody>
-          <tr>
-            <td>Birinder</td>
-            <td>Lab</td>
-          </tr>
-          <tr>
-            <td><code>(null)</code></td>
-            <td>Paper</td>
-          </tr>
-          <tr>
-            <td>Amandeep</td>
-            <td><code>(null)</code></td>
-          </tr>
-          <tr>
-            <td>Ryan</td>
-            <td>Exam</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3>Cross join</h3>
-      <pre><code class="language-sql">SELECT student, assignment
-FROM assignments, students</code></pre>
-      <table>
-        <tbody>
-          <tr><td>Birinder</td><td>Lab</td></tr>
-          <tr><td>Birinder</td><td>Paper</td></tr>
-          <tr><td>Birinder</td><td>Exam</td></tr>
-          <tr><td>Amandeep</td><td>Lab</td></tr>
-          <tr><td>Amandeep</td><td>Paper</td></tr>
-          <tr><td>Amandeep</td><td>Exam</td></tr>
-          <tr><td>Ryan</td><td>Lab</td></tr>
-          <tr><td>Ryan</td><td>Paper</td></tr>
-          <tr><td>Ryan</td><td>Exam</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <div class="callout alert">
-        <p>Why would we <code>RIGHT JOIN</code> table A with table B when we could <code>LEFT JOIN</code> table B with table A?</p>  
-        <p>The answer is, normally, we wouldn't. Right joins only really come in handy when we're joining more than one table and things start to get awkward syntactically.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="schema">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Schema</h2>
-      <p>Wouldn't it be nice if you could spend all day writing out your <code>JOIN</code>s without having to always look up which table has which columns by clicking on them individually in DBeaver? And wouldn't it be even better if you had some way of quickly visualizing the relationships between between tables?</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Entity relationship diagrams</h2>
-      <figure><img src="/images/er.png" alt="An entity relationship diagram"></figure>  
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>You can make your own!</p>
-      <p>DBeaver gives us two ways to generate an ER diagram.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>1. If you double click on a table in the Database Navigator pane, you'll open up a panel of information about that table. One of the panel tabs is "ER Diagram", which show any <em>direct</em> relationships between the selected table and related tables in the database.</p>
-      <figure>
-        <img src="/images/invoices-erd.png" alt="An entity relationship diagram based on the invoices table.">
-        <figcaption>Invoices and tables directly related to it.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>2. You can create a <strong>custom</strong> diagram by right-clicking on your connection, and selecting <kbd>Create > Other... > ER Diagram > Next</kbd> and selecting the tables you want to include in your diagram.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Either way, your diagram comes with a good amount of information, including all columns, their data types, keys, and, particularly helpful, the arrows and crow's feet. This signify a one-to-many relationship.</p>
-      <p>This will particularly come in handy when you're...</p>
-    </div>
-  </div>
-</section>
-<section id="joiningMultiple">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Joining multiple tables</h2>
-      <pre><code class="language-sql">SELECT 
-    vendor_name, 
-    invoice_number, 
-    invoice_date, 
-    line_item_amount, 
-    account_description
-FROM vendors v
-    JOIN invoices i
-        ON v.vendor_id = i.vendor_id
-    JOIN invoice_line_items li
-        ON i.invoice_id = li.invoice_id
-    JOIN general_ledger_accounts gl
-        ON li.account_number = gl.account_number
-WHERE (invoice_total - payment_total - credit_total) > 0
-ORDER BY vendor_name, line_item_amount DESC</code></pre>
-</div>
-</div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Tables can effectively be 'chained' together using joins.</p>
-      <p class="callout alert">This can come in particularly handy when using an intermediary table to break up a many-to-many relationship into two one-to-many relationships.</p>
-    </div>
-  </div>
-</section>
-<section id="selfJoin">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Joining a single table (to itself)</h2>
-      <pre><code class="language-sql">SELECT DISTINCT v1.vendor_name, v1.vendor_city
-FROM vendors v1 JOIN vendors v2
-    ON (v1.vendor_city = v2.vendor_city) AND
-    (v1.vendor_id <> v2.vendor_id)
-ORDER BY v1.vendor_city</code></pre>
-      <p>Okay, this is a bit weird, but let's think it through. This query joins two tables (one just happens to be a duplicate of the other). We're used to joining things on a key, like an id, that is unique for at least one of the tables, but in this case we're joining on the city. So this query produces a list of all rows from one table that have the same city as the rows in the other table (<code>v1.vendor_city = v2.vendor_city</code>).</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <p>Then, on top of that, we say we're only going to join the rows <em>if</em> the id in the first table <em>doesn't</em> match the id in the second table. So we're asking the question, "<strong>where are the rows with the same city but different vendors?</strong>" Or, another way to put that is, "<strong>what cities have multiple vendors?</strong>" Using <code>DISTINCT</code> (otherwise we would find a row in each of the two columns that met the conditions), what we end up with is a list of vendors that share a city.</p> 
-      <div class="callout primary">Don't worry - self joins are very rare!</div>
-    </div>
-  </div>
-</section>
-<section id="syntaxVariations">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Syntax variations</h2>
-      <p>The syntax we've gone over today is chosen to make it clear what we're doing, but, as usual with SQL, there are other ways to write things. Shorter or implicit syntax is risky with joins, as it's easy to write something you don't mean. Still, you'll need to recognize it if you come across it.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3>Inner join - implicit (a.k.a. non-ANSI) syntax</h3>
-      <p>The implicit syntax for an inner join puts both tables in the <code>FROM</code> conditions, and uses <code>WHERE</code> in place of <code>ON</code></p>
-      <pre><code class="language-sql">SELECT invoice_number, vendor_name
-FROM vendors v, invoices i
-WHERE v.vendor_id = i.vendor_id</code></pre>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3><code>USING</code></h3>
-      <p>Using <code>USING</code> isn't necessarily bad practice - it's quite concise. But it doesn't have the flexibility of the <code>ON</code> clause, hence why we didn't cover it today. It is a shorthand for <code class="language-sql">ON table1.id = table2.id</code>.</p>
-      <pre><code class="language-sql">SELECT invoice_number, vendor_name
-FROM invoices JOIN vendors
-USING (vendor_id)</code></pre>
-</div>
-</div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3><code>NATURAL</code></h3>
-      <p><code>NATURAL</code>, however, <em>is</em> sloppy syntax, and should be avoided. It tells the database to <em>guess</em> what columns to join on. It only works if there is a single, identically named shared column. It's very poor for maintainability.</p>
-      <pre><code class="language-sql">-- Shame!
-SELECT invoice_number, vendor_name
-FROM invoices NATURAL JOIN vendors</code></pre>
-    </div>
-  </div>
-</section>
-<section id="other">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Another way to 'join' table data <span class="post-only">(that isn't a JOIN)</span></h2>
-      <p>We're not going to dive into this today, but I want you to have heard of this.</p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h3 class="post-only">UNION</h3>
-      <p>There is an operator called <code>UNION</code>. It's similar to a join, but it doesn't merge any rows. Instead it lets you add rows from multiple tables to a single results table. So, if you've got a table of current students, and a table of past students, you could do something like this:</p>
-      <pre><code class="language-sql">SELECT 'current' AS status, 
-name_first, name_last, grade_point_average
-FROM current_students
-UNION
-SELECT 'graduated' as status, 
-first_name, last_name, final_grade_point_average
-FROM past_students
-WHERE graduated = 'true'</code></pre>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <div class="callout alert">Note that the columns from the two tables are treated as single columns in the results table, and need the same data type.</div>
-    </div>
-  </div>
-</section>
-<section id="lab">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Lab time!</h2>
-      <p>If you're done your lab before the end of class, you're welcome to start on your <a href="/assignments/assignment-1/">first assignment</a>.</p>
-    </div>
-  </div>
+    <h3>Midterm Assignment</h3>
+    <p>See: <a href='/a11y/assignments/midterm.html' target='_blank'>your midterm</a>.</p>
 </section>
 <section class="slide-only">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2 class="h2">Lab Questions</h2>
-      <p>See <a href="/posts/the-3rd-week/index.html#lab" target="_blank">notes<span class="show-for-sr"> Opens in a new tab</span></a></p> 
-    </div>
-  </div>
+    <h3>OCAS is go</h3>
+    <p>We will be testing the application process at <a href='https://www.ontariocolleges.ca/en' target='_blank'>https://www.ontariocolleges.ca/en</a>. We will be doing this as part of our lab time. You can make it the subject of your midterm/final assignment <em>if you want</em>.</p>
 </section>
-<section class="post-only">
-  <div class="grid-x">
-    <div class="cell large-10 large-offset-1">
-      <h2>Lab Questions:</h2>
-      <ol class="lab-questions">
-        <li>Write a query that returns invoice_number, line_item_amount and line_item_description by joining invoice_line_items and invoices, where the credit total is non-zero. Use table aliases, but only where you need them.</li>
-        <li>Write a query that returns the first name and zip code of anyone sharing a zip code with another customer from the customers table.</li>
-        <li>Fully join order_details and orders. Sort the results so that any orders that haven't been recorded as shipped are at the top.</li>
-        <li>Screenshot an ER diagram of 3 (only 3!) tables that are connected by defined relationships.</li>
-      </ol>
-    </div>
-  </div>
+<section class="slide-only">
+    <h3>Things that have come up</h3>
+    <p><img src='/a11y/assets/images/contrast-ratio.png' alt='Screenshot of the Chrome devtools contrast ratio report in the colour picker'>"</p>
+</section>
+<section class="slide-only">
+    <p><code>*, *:before, *:after {outline: 1px solid red}</code></p>
+</section>
+<section class="slide-only">
+    <h3>Learning CSS layout</h3>
+    <p><a href='https://flexboxfroggy.com/'>Flexbox Froggy</a></p>
+    <p><a href='https://cssgridgarden.com/'>CSS Grid Garden</a></p>
+</section>
+<section class="slide-only">
+    <h3>The `name` attribute.</h3>
+    <p>The <code>name</code> attribute is for use when <code>POST</code>ing or <code>GET</code>ing a form.</p>
+    <p>A surprising number of examples of the <code>label</code> element use the same <code>id</code> and <code>name</code> attributes, which is confusing.</p>
+    <p>The <code>for</code> attribute of your <code>label</code> element refers to the <code>id</code> of the labelled element.</p>
+</section>
+<section>
+    <h3>The DOM API</h3>
+    <p>Both 'DOM' and 'API' are acronyms that get thrown around a lot. Let's quickly make sure we all know what they mean.</p>
+    <p>An <strong>Application Programming Interface</strong> is a user interface, where the user is a person writing a computer script. It provides you information and functionality from the document or application that you're interacting with.</p>
+    <p>The <strong>Document Object Model</strong> is an API that represents an HTML (or XML) document as a traversable tree structure. The elements (and attributes, including text content) within that structure are referred to as 'nodes'.</p>
+</section>
+<section>
+    <p>There are different kinds of attributes we can assign to DOM nodes. There are native attributes, which are provided by the HTML spec, e.g. <code>class</code>, <code>alt</code>, <code>target</code>. There are data attributes (added in HTML5), which are user-customizable. And there are ARIA attributes.</p>
+    <p>ARIA (Accessible Rich Internet Applications) provides contextual information about if and how DOM nodes can update, and what happens when they do.</p>
+</section>
+<section>
+    <h3>When to use ARIA</h3>
+    <ol>
+        <li class="fragment">There is a DOM node (including text) that can or does update without a page refresh being triggered, and</li>
+        <li class="fragment">There is no native semantics or attribute available.</li>
+    </ol>
+</section>
+<section>
+    <h3>Don&#39;t be redundant</h3>
+    <p><code>div[role='button']</code> is not redundant, but <code>button[role='button']</code> <em>is</em> redundant.</p>
+</section>
+<section>
+    <h3>Want to be safe?</h3>
+    <p>TEST</p>
+    <p>I can't emphasize enough how important it is to test. That's why there are QA departments. It is wonderful to follow best practices, but even when specification documentation is perfect (it's not), and even when you limit your scope to the latest versions of a few popular clients (don't), and even when your linters catch all the edge cases (they won't), you still makes mistakes.</p>
+</section>
+<section>
+    <h3>What ARIA attributes?</h3>
+    <p>You can find a pretty comprehensive list at <a href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques'>https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques</a></p>
+    <p>There are a lot, but you should know about the <code>role</code> attribute, which labels interactive elements, including tabs, search, form, and grid; and state attributes including <code>aria-live</code>, <code>aria-expanded</code>, and <code>aria-hidden</code> (which differs from the native <code>hidden</code> attribute).</p>
+</section>
+<section>
+    <h3>Showing &amp; hiding</h3>
+    <p>
+        <p data-height="463" data-theme-id="0" data-slug-hash="xjBoWv" data-default-tab="result" data-user="simonborer" data-embed-version="2" data-pen-title="Hiding Techniques" class="codepen">See the Pen <a href="https://codepen.io/simonborer/pen/xjBoWv/">Hiding Techniques</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </p>
+</section>
+<section>
+    <h3>Accessible tabs are &lt;em&gt;hard&lt;/em&gt;</h3>
+    <p>
+        <p data-height="265" data-theme-id="0" data-slug-hash="pVBoQx" data-default-tab="js,result" data-user="simonborer" data-embed-version="2" data-pen-title="pVBoQx" class="codepen">See the Pen <a href="https://codepen.io/simonborer/pen/pVBoQx/">pVBoQx</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </p>
+</section>
+<section>
+    <h3>Tabindex</h3>
+    <p><code>tabindex</code> is an attribute that specifies <em>focusability</em>. Focus is usually stepped through with the <code>tab</code> key, hence the name.</p>
+    <p><code>tabindex="-1"</code> is focusable, but not sequentially. As in, you can`t tab to it.</p>
+    <p><code>tabindex="0"</code> means that the element is focusable in the normal tab sequence.</p>
+    <p><code>tabindex="1"</code>, or any other positive value, means that this element takes precedence over any other element without a declared tabindex. If you are using this, that`s a bad sign.</p>
+</section>
+<section>
+    <p>Remember not to confuse the visual order with the DOM order :)</p>
+    <p>Declaring a tabindex value can affect scrolling behaviour on child elements. For examples, see <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">https://jsfiddle.net/jainakshay/0b2q4Lgv/</a></p>
+</section>
+<section>
+    <h3>Persona creation process</h3>
+    <ol>
+        <li class="fragment">Interview and/or observe an adequate number of people.</li>
+        <li class="fragment">Find patterns in the interviewees’ responses and actions, and use those to group similar people together.</li>
+        <li class="fragment">Create archetypical models of those groups, based on the patterns.</li>
+    </ol>
+</section>
+<section>
+    <p><img src='https://media.nngroup.com/media/editor/2018/01/05/personaexample.jpg' alt='Example of a persona document'></p>
+</section>
+<section>
+    <p>Just like any other team tool, personas don't work if you don't have buy-in.</p>
+</section>
+<section>
+    <h3>Aurora Harley</h3>
+    <ol>
+        <li class="fragment">Name, age, gender, and an image of the persona</li>
+        <li class="fragment">A tag line</li>
+        <li class="fragment">The experience and relevant skills in the area of the product or service</li>
+        <li class="fragment">Some context to indicate how he/she would interact with your product or service (e.g., the voluntariness of use, frequency of use, and preferred device)</li>
+        <li class="fragment">Any goals, attitudes, and concerns he/she would have when using your product or service</li>
+        <li class="fragment">Quotes or a brief scenario, that indicate the persona’s attitude toward the product or service you’re designing.</li>
+    </ol>
+</section>
+<section>
+    <h3>Write your own Persona</h3>
+</section>
+<section>
+    <h3>Task analysis</h3>
+    <p>Like many usability techniques, task analysis can happen as a precursor to design, or to test it.</p>
+    <p>You should do a rudimentary version of this to break your test scenarios into tasks, but you should also consider doing this when generating results from your tests.</p>
+</section>
+<section>
+    <h3>Task analysis topics</h3>
+    <ol>
+        <li class="fragment">Trigger: What prompts users to start their task?</li>
+        <li class="fragment">Desired Outcome: How users will know when the task is complete?</li>
+        <li class="fragment">Base Knowledge: What will the users be expected to know when starting the task?</li>
+        <li class="fragment">Required Knowledge: What the users actually need to know in order to complete the task?</li>
+        <li class="fragment">Artifacts: What tools or information do the users utilize during the course of the task?</li>
+    </ol>
+</section>
+<section>
+    <h3>Task analysis topics</h3>
+    <p>With a partner, perform a task analysis of their journey to class today. Use your judgement in determining the level of detail that is appropriate to find efficiences in their journey. Was their journey optimal?</p>
 </section>
