@@ -1,6 +1,6 @@
-baseURL = "https://www.dbcourse2019.com"
+baseURL = "https://a11y2020.com"
 languageCode = "en-us"
-title = "Databases 2019"
+title = "Accessibility & Usability 2020"
 theme = "blnk"
 [outputFormats]
   [outputFormats.slide]
@@ -14,4 +14,4 @@ theme = "blnk"
   post = ["HTML", "slide"]
 [params]
   author = "Simon Borer"
-  description = "2019 Humber Database Course"
+  description = "2020 Humber Accessibility/Usability Course"
