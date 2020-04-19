@@ -1,0 +1,57 @@
+{{ define "main" }}
+	<main class="post">
+		<article>
+			<div class="hero hero--page" style="background-image:url('/images/{{ .Params.featured_image }}')">
+				<nav class="page-nav">
+					<a class="button small primary page-nav__link" href="{{ .Site.BaseURL }}">Home</a>
+					{{ if in .File.Path "posts" }}
+					<a class="button small primary page-nav__link" href="/slides/{{ .RelPermalink }}">Slides</a>
+					{{ end }}
+				</nav>
+				<h1 class="page-title">{{ .Title }}</h1>
+			</div>
+			<div class="grid-container">
+				<div class="grid-x">
+					<div class="cell large-6 large-offset-3 medium-10 medium-offset-1">{{ .Content }}</div>
+									
+				</div>
+			</div>
+		</article>
+	</main>
+{{ end }}
+{{ define "scripts" }}
+<script src="{{ .Site.BaseURL }}/js/prism.js"></script>
+<script src="{{ .Site.BaseURL }}/js/codemirror.js"></script>
+<script src="{{ .Site.BaseURL }}/js/xml.js"></script>
+<script src="{{ .Site.BaseURL }}/js/css.js"></script>
+<script src="{{ .Site.BaseURL }}/js/javascript.js"></script>
+<script src="{{ .Site.BaseURL }}/js/htmlmixed.js"></script>
+<script src="{{ .Site.BaseURL }}/js/sql.js"></script>
+<script type="text/javascript">
+function qsa(sel) {
+	return Array.apply(null, document.querySelectorAll(sel));
+}
+qsa('[data-code-mirror="html"]').forEach(function (editorEl) {
+	var mirror = CodeMirror.fromTextArea(editorEl, {
+		lineNumbers: true,
+		mode: 'htmlmixed',
+		theme: 'material'
+	});
+	if (editorEl.hasAttribute("data-code-mirror-height")) {
+		var setHeight = editorEl.getAttribute("data-code-mirror-height");
+		mirror.setSize(null, setHeight);
+	}
+});
+qsa('[data-code-mirror="sql"]').forEach(function (editorEl) {
+	var mirror = CodeMirror.fromTextArea(editorEl, {
+		lineNumbers: true,
+		mode: 'sql',
+		theme: 'material'
+	});
+	if (editorEl.hasAttribute("data-code-mirror-height")) {
+		var setHeight = editorEl.getAttribute("data-code-mirror-height");
+		mirror.setSize(null, setHeight);
+	}
+});
+</script>
+{{ end }}
