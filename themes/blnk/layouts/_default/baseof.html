@@ -12,15 +12,15 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	{{ block "stylesheets" . }}
-		{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-		<link rel="stylesheet" href="{{ $style.Permalink }}">
+		{{ $sass         := resources.Get "sass/main.scss" }}
+		{{ $cssTarget    := "main.css" }}
+		{{ $cssOpts      := (dict "targetPath" $cssTarget "enableSourceMap" true "outputStyle" "compressed") }}
+		{{ $css := $sass | toCSS $cssOpts | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" integrity="{{ $css.Data.Integrity }}">
 	{{ end }}
-	<link rel="stylesheet" href="/css/codemirror.css">
 </head>
 <body>
-	
 	{{ block "main" . }}{{ end }}
 	{{ block "scripts" . }}{{ end }}
-
 </body>
 </html>
