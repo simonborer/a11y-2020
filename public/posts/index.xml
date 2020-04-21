@@ -6,45 +6,18 @@
     <description>Recent content in Posts on Accessibility &amp; Usability 2020</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Nov 2019 08:47:11 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2019 08:47:11 +0100</lastBuildDate>
     
 	<atom:link href="https://a11y2020.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Week 10 - Your presentations!</title>
-      <link>https://a11y2020.com/posts/the-10th-week/</link>
-      <pubDate>Tue, 05 Nov 2019 08:47:11 +0100</pubDate>
-      
-      <guid>https://a11y2020.com/posts/the-10th-week/</guid>
-      <description>This week YOU&amp;rsquo;LL be sharing your experiences writing some SQL code.</description>
-    </item>
-    
-    <item>
-      <title>Week 9 - State of DB; Final Review</title>
-      <link>https://a11y2020.com/posts/the-9th-week/</link>
-      <pubDate>Tue, 29 Oct 2019 08:47:11 +0100</pubDate>
-      
-      <guid>https://a11y2020.com/posts/the-9th-week/</guid>
-      <description>This week we&amp;rsquo;ll cover the state of databases in 2019, and review the top requested subjects.</description>
-    </item>
-    
-    <item>
-      <title>Week 8 - Triggers, Views &amp; Users</title>
-      <link>https://a11y2020.com/posts/the-8th-week/</link>
-      <pubDate>Tue, 22 Oct 2019 08:47:11 +0100</pubDate>
-      
-      <guid>https://a11y2020.com/posts/the-8th-week/</guid>
-      <description>This week we&amp;rsquo;ll cover triggers, views &amp;amp; user management. You&amp;rsquo;ll also receive your final assignment.</description>
-    </item>
-    
-    <item>
-      <title>Week 7 - Routines</title>
+      <title>Week 7... Plus Week 8?</title>
       <link>https://a11y2020.com/posts/the-7th-week/</link>
       <pubDate>Tue, 15 Oct 2019 08:47:11 +0100</pubDate>
       
       <guid>https://a11y2020.com/posts/the-7th-week/</guid>
-      <description>This week we&amp;rsquo;ll make a database for a library, and look at how functions and procedures can make things easier!</description>
+      <description>This week I&amp;rsquo;ve combined last year&amp;rsquo;s week seven and eight</description>
     </item>
     
     <item>
@@ -93,12 +66,12 @@
     </item>
     
     <item>
-      <title>Week 1 - Introduction to Databases</title>
+      <title>Week 1 - </title>
       <link>https://a11y2020.com/posts/the-1st-week/</link>
       <pubDate>Mon, 02 Sep 2019 08:47:11 +0100</pubDate>
       
       <guid>https://a11y2020.com/posts/the-1st-week/</guid>
-      <description>This week we&amp;rsquo;re starting! We&amp;rsquo;re going to start by reviewing the course outline. After that, we&amp;rsquo;ll learn: &lt;!-- raw HTML omitted --&gt;what a database is&lt;!-- raw HTML omitted --&gt;, and how they&amp;rsquo;re used in web development; &lt;!-- raw HTML omitted --&gt;what &lt;!-- raw HTML omitted --&gt;SQL&lt;!-- raw HTML omitted --&gt; is&lt;!-- raw HTML omitted --&gt;; how to set up &lt;!-- raw HTML omitted --&gt;MAMP&lt;!-- raw HTML omitted --&gt; so that we can use the &lt;!-- raw HTML omitted --&gt;MySQL &lt;!-- raw HTML omitted --&gt;RDBMS&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;; basic SQL terms definitions; simple single-table queries.</description>
+      <description>Here&#39;s what we&#39;re going today  Going over the syllabus Theory  Accessibility terms Usability terms   Praxis  Heuristic evaluation (usability) User task scenario (usability) Static HTML accessibility     Syllabus Let&#39;s take a look at the syllabus =   Download the syllabus  Hi! Let&#39;s talk about things. What better place to start in any discipline than knowing the jargon. It makes googling your problems so much easier!</description>
     </item>
     
   </channel>
