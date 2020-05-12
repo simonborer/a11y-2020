@@ -1,5 +1,6 @@
-> Public site CSS ref doesn't work
+> Oh shit, buttons don't have contrast ratio
 > Map content
 > Rewrite content
-> webp/PWA
 > favicon
+> Images on home could be sized properly
+> webp/PWA

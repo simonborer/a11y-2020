@@ -22,4 +22,36 @@ wk 2
 	users at cross-purposes
 	bias
 	auditing access
-	
+wk 3
+	DOM API
+	WAI-ARIA
+	Showing/Hiding
+	Keyboard Ctrl
+	Focus
+	Personas
+	Task analysis
+	Writing a persona
+	Writing a task analysis
+Wk 4	
+	Dark patterns
+	Linting
+	An accessible accordion
+Wk 5
+	How to write a report
+		Compiling 
+		Analysis
+		Readability
+		Another user report format (informal, as compared to .gov's formality)
+	Pepulator
+	Evangelism
+Wk 6
+	Final Project
+	Using the screenreader
+	UAT vs Usability testing
+	Mobile accessibility
+Wk 7
+	WAI-ARIA Deep dive
+	JS Framework access
+	Test result analysis
+	Office Culture
+	Review
