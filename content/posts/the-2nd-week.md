@@ -1,28 +1,19 @@
 ---
-title: "Week 2 - Accessing Data from Tables"
+title: "Step 2: Collecting data"
 date: 2019-09-10T08:47:11+01:00
 publishdate: 2019-09-02T08:47:11+01:00
-summary: "This week we'll cover retrieving rows from a single table; implementing arithmetic statements; renaming columns in results; retrieving rows using comparison operators; using DISTINCT to eliminate duplicate rows; defining the logical operators AND, OR and NOT; retrieving rows using LIKE, BETWEEN, IN and IS NULL operators; sorting the result set using ORDER BY."
+summary: ""
 featured_image: rpg.jpg
 ---
 <section class="slide-only">
         <h2>Here's what we're going today</h2>
         <ol>
-            <li>Review</li>
-            <li>Discuss reading</li>
-            <li>Reviewing a test plan template</li>
             <li>Theory
                 <ol>
                     <li>End user</li>
                     <li>The open web</li>
                     <li>Subjectivity</li>
                     <li>Test script</li>
-                </ol>
-            </li>
-            <li>Praxis
-                <ol>
-                    <li>Reviewing Krug</li>
-                    <li>Auditing accessibility</li>
                 </ol>
             </li>
         </ol>

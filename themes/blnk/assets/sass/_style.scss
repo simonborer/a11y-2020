@@ -1,9 +1,17 @@
+$bg-colour: #faebd7;
+
 html,
 body {
     font-size: 20px;
-    background: #faebd7;
+    background: $bg-colour;
 }
 
+blockquote {
+    background: lighten(#faebd7, 7);
+    color: #575757;
+    padding-bottom: .5rem;
+    padding-top: 1rem;
+}
 h1,
 h2 {
     font-weight: 700;
@@ -19,12 +27,22 @@ h2 {
     font-size: 2rem;
     line-height: 1.2;
     margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+h3 {
+    margin-top: 2rem;
+    hr + & {
+        margin-top: 1rem;
+    }
 }
 
 td {
     font-size: .8em;
 }
-
+blockquote footer {
+    padding: 1rem;
+}
 .code-examples {
     margin-top: 3rem;
 }
@@ -294,4 +312,8 @@ ol ol li {
 
 .post section:last-child {
     margin-bottom: 15rem;
+}
+
+.list-2-col {
+    columns: 2;
 }

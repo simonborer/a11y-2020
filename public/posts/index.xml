@@ -57,21 +57,21 @@
     </item>
     
     <item>
-      <title>Week 2 - Accessing Data from Tables</title>
+      <title>Step 2: Collecting data</title>
       <link>https://a11y2020.ca/posts/the-2nd-week/</link>
       <pubDate>Tue, 10 Sep 2019 08:47:11 +0100</pubDate>
       
       <guid>https://a11y2020.ca/posts/the-2nd-week/</guid>
-      <description>This week we&amp;rsquo;ll cover retrieving rows from a single table; implementing arithmetic statements; renaming columns in results; retrieving rows using comparison operators; using DISTINCT to eliminate duplicate rows; defining the logical operators AND, OR and NOT; retrieving rows using LIKE, BETWEEN, IN and IS NULL operators; sorting the result set using ORDER BY.</description>
+      <description>Here&#39;s what we&#39;re going today  Theory  End user The open web Subjectivity Test script     Last Week  Accessibility is a good idea, and also it&amp;#39;s the law. Usability is not the same as a bunch of other stuff (but it&amp;#39;s close) &amp;#39;Heuristic evaluation&amp;#39; is just a fancy way of saying &amp;#39;checklist of good ideas&amp;#39; Personas and Scenarios are tools for usability design and evaluation Two kinds of data: quantitative and qualitative Basic accessibility is basic   What did you think of the reading?</description>
     </item>
     
     <item>
-      <title>Week 1 - </title>
+      <title>Step 1: What are we talking about?</title>
       <link>https://a11y2020.ca/posts/the-1st-week/</link>
       <pubDate>Mon, 02 Sep 2019 08:47:11 +0100</pubDate>
       
       <guid>https://a11y2020.ca/posts/the-1st-week/</guid>
-      <description>Here&#39;s what we&#39;re going today  Going over the syllabus Theory  Accessibility terms Usability terms   Praxis  Heuristic evaluation (usability) User task scenario (usability) Static HTML accessibility     Syllabus Let&#39;s take a look at the syllabus =   Download the syllabus  Hi! Let&#39;s talk about things. What better place to start in any discipline than knowing the jargon. It makes googling your problems so much easier!</description>
+      <description>Today we&amp;rsquo;re going to look at an overview of the course, define our terms, and start a heuristic evaluation.</description>
     </item>
     
   </channel>
