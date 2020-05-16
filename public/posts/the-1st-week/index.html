@@ -199,6 +199,7 @@
     <p class="fragment" id="hcd"><strong>Human-centred design</strong> and <strong>user-centred design</strong> are often used interchangeably, BUT, (and, again, we're splitting hairs), human centred design is a design process that takes into consideration the end user (i.e. humanity) at each stage of design, whereas UCD takes into consideration <em>a specific audience</em>.</p>
 </section>
 <section>
+    <img src="/images/ipod.jpg" alt="I couldn't find an image of a Zune, so here is an iPod.">
     <p>So, if we were to apply these terms to, and I'm dating myself here, an ipod...
         <ul>
             <li>Usability === average number of steps to listen to a song.</li>
@@ -212,9 +213,10 @@
             <li>UCD means<span class="post-only">, from the beginning of the design process,</span> someone was thinking about the hands of people who would spend $399 on a portable music player.</li>
         </ul>
     </p>
+    <p>Okay, so now that we know what usability is (and isn't), let's talk about some terms associated with...</p>
 </section>
 <section>
-    <h3>Okay, so now that we know what usability is (and isn't), let's talk about some terms associated with <strong>how we test it</strong>.</h3>
+    <h3><strong>How We Test It</strong></h3>
 </section>
 <section id="heuristics">
     <img src="/images/lightbulb.jpg" alt="This is a decorative image, which doesn't need alt text, but I'm trying to set a good example.">
@@ -293,6 +295,14 @@
         <li class="fragment">Primarily addresses visual, hearing and mobility impairments.</li>
     </ul>
 </section>
+<section id="a11y">
+    <h3>a11y</h3>
+    <blockquote>
+        <p>"a11y" is an abbreviation for "accessibility" that is more compact for the character limits on social media. The “11” in the middle stems from conventions in software engineering and Information and Communication Technology that shortens long words by substituting middle letters with the number of middle letters instead. There are 11 letters between the "a" and the "y," so accessibility becomes a11y. For another example, “l10n” refers to "localization," because 10 letters come between the “l” and the “n.”</p>
+        <p>Coincidentally, a11y looks like it would read phonetically as <em>ally</em>... Many technologists see a11y as a movement, and not just the simple act of making websites more accessible.</p>
+        <footer><cite><a href="https://www.boia.org/blog/what-is-a11y">Bureau of Internet Accessibility - What is a11y?</a></cite></footer>
+    </blockquote>
+</section>
 <section id="aoda">
     <h3>AODA</h3>
     <p>These guidelines are codified in the <a target="_blank" href="https://www.ontario.ca/laws/regulation/110191#BK14">AODA (Access for Ontarians with Disabilities Act) <span class="show-for-sr">Link opens in a new tab</span></a> specs.</p>
@@ -311,11 +321,74 @@
     <h3>That's all the definitions!</h3>
     <p>Now for the fun stuff.</p>
 </section>
+<section>
+    <h2>Component of the week</h2>
+    <p>The first half of this course is mostly going to be looking at usability testing and best practices, with the second half focussed more on accessibility best practices. But I didn't want to save all the good stuff for last, so each week we'll look at how to make one component or design pattern fully accessible.</p>
+    <p>This week, we turn our spotlight on the <code>&lt;picture&gt;</code> element!</p>
+</section>
+<section>
+    <p>Our story <a href="https://thehistoryoftheweb.com/the-origin-of-the-img-tag/" target="_blank">begins in 1995<span class="show-for-sr"> Opens in a new tab</span></a>, with the introduction of the humble <code>&lt;img></code> element.</p>
+    <p>Along with it came the <code>alt</code> attribute, for specifying alternative text.</p>
+    <p>If people know anything about accessibility on the web, it's probably the <code>alt</code> attribute.</p>
+    <p><u>Things people get wrong about the <code>alt</code> attribute:</u></p>
+    <ul>
+        <li><em>It's an attribute, not a tag</em> (tags are the opening and closing of an element, but the term 'tag' is often used to refer to elements).</li>
+        <li><em>It is not interchangeable with the <code>title</code> attribute.</em> Title attributes are rudimentary tooltips that the HTML spec <a href="https://www.w3.org/TR/html51/dom.html#the-title-attribute">actually discourages you from using<span class="show-for-sr">&nbsp;Opens in a new tab</span></a> <strong>specifically because it's not accessible</strong>. A lot of people are under the mistaken impression that it is an accessibility requirement. It's <strong>the opposite of that</strong>.</li>
+    </ul>
+    <p>The <code>&lt;img></code> element was all we had for about 14 years. But in 2012, with mobile web browsing becoming a thing, and the introduction of higher resolution "Retina" devices, a more responsive solution was required.</p>
+    <pre><code class="language-html">
+        /* Ta-da! */
+       &lt;picture>
+            &lt;source 
+                media="(max-width: 799px)" 
+                srcset="mobile.webp"
+                type="image/webp">
+            &lt;img 
+                srcset="retina.jpg 2x"
+                src="fallback.jpg" 
+                alt="">
+        &lt;/picture>
+    </code></pre>
+    <p>The <code>picture</code> element does <em>a lot</em> of work to let us accommodate different devices, resolutions, bandwidth (let's not forget that internet access is an accessibility issue!), and browsers.</p>
+    <p>In the middle is our image element. This will work even if <strong>nothing else does</strong>. The <code>picture</code> element isn't supported in old browsers, but <strong>it doesn't matter</strong>, because they'll just display it as a regular <code>img</code> element. We use the <code>img</code> element to display our fallback image, and supply our alt text, which will be used regardless of what image the picture element loads, <u>thus supporting old browsers</u>.</p>
+    <p>We put a <code>srcset</code> attribute on our image element to load a big image if the pixel ratio is <code>2x</code> thus <u>supporting different screen resolutions</u>. <em>Note: for whatever reason, if the srcset is not specified on the image element, you won't get the data-saving aspect of the <code>srcset</code> - the browser will try to load the fallback image as well. You don't want to miss out on an opportunity to provide a good experience for <u>people with limited bandwidth</u>.</em></p>
+    <p>Our <code>source</code> element lets us specify our image type, allowing us to load next-generation image formats like 'webp' (seriously, you should be using webp - you can't get image compression results anywhere <em>near</em> webp compression on other image formats.</p>
+    <p>This is an example of what we call <strong>progressive enhancement</strong>. First you supply the thing that works for everyone (the <code>img</code>) and then you offer the fancy new experience, if it's supported.</p>
+    <p>Finally, the <code>source</code> element has a <code>media</code> attribute, which works just like a CSS media query, allowing us to specify which image should be rendered on which <u>different device widths</u>.</p>
+</section>
+<section>
+    <hr>
+    <p>Depending on how much time we have today, I might pop into this pen I made and show you how to provide people with a good experience even when your images aren't loading.</p><p class="codepen" data-height="965" data-theme-id="dark" data-default-tab="result" data-user="simonborer" data-slug-hash="rNOqJJM" data-preview="true" style="height: 465px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Usability &amp;amp; Accessibility in the &amp;lt;picture&amp;gt; element">
+  <span>See the Pen <a href="https://codepen.io/simonborer/pen/rNOqJJM">
+  Usability &amp; Accessibility in the &lt;picture&gt; element</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script></section>
+<section>
+    <h2>Assignments</h2>
+    <p>You're being assigned two things today.</p>
+    <ol>
+        <li><a href="#theReading">The Reading</a></li>
+        <li><a href="#theGroupProject">The Group Project</a></li>
+    </ol>
+    <hr>
+    <h3 id="theReading">The Reading (or listening!)</h3>
+    <p><strong>Step 1:</strong> Please read or listen to <a href="https://99percentinvisible.org/episode/on-average/">On Average</a> (or both, for the full experience).</p>
+    <p><strong>Step 2:</strong> In Blackboard, please submit to me 250-500 words on the following topic: <em>How this article/podcast relates to the work of web development</em>.</p>
+    <p>This is due <strong>one week from today</strong>.</p>
+    <h3 id="theGroupProject">The Group Project</h3>
+    <p><strong>Step 1:</strong> Get into groups of 4-5 people.</p>
+    <p><strong>Step 2:</strong> Choose something on the internet (for example, a web page).</p>
+    <p><strong>Step 3:</strong></p>
+</section>
 <section id="heuristicEvaluation">
     <ol>
+        <li>TODOs</li>
         <li>Walk through the NN list</li>
         <li>assign the group project</li>
-        <li>assign the reading (99%)</li></ol>
+        <li>Make things slide-friendly</li>
+        <li>Move to bb</li>
+    </ol>
     Get into groups, and evaluate a site based on <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">https://www.nngroup.com/articles/ten-usability-heuristics/</a>
 </section>
 <!-- <section id="scenarioWriting">

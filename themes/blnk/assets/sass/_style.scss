@@ -11,6 +11,15 @@ blockquote {
     color: #575757;
     padding-bottom: .5rem;
     padding-top: 1rem;
+    & footer {
+        padding: 1rem;
+    }
+    & p {
+        color: #575757;
+        & + footer {
+            padding-top: 0;
+        }
+    }
 }
 h1,
 h2 {
@@ -40,9 +49,7 @@ h3 {
 td {
     font-size: .8em;
 }
-blockquote footer {
-    padding: 1rem;
-}
+
 .code-examples {
     margin-top: 3rem;
 }
