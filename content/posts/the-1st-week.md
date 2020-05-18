@@ -5,7 +5,7 @@ featured_image: card-catalogue.jpg
 summary: "Today we're going to look at an overview of the course, define our terms, and start a heuristic evaluation."
 ---
 <section class="slide-only">
-    <h2>Here's what we're going today</h2>
+    <h2>Here's what we're going to do today</h2>
     <ol>
         <li class="fragment">Course overview</li>
         <li class="fragment">Define our terms</li>
