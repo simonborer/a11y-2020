@@ -11,23 +11,23 @@ summary: "Today we're going to look at an overview of the course, define our ter
         <li class="fragment">Define our terms</li>
         <li class="fragment">Learn about heuristics</li>
         <li class="fragment">
-            Component of the week: &lt;picture&gt;
+            Component of the week: &lt;img&gt;
         </li>
     </ol>
 </section>
 <section class="slide-only">
     <h2>Syllabus</h2>
-    <a href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" class="button primary">Let's take a look at the syllabus =></a>
+    <a href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" class="button primary">Let's take a look at the syllabus →</a>
 </section>
-<section>
-    <h2 class="post-only">Resources</h2>
-    <hr class="post-only">
+<section class="post-only">
+    <h2>Resources</h2>
+    <hr>
     <a class="button primary" href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank">Download the syllabus</a>
     <hr>
 </section>
 <section>
     <h2>This course (in chart form)</h2>
-    <table>
+    <table style="font-size:1.1rem">
     <tr>
         <th><small>Week&nbsp;#</small></th>
         <th>Topic</th>
@@ -90,26 +90,24 @@ summary: "Today we're going to look at an overview of the course, define our ter
             <li>make recommendations about how to improve the thing.</li>
         </ul> 
     </p>
-    <h3>Why does it matter?</h3>
-    <p>As with most of what you're learning in this program, it matters because <strong>it will make you good at making things</strong>. In most of your courses, you learn how to make things. In this course, you will learn how to make things <strong>for real people, better.</strong></p>
-    <img src="/images/people.png" alt="Vectors of faces">
-    <h3>How will we learn it?</h3>
-    <p>In this course, we will:
-        <ul>
-            <li>Read materials related to usability, and reflect on them in the context of our work. <br>These are the <strong>reading assignments</strong>.</li>
-            <li>Work in a team of 4-5 with fellow experts to evaluate a website based on an industry-standard checklist (a.k.a. a 'heuristic evaluation'). <br>This is your <strong>group assignment</strong>.</li>
-            <li>Design a usability test for collecting good information about the website, application or component of your choice. <br>This is <strong>the brief</strong>.</li>
-            <li>Carry out that test with 5 users, observing them using the website (or application, component, etc.) <em>while they are using only a screenreader or keyboard</em> (you'll pick one for all your users), and reporting to the class your findings. <br>This is <strong>the final report/presentation</strong>.</li>
-        </ul>
-    </p>
 </section>
 <section>
-    <h2>Hi! Let's talk about things.</h2>
-    <figure>
-        <img src="/images/women.jpg" alt="Socially distanced people talking">
-        <figcaption>...from a safe distance.</figcaption>
-    </figure>
-    <p>What better place to start in any discipline than knowing the jargon. It makes googling your problems so much easier! Let's jump into accessibility and usability by going over some of the common terms for the fields' general concepts.</p>
+    <h3>Why does it matter?</h3>
+    <p>As with most of what you're learning in this program, it matters because <strong>it will make you good at making things</strong>. In most of your courses, you learn how to make things. In this course, you will learn how to make things <strong>for real people, better.</strong></p>
+    <img class="post-only" src="/images/people.png" alt="Vectors of faces">
+</section>
+<section>
+    <h3>How will we learn it?</h3>
+</section>
+<section>
+    <p>In this course, we will:
+        <ul>
+            <li>Read materials related to usability, and reflect on them in the context of our work. <em>(These are the <strong>reading assignments</strong>.)</em></li>
+            <li>Work in a team of 4-5 with fellow experts to evaluate a website based on an industry-standard checklist (a.k.a. a 'heuristic evaluation'). <em>(This is your <strong>group assignment</strong>.)</em></li>
+            <li>Design a usability test for collecting good information about the website, application or component of your choice. <em>(This is <strong>the brief</strong>.)</em></li>
+            <li>Carry out that test with 5 users, observing them using the website (or application, component, etc.) <em>while they are using only a screenreader or keyboard</em> (you'll pick one for all your users), and reporting to the class your findings. <em>(This is <strong>the final report/presentation</strong>.)</em></li>
+        </ul>
+    </p>
 </section>
 <section>
     <h3>In this lesson, we'll...</h3>
@@ -118,6 +116,17 @@ summary: "Today we're going to look at an overview of the course, define our ter
         <li class="fragment"><a href="#heuristicEvaluation">Learn how to perform a heuristic evaluation.</a></li>
     </ol>
 </section>
+<section>
+    <h2>Hi! Let's talk about things.</h2>
+    <figure>
+        <img src="/images/women.jpg" alt="Socially distanced people talking">
+        <figcaption>...from a safe distance.</figcaption>
+    </figure>
+</section>
+<section>
+    <p>What better place to start in any discipline than knowing the jargon. It makes googling your problems so much easier! Let's jump into accessibility and usability by going over some of the common terms for the fields' general concepts.</p>
+</section>
+
 <div id="terms" class="post-only">
     <h3>Here are the terms we're going to define:</h3>
     <ol>
@@ -165,7 +174,14 @@ summary: "Today we're going to look at an overview of the course, define our ter
     <p class="fragment" id="hcd"><strong>Human-centred design</strong> and <strong>user-centred design</strong> are often used interchangeably, BUT, (and, again, we're splitting hairs), human centred design is a design process that takes into consideration the end user (i.e. humanity) at each stage of design, whereas UCD takes into consideration <em>a specific audience</em>.</p>
 </section>
 <section>
-    <img src="/images/ipod.jpg" alt="I couldn't find an image of a Zune, so here is an iPod.">
+    <figure>
+        <footer>
+            <img src="/images/ipod.jpg" alt="">
+            <figcaption>I couldn't find an image of a Zune, so here is an iPod.</figcaption>
+        </footer>
+    </figure>
+</section>
+<section>
     <p>So, if we were to apply these terms to, and I'm dating myself here, an ipod...
         <ul>
             <li>Usability === average number of steps to listen to a song.</li>
@@ -179,18 +195,23 @@ summary: "Today we're going to look at an overview of the course, define our ter
             <li>UCD means<span class="post-only">, from the beginning of the design process,</span> someone was thinking about the hands of people who would spend $399 on a portable music player.</li>
         </ul>
     </p>
+</section>
+<section>
     <p>Okay, so now that we know what usability is (and isn't), let's talk about some terms associated with...</p>
 </section>
 <section>
     <h3><strong>How We Test It</strong></h3>
 </section>
-<section id="heuristics">
+<section id="heuristics" data-notes="Something important">
     <img src="/images/lightbulb.jpg" alt="This is a decorative image, which doesn't need alt text, but I'm trying to set a good example.">
     <h3>Heuristics</h3>
     <p>For whatever reason, 'heuristic' is one of those words I have to look up every six months, I always forget the definition, probably because it's a little hard to define.</p>
     <p>An heuristic is a good-enough solution, an approximation, a rule of thumb. In usability, <strong>heuristic analysis</strong> is basically a checklist of good usability principles. You don't need to watch a live test subject to know that you need good error messages, or system feedback.</p>
+    <p class="callout">Let's take a look at the most popular checklist for doing heuristic evaluations: Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span></a></p>
 </section>
-<section><p>Heuristics aren't just something to test, they're rules to internalize when making things.</p><hr><p>The next term, <em>personas</em>, describes a tool that is typically used when designing (and adding to) a user workflow, but also come into play during usability testing.</p></section>
+<section><p>Heuristics aren't just something to test, they're rules to internalize when making things.</p><hr><p>The next term, <em>personas</em>, describes a tool that is typically used when designing (and adding to) a user workflow, but also come into play during usability testing.</p>
+
+</section>
 <section id="personas">
     <h3>Personas</h3>
     <p>Personas are a tool for creating a design. A persona is a fake person you use to represent a major user group for your product. Let's say you're a library, and you're creating a form to get people to sign up for an online account. You would create personas based on your current users, and any group that you want to target as a user (maybe you've got an ad campaign to drive new users to the website, for example).</p>
@@ -290,41 +311,62 @@ summary: "Today we're going to look at an overview of the course, define our ter
 <section>
     <h2>Component of the week</h2>
     <p>The first half of this course is mostly going to be looking at usability testing and best practices, with the second half focussed more on accessibility best practices. But I didn't want to save all the good stuff for last, so each week we'll look at how to make one component or design pattern fully accessible.</p>
-    <p>This week, we turn our spotlight on the <code>&lt;picture&gt;</code> element!</p>
+    <p>This week, we turn our spotlight on the <code>&lt;img&gt;</code> element!</p>
 </section>
 <section>
     <p>Our story <a href="https://thehistoryoftheweb.com/the-origin-of-the-img-tag/" target="_blank">begins in 1995<span class="show-for-sr"> Opens in a new tab</span></a>, with the introduction of the humble <code>&lt;img></code> element.</p>
     <p>Along with it came the <code>alt</code> attribute, for specifying alternative text.</p>
     <p>If people know anything about accessibility on the web, it's probably the <code>alt</code> attribute.</p>
-    <p><u>Things people get wrong about the <code>alt</code> attribute:</u></p>
+    <p>It's a deceptively simple concept - you have an image, and you provide an alternative to that image in text form.</p>
+    <img src="/images/alternative.jpg" alt="What should the alternative text be?">
+    <hr>
+    <p>If you've got an image with text in it - just put the text in the alt attribute.</p>
+    <p>If you've got an image that you can click to <em>do</em> something, describe what happens.</p>
+    <img style="height:5rem" class="float-center" src="/images/play.svg" alt="Play this song (example)">
+    <pre><code class="language-html">&lt;img src="/images/play.svg" 
+    alt="Play this song"></code></pre>
+</section>
+    <hr>
+<section>
+    <h3>"A picture is worth a thousand words... Oh no."</h3>
+    <p>It's our<a href="#team">*</a> responsibility to provide the same information in an alternative format, and that can be a challenge.</p>
+    <img src="/images/testing.jpg" alt="A graph showing COVID-19 testing in Ontario, having exceeded the April 29 goal of 14,000 per day." class="float-center">
+    <p>We need to consider what the primary message of the image is. Graphs and charts are a great example of this. They have a huge volume of information, but to try and capture each data point would result in a volume of text that most users not only don't need, but would negatively affect their experience.</p>
+    <p>Instead, we think about what the 'message' of the data is.</p>
+    <pre><code class="language-html">&lt;img src="/images/testing.jpg" 
+        alt="A graph showing COVID-19 testing 
+        in Ontario, having exceeded 
+        the April 29 goal of 14,000 per day." ></code></pre>
+</section>
+    <hr>
+<section>
+    <p><h3>Things people get wrong about the <code>alt</code> attribute:</h3></p>
     <ul>
         <li><em>It's an attribute, not a tag</em> (tags are the opening and closing of an element, but the term 'tag' is often used to refer to elements).</li>
         <li><em>It is not interchangeable with the <code>title</code> attribute.</em> Title attributes are rudimentary tooltips that the HTML spec <a href="https://www.w3.org/TR/html51/dom.html#the-title-attribute">actually discourages you from using<span class="show-for-sr">&nbsp;Opens in a new tab</span></a> <strong>specifically because it's not accessible</strong>. A lot of people are under the mistaken impression that it is an accessibility requirement. It's <strong>the opposite of that</strong>.</li>
+        <li>All images should have alternative text.</li>
+        <li>Not all images need alt attributes.</li>
     </ul>
-    <p>The <code>&lt;img></code> element was all we had for about 14 years. But in 2012, with mobile web browsing becoming a thing, and the introduction of higher resolution "Retina" devices, a more responsive solution was required.</p>
-    <pre><code class="language-html">
-        /* Ta-da! */
-       &lt;picture>
-            &lt;source 
-                media="(max-width: 799px)" 
-                srcset="mobile.webp"
-                type="image/webp">
-            &lt;img 
-                srcset="retina.jpg 2x"
-                src="fallback.jpg" 
-                alt="">
-        &lt;/picture>
-    </code></pre>
-    <p>The <code>picture</code> element does <em>a lot</em> of work to let us accommodate different devices, resolutions, bandwidth (let's not forget that internet access is an accessibility issue!), and browsers.</p>
-    <p>In the middle is our image element. This will work even if <strong>nothing else does</strong>. The <code>picture</code> element isn't supported in old browsers, but <strong>it doesn't matter</strong>, because they'll just display it as a regular <code>img</code> element. We use the <code>img</code> element to display our fallback image, and supply our alt text, which will be used regardless of what image the picture element loads, <u>thus supporting old browsers</u>.</p>
-    <p>We put a <code>srcset</code> attribute on our image element to load a big image if the pixel ratio is <code>2x</code> thus <u>supporting different screen resolutions</u>. <em>Note: for whatever reason, if the srcset is not specified on the image element, you won't get the data-saving aspect of the <code>srcset</code> - the browser will try to load the fallback image as well. You don't want to miss out on an opportunity to provide a good experience for <u>people with limited bandwidth</u>.</em></p>
-    <p>Our <code>source</code> element lets us specify our image type, allowing us to load next-generation image formats like 'webp' (seriously, you should be using webp - you can't get image compression results anywhere <em>near</em> webp compression on other image formats.</p>
-    <p>This is an example of what we call <strong>progressive enhancement</strong>. First you supply the thing that works for everyone (the <code>img</code>) and then you offer the fancy new experience, if it's supported.</p>
-    <p>Finally, the <code>source</code> element has a <code>media</code> attribute, which works just like a CSS media query, allowing us to specify which image should be rendered on which <u>different device widths</u>.</p>
+</section>
+<section>
+    <h3>No alternative</h3>
+    <p>Let's talk about those last two points. 
+        <ol><li>All images should have an alt tag. This is so everyone (i.e. the user, your team, Google's web crawler) knows if it's empty, that's <em>on purpose</em>.</li>
+            <li>Some images should have empty alt attributes because the image has no meaning.</li></ol></p>
+    <img style="height:10rem; transform: rotate(90deg);" src="/images/round-box.png" alt="An example of a decorative image, a transparent box with rounded corners." class="float-center">
+    <p>When I was a young web developer, we used images for pretty much <em>any</em> kind of decorative layout. Things like <code>border-radius</code> weren't supported in older browsers, so we rounded corners using images.</p>
+    <p>This image, if used for decoration, <strong>should have an alt attribute, and it should be empty.</strong></p>
+    <pre><code class="language-html">&lt;img src="rounded-box.png" alt=""></code></pre>
+    <p>The goal of accessibility is to provide all people with the same information. If an image provides no (or redundant) information, then there doesn't need to be a text alternative to that image.</p>
+    <p>What do I mean by redundant? The World Wide Web Consortium provides us with a <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank">very handy decision-tree about what to include in your alt text<span class="show-for-sr"> Opens in a new window</span></a>. If you read through this (and it's a great thing to bookmark), you'll notice that most images don't need alternative text, <em>provided that the meaning is conveyed in real text nearby</em>.</p>
+</section>
+<section>
+    <hr><p>To sum up, <strong>accessibility is making meaning available</strong>.</p>
+    <p>If your meaning is only available in one form, and that form excludes some people, then create an alternative.</p>
 </section>
 <section>
     <hr>
-    <p>Depending on how much time we have today, I might pop into this pen I made and show you how to provide people with a good experience even when your images aren't loading.</p><p class="codepen" data-height="965" data-theme-id="dark" data-default-tab="result" data-user="simonborer" data-slug-hash="rNOqJJM" data-preview="true" style="height: 465px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Usability &amp;amp; Accessibility in the &amp;lt;picture&amp;gt; element">
+    <p>Depending on how much time we have today, I might pop into this pen I made and show you how to provide people with a good experience even when your images aren't loading.</p><p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="simonborer" data-slug-hash="rNOqJJM" data-preview="true" style="height: 465px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Usability &amp;amp; Accessibility in the &amp;lt;picture&amp;gt; element">
   <span>See the Pen <a href="https://codepen.io/simonborer/pen/rNOqJJM">
   Usability &amp; Accessibility in the &lt;picture&gt; element</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -343,20 +385,24 @@ summary: "Today we're going to look at an overview of the course, define our ter
     <p><strong>Step 2:</strong> In Blackboard, please submit to me 250-500 words on the following topic: <em>How this article/podcast relates to the work of web development</em>.</p>
     <p>This is due <strong>one week from today</strong>.</p>
     <h3 id="theGroupProject">The Group Project</h3>
-    <p><strong>Step 1:</strong> Get into groups of 4-5 people.</p>
-    <p><strong>Step 2:</strong> Choose something on the internet (for example, a web page).</p>
-    <p><strong>Step 3:</strong></p>
+    <p><strong>Step 1:</strong> Individually, go to <a href="https://humber.ca" target="_blank">humber.ca<span class="show-for-sr"> Opens in a new window</span></a>.</p>
+    <p><strong>Step 2:</strong> Individually, using the use case <strong>"Get directions to the Usability Lab"</strong>, evaluate the website based Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span>.</a> Create a spreadsheet. For each heuristic, provide examples of where this was done well, or needs improvement.</p>
+    <p><strong>Step 3</strong>: Get into groups, and compare notes. Create a spreadsheet of your evaluation <em>based on consensus</em>. What do you all agree was done well, or needs improvement, for each heuristic, with examples.</p>
+    <p><strong>Step 4</strong>: Submit your individual and group spreadsheets via blackboard within the next two weeks.</p>
 </section>
 <section id="heuristicEvaluation">
     <ol>
         <li>TODOs</li>
-        <li>Walk through the NN list</li>
-        <li>assign the group project</li>
         <li>Make things slide-friendly</li>
         <li>Move to bb</li>
     </ol>
     Get into groups, and evaluate a site based on <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">https://www.nngroup.com/articles/ten-usability-heuristics/</a>
 </section>
+<footer>
+    <section>
+        <h2>Footnotes</h2><span id="team">*</span><small>Well, it's the responsibility of whoever is generating the content, so feel free to tell someone else that it's not the job of a web developer to generate content.</small>
+    </section>
+</footer>
 <!-- <section id="scenarioWriting">
     <p>Review <a href="https://www.nngroup.com/articles/task-scenarios-usability-testing/" target="_blank">https://www.nngroup.com/articles/task-scenarios-usability-testing/</a> and Brainstorm task scenarios for a website, i.e. amazon</p>
 </section> -->
