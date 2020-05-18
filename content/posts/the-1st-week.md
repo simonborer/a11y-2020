@@ -17,12 +17,12 @@ summary: "Today we're going to look at an overview of the course, define our ter
 </section>
 <section class="slide-only">
     <h2>Syllabus</h2>
-    <a href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" class="button primary">Let's take a look at the syllabus →</a>
+    <a href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" rel="noreferrer" class="button primary">Let's take a look at the syllabus →</a>
 </section>
 <section class="post-only">
     <h2>Resources</h2>
     <hr>
-    <a class="button primary" href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank">Download the syllabus</a>
+    <a class="button primary" href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" rel="noreferrer">Download the syllabus</a>
     <hr>
 </section>
 <section>
@@ -155,7 +155,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
 <section id="usability">
     <h2>Usability</h2>
     <blockquote><strong>Web usability</strong> The extent to which specified users can find, understand and use information and services online. Web usability can be measured through the effectiveness and efficiency with which users can complete defined tasks online.
-        <footer><cite><a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227&section=glossary" target="_blank">Government of Canada, Standard on Web Usability</a></cite></footer></blockquote>
+        <footer><cite><a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227&section=glossary" target="_blank" rel="noreferrer">Government of Canada, Standard on Web Usability</a></cite></footer></blockquote>
     <p class="post-only">Let's differentiate usability from some similar (and sometimes overlapping) terms.</p>
 </section>
 <section>
@@ -165,7 +165,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
     <p class="fragment" id="ui">The <strong>user interface (UI)</strong> is the mechanism by which the person uses the product.</p>
 </section>
 <section>
-    <p id="hci"><strong>Human-Computer Interaction (HCI)</strong> is the study of the usability of user interface(s). It is an old (<a href="https://www.cs.cmu.edu/~amulet/papers/uihistory.tr.html" target="_blank">50+ years!<span class="show-for-sr"> Link opens in a new tab</span></a>), and primarily academic discipline that talks about cognitive science, ergonomics, and all kinds of wonderful stuff.</p>
+    <p id="hci"><strong>Human-Computer Interaction (HCI)</strong> is the study of the usability of user interface(s). It is an old (<a href="https://www.cs.cmu.edu/~amulet/papers/uihistory.tr.html" target="_blank" rel="noreferrer">50+ years!<span class="show-for-sr"> Link opens in a new tab</span></a>), and primarily academic discipline that talks about cognitive science, ergonomics, and all kinds of wonderful stuff.</p>
     <p class="fragment" id="ixd"><strong>Interaction design (IxD)</strong> is the functional design of the interface, while UI design is the appearance of the interface. We're really starting to split hairs here. If you're a UI designer, this is not a "not my job" type of thing.</p>
     <p class="fragment" id="hcd"><strong>Human-centred design</strong> and <strong>user-centred design</strong> are often used interchangeably, BUT, (and, again, we're splitting hairs), human centred design is a design process that takes into consideration the end user (i.e. humanity) at each stage of design, whereas UCD takes into consideration <em>a specific audience</em>.</p>
 </section>
@@ -202,7 +202,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
     <p>An heuristic is a good-enough solution, an approximation, a rule of thumb. In usability, <strong>heuristic analysis</strong> is basically a checklist of good usability principles. You don't need to watch a live test subject to know that you need good error messages, or system feedback.</p>
 </section>
 <section>
-    <p class="callout">Let's take a look at the most popular checklist for doing heuristic evaluations: Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span></a></p>
+    <p class="callout">Let's take a look at the most popular checklist for doing heuristic evaluations: Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noreferrer">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span></a></p>
     <p class="post-only">Heuristics aren't just something to test, they're rules to internalize when making things.</p><hr class="post-only"><p class="post-only">The next term, <em>personas</em>, describes a tool that is typically used when designing (and adding to) a user workflow, but also come into play during usability testing.</p>
 </section>
 <section id="personas">
@@ -223,7 +223,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
             <li>A quote that sums up what matters most to the persona as it relates to your site </li>
             <li>Casual pictures representing that user group</li>
         </ul>
-        <footer><cite><a href="https://www.usability.gov/how-to-and-tools/methods/personas.html" target="_blank">https://www.usability.gov/how-to-and-tools/methods/personas.html</a></cite></footer>
+        <footer><cite><a href="https://www.usability.gov/how-to-and-tools/methods/personas.html" target="_blank" rel="noreferrer">https://www.usability.gov/how-to-and-tools/methods/personas.html</a></cite></footer>
     </blockquote>
 </section>
 <section>
@@ -234,7 +234,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
 <section id="scenarios">
     <h3>Scenarios</h3>
     <p><span class="post-only">Now that you've got an idea of who is using your site, you can go a step further and write down WHAT they're using the site for - these are called Scenarios. </span>A Scenario is <strong>a set of tasks required to accomplish a user's goal</strong>.</p>
-    <p class="post-only">Further reading: <a href="https://www.nngroup.com/articles/task-scenarios-usability-testing/" target="_blank">https://www.nngroup.com/articles/task-scenarios-usability-testing/</a></p>
+    <p class="post-only">Further reading: <a href="https://www.nngroup.com/articles/task-scenarios-usability-testing/" target="_blank" rel="noreferrer">https://www.nngroup.com/articles/task-scenarios-usability-testing/</a></p>
     <p class="post-only"><hr>So, with your personas to guide you, you've developed a prototype application. Time to see if your fake people translate to real people - it's time for usability testing! In usability tests, you take your scenarios, and you ask people to try and accomplish the goal of that scenario. Then, you spy on them like a total creep! But it's fine because you have their consent and you're probably giving them $5 and some donuts. When you run your scenario, there are a number of ways that you can get data from the test.</p>
 </section>
 <section id="qualQuant">
@@ -287,7 +287,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
 </section>
 <section id="aoda">
     <h3>AODA</h3>
-    <p>These guidelines are codified in the <a target="_blank" href="https://www.ontario.ca/laws/regulation/110191#BK14">AODA (Access for Ontarians with Disabilities Act)<span class="show-for-sr"> Link opens in a new tab</span></a> specs.</p>
+    <p>These guidelines are codified in the <a target="_blank" rel="noreferrer" href="https://www.ontario.ca/laws/regulation/110191#BK14">AODA (Access for Ontarians with Disabilities Act)<span class="show-for-sr"> Link opens in a new tab</span></a> specs.</p>
     <blockquote>
         (4) Designated public sector organizations and large organizations for their internet websites shall meet the requirements of this section <br><br>2. By January 1, 2021, all internet websites and web content must conform with WCAG 2.0 Level AA, other than, <br><br>i. success criteria 1.2.4 Captions (Live), and <br><br>ii. success criteria 1.2.5 Audio Descriptions (Pre-recorded). O. Reg. 191/11, s. 14 (4).</blockquote>
 </section>
@@ -297,7 +297,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
 </section>
 <section id="wai-aria">
     <h3>WAI-ARIA</h3>
-    <p>is also produced by the W3C. It is a set of specifications for techniques to make dynamic content accessible (which helps it <a href="https://www.w3.org/TR/WCAG20-TECHS/aria" target="_blank">comply with the WCAG</a>). It's pretty simple - it's essentially just a specification for a set of attributes in your markup language. The purpose is to fill in a visibility gap created when a scripting language turns static markup into dynamic content. </p>
+    <p>is also produced by the W3C. It is a set of specifications for techniques to make dynamic content accessible (which helps it <a href="https://www.w3.org/TR/WCAG20-TECHS/aria" target="_blank" rel="noreferrer">comply with the WCAG</a>). It's pretty simple - it's essentially just a specification for a set of attributes in your markup language. The purpose is to fill in a visibility gap created when a scripting language turns static markup into dynamic content. </p>
 </section>
 <section>
     <h3>That's all the definitions!</h3>
@@ -309,7 +309,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
     <p>This week, we turn our spotlight on the <code>&lt;img&gt;</code> element!</p>
 </section>
 <section>
-    <p>Our story <a href="https://thehistoryoftheweb.com/the-origin-of-the-img-tag/" target="_blank">begins in 1995<span class="show-for-sr"> Opens in a new tab</span></a>, with the introduction of the humble <code>&lt;img></code> element.</p>
+    <p>Our story <a href="https://thehistoryoftheweb.com/the-origin-of-the-img-tag/" target="_blank" rel="noreferrer">begins in 1995<span class="show-for-sr"> Opens in a new tab</span></a>, with the introduction of the humble <code>&lt;img></code> element.</p>
     <p>Along with it came the <code>alt</code> attribute, for specifying alternative text.</p>
     <p>If people know anything about accessibility on the web, it's probably the <code>alt</code> attribute.</p>
 </section>
@@ -363,7 +363,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
 </section>
 <section>
     <p>The goal of accessibility is to provide all people with the same information. If an image provides no (or redundant) information, then there doesn't need to be a text alternative to that image.</p>
-    <p>What do I mean by redundant? The World Wide Web Consortium provides us with a <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank">very handy decision-tree about what to include in your alt text<span class="show-for-sr"> Opens in a new window</span></a>.</p><p class="post-only">If you read through this (and it's a great thing to bookmark), you'll notice that most images don't need alternative text, <em>provided that the meaning is conveyed in real text nearby</em>.</p>
+    <p>What do I mean by redundant? The World Wide Web Consortium provides us with a <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank" rel="noreferrer">very handy decision-tree about what to include in your alt text<span class="show-for-sr"> Opens in a new window</span></a>.</p><p class="post-only">If you read through this (and it's a great thing to bookmark), you'll notice that most images don't need alternative text, <em>provided that the meaning is conveyed in real text nearby</em>.</p>
 </section>
 <section>
     <hr class="post-only"><p>To sum up, <strong>accessibility is making meaning available</strong>.</p>
@@ -394,8 +394,8 @@ summary: "Today we're going to look at an overview of the course, define our ter
 </section>
 <section>
     <h3 id="theGroupProject">The Group Project</h3>
-    <p><strong>Step 1:</strong> Individually, go to <a href="https://humber.ca" target="_blank">humber.ca<span class="show-for-sr"> Opens in a new window</span></a>.</p>
-    <p><strong>Step 2:</strong> Individually, using the use case <strong>"Get directions to the Usability Lab"</strong>, evaluate the website based Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span>.</a> Create a spreadsheet. For each heuristic, provide examples of where this was done well, or needs improvement.</p>
+    <p><strong>Step 1:</strong> Individually, go to <a href="https://humber.ca" target="_blank" rel="noreferrer">humber.ca<span class="show-for-sr"> Opens in a new window</span></a>.</p>
+    <p><strong>Step 2:</strong> Individually, using the use case <strong>"Get directions to the Usability Lab"</strong>, evaluate the website based Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noreferrer">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span>.</a> Create a spreadsheet. For each heuristic, provide examples of where this was done well, or needs improvement.</p>
     <p><strong>Step 3</strong>: Get into groups, and compare notes. Create a spreadsheet of your evaluation <em>based on consensus</em>. What do you all agree was done well, or needs improvement, for each heuristic, with examples.</p>
     <p><strong>Step 4</strong>: Submit your individual and group spreadsheets via blackboard within the next two weeks.</p>
 </section>
