@@ -41,27 +41,27 @@
 					<div class="cell large-6 large-offset-3 medium-10 medium-offset-1"><section class="slide-only">
     <h2>Here's what we're going today</h2>
     <ol>
-        <li class="fragment">Go over the syllabus</li>
+        <li class="fragment">Course overview</li>
         <li class="fragment">Define our terms</li>
-        <li class="fragment">Learn about heuristics</li>
         <li class="fragment">
-            Component of the week: &lt;picture&gt;
+            Component of the week: &lt;img&gt;
         </li>
+        <li class="fragment">Two assigments</li>
     </ol>
 </section>
 <section class="slide-only">
     <h2>Syllabus</h2>
-    <a href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" class="button primary">Let's take a look at the syllabus =></a>
+    <a href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" rel="noreferrer" class="button primary">Let's take a look at the syllabus →</a>
 </section>
-<section>
-    <h2 class="post-only">Resources</h2>
-    <hr class="post-only">
-    <a class="button primary" href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank">Download the syllabus</a>
+<section class="post-only">
+    <h2>Resources</h2>
+    <hr>
+    <a class="button primary" href="/files/http5301-accessibility-and-usability-syllabus.pdf" target="_blank" rel="noreferrer">Download the syllabus</a>
     <hr>
 </section>
 <section>
     <h2>This course (in chart form)</h2>
-    <table>
+    <table style="font-size:1.1rem">
     <tr>
         <th><small>Week&nbsp;#</small></th>
         <th>Topic</th>
@@ -124,26 +124,24 @@
             <li>make recommendations about how to improve the thing.</li>
         </ul> 
     </p>
-    <h3>Why does it matter?</h3>
-    <p>As with most of what you're learning in this program, it matters because <strong>it will make you good at making things</strong>. In most of your courses, you learn how to make things. In this course, you will learn how to make things <strong>for real people, better.</strong></p>
-    <img src="/images/people.png" alt="Vectors of faces">
-    <h3>How will we learn it?</h3>
-    <p>In this course, we will:
-        <ul>
-            <li>Read materials related to usability, and reflect on them in the context of our work. <br>These are the <strong>reading assignments</strong>.</li>
-            <li>Work in a team of 4-5 with fellow experts to evaluate a website based on an industry-standard checklist (a.k.a. a 'heuristic evaluation'). <br>This is your <strong>group assignment</strong>.</li>
-            <li>Design a usability test for collecting good information about the website, application or component of your choice. <br>This is <strong>the brief</strong>.</li>
-            <li>Carry out that test with 5 users, observing them using the website (or application, component, etc.) <em>while they are using only a screenreader or keyboard</em> (you'll pick one for all your users), and reporting to the class your findings. <br>This is <strong>the final report/presentation</strong>.</li>
-        </ul>
-    </p>
 </section>
 <section>
-    <h2>Hi! Let's talk about things.</h2>
-    <figure>
-        <img src="/images/women.jpg" alt="Socially distanced people talking">
-        <figcaption>...from a safe distance.</figcaption>
-    </figure>
-    <p>What better place to start in any discipline than knowing the jargon. It makes googling your problems so much easier! Let's jump into accessibility and usability by going over some of the common terms for the fields' general concepts.</p>
+    <h3>Why does it matter?</h3>
+    <p>As with most of what you're learning in this program, it matters because <strong>it will make you good at making things</strong>. In most of your courses, you learn how to make things. In this course, you will learn how to make things <strong>for real people, better.</strong></p>
+    <img class="post-only" src="/images/people.png" alt="Vectors of faces">
+</section>
+<section>
+    <h3>How will we learn it?</h3>
+</section>
+<section>
+    <p>In this course, we will:
+        <ul>
+            <li>Read materials related to usability, and reflect on them in the context of our work. <em>(These are the <strong>reading assignments</strong>.)</em></li>
+            <li>Work in a team of 4-5 with fellow experts to evaluate a website based on an industry-standard checklist (a.k.a. a 'heuristic evaluation'). <em>(This is your <strong>group assignment</strong>.)</em></li>
+            <li>Design a usability test for collecting good information about the website, application or component of your choice. <em>(This is <strong>the brief</strong>.)</em></li>
+            <li>Carry out that test with 5 users, observing them using the website (or application, component, etc.) <em>while they are using only a screenreader or keyboard</em> (you'll pick one for all your users), and reporting to the class your findings. <em>(This is <strong>the final report/presentation</strong>.)</em></li>
+        </ul>
+    </p>
 </section>
 <section>
     <h3>In this lesson, we'll...</h3>
@@ -151,6 +149,14 @@
         <li class="fragment"><a href="#terms">Define general terms and concepts for both usability and accessibility.</a></li>
         <li class="fragment"><a href="#heuristicEvaluation">Learn how to perform a heuristic evaluation.</a></li>
     </ol>
+</section>
+<section>
+    <h2>Hi! Let's talk about things.</h2>
+    <figure>
+        <img src="/images/women.jpg" alt="Socially distanced people talking">
+        <figcaption>...from a safe distance.</figcaption>
+    </figure>
+    <p class="post-only">What better place to start in any discipline than knowing the jargon. It makes googling your problems so much easier! Let's jump into accessibility and usability by going over some of the common terms for the fields' general concepts.</p>
 </section>
 <div id="terms" class="post-only">
     <h3>Here are the terms we're going to define:</h3>
@@ -182,25 +188,30 @@
 <section id="usability">
     <h2>Usability</h2>
     <blockquote><strong>Web usability</strong> The extent to which specified users can find, understand and use information and services online. Web usability can be measured through the effectiveness and efficiency with which users can complete defined tasks online.
-        <footer><cite><a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227&section=glossary" target="_blank">Government of Canada, Standard on Web Usability</a></cite></footer></blockquote>
+        <footer><cite><a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=24227&section=glossary" target="_blank" rel="noreferrer">Government of Canada, Standard on Web Usability</a></cite></footer></blockquote>
+    <p class="post-only">Let's differentiate usability from some similar (and sometimes overlapping) terms.</p>
 </section>
 <section>
-    <p>Let's differentiate usability from some similar (and sometimes overlapping) terms.</p>
-</section>
-<section>
-    <p><strong>Usability</strong>, as we said, is how quantitatively useful a product is.</p>
+    <p><strong>Usability</strong> is, as we said, how quantitatively useful a product is.</p>
     <p class="fragment" id="ux"><strong>User experience (UX)</strong> is how people felt about their experience of using the product. </p>
     <p class="fragment" id="cx"><strong>Customer experience (CX)</strong> is how people felt about the company that the product represents.</p>
     <p class="fragment" id="ui">The <strong>user interface (UI)</strong> is the mechanism by which the person uses the product.</p>
 </section>
 <section>
-    <p id="hci"><strong>Human-Computer Interaction (HCI)</strong> is the study of the usability of user interface(s). It is an old (<a href="https://www.cs.cmu.edu/~amulet/papers/uihistory.tr.html" target="_blank">50+ years!<span class="show-for-sr"> Link opens in a new tab</span></a>), and primarily academic discipline that talks about cognitive science, ergonomics, and all kinds of wonderful stuff.</p>
+    <p id="hci"><strong>Human-Computer Interaction (HCI)</strong> is the study of the usability of user interface(s). It is an old (<a href="https://www.cs.cmu.edu/~amulet/papers/uihistory.tr.html" target="_blank" rel="noreferrer">50+ years!<span class="show-for-sr"> Link opens in a new tab</span></a>), and primarily academic discipline that talks about cognitive science, ergonomics, and all kinds of wonderful stuff.</p>
     <p class="fragment" id="ixd"><strong>Interaction design (IxD)</strong> is the functional design of the interface, while UI design is the appearance of the interface. We're really starting to split hairs here. If you're a UI designer, this is not a "not my job" type of thing.</p>
     <p class="fragment" id="hcd"><strong>Human-centred design</strong> and <strong>user-centred design</strong> are often used interchangeably, BUT, (and, again, we're splitting hairs), human centred design is a design process that takes into consideration the end user (i.e. humanity) at each stage of design, whereas UCD takes into consideration <em>a specific audience</em>.</p>
 </section>
 <section>
-    <img src="/images/ipod.jpg" alt="I couldn't find an image of a Zune, so here is an iPod.">
-    <p>So, if we were to apply these terms to, and I'm dating myself here, an ipod...
+    <figure>
+        <footer>
+            <img src="/images/ipod.jpg" alt="">
+            <figcaption>I couldn't find an image of a Zune, so here is an iPod.</figcaption>
+        </footer>
+    </figure>
+</section>
+<section>
+    <p class="post-only">So, if we were to apply these terms to, and I'm dating myself here, an iPod...</p>
         <ul>
             <li>Usability === average number of steps to listen to a song.</li>
             <li>UX === people like using the ipod.</li>
@@ -212,23 +223,25 @@
             <li>HCD means<span class="post-only">, from the beginning of the design process,</span> someone was thinking about what it would be like to hold in your hand.</li>
             <li>UCD means<span class="post-only">, from the beginning of the design process,</span> someone was thinking about the hands of people who would spend $399 on a portable music player.</li>
         </ul>
-    </p>
-    <p>Okay, so now that we know what usability is (and isn't), let's talk about some terms associated with...</p>
+    <p class="post-only">Okay, so now that we know what usability is (and isn't), let's talk about some terms associated with...</p>
 </section>
 <section>
     <h3><strong>How We Test It</strong></h3>
 </section>
 <section id="heuristics">
-    <img src="/images/lightbulb.jpg" alt="This is a decorative image, which doesn't need alt text, but I'm trying to set a good example.">
+    <img class="post-only" src="/images/lightbulb.jpg" alt="This is a decorative image, which doesn't need alt text, but I'm trying to set a good example.">
     <h3>Heuristics</h3>
-    <p>For whatever reason, 'heuristic' is one of those words I have to look up every six months, I always forget the definition, probably because it's a little hard to define.</p>
+    <p class="post-only">For whatever reason, 'heuristic' is one of those words I have to look up every six months, I always forget the definition, probably because it's a little hard to define.</p>
     <p>An heuristic is a good-enough solution, an approximation, a rule of thumb. In usability, <strong>heuristic analysis</strong> is basically a checklist of good usability principles. You don't need to watch a live test subject to know that you need good error messages, or system feedback.</p>
 </section>
-<section><p>Heuristics aren't just something to test, they're rules to internalize when making things.</p><hr><p>The next term, <em>personas</em>, describes a tool that is typically used when designing (and adding to) a user workflow, but also come into play during usability testing.</p></section>
+<section>
+    <p class="callout">Let's take a look at the most popular checklist for doing heuristic evaluations: Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noreferrer">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span></a></p>
+    <p class="post-only">Heuristics aren't just something to test, they're rules to internalize when making things.</p><hr class="post-only"><p class="post-only">The next term, <em>personas</em>, describes a tool that is typically used when designing (and adding to) a user workflow, but also come into play during usability testing.</p>
+</section>
 <section id="personas">
     <h3>Personas</h3>
-    <p>Personas are a tool for creating a design. A persona is a fake person you use to represent a major user group for your product. Let's say you're a library, and you're creating a form to get people to sign up for an online account. You would create personas based on your current users, and any group that you want to target as a user (maybe you've got an ad campaign to drive new users to the website, for example).</p>
-    <p>Based on the information you have, you might create personas for an elderly person, a parent with children, and a student. </p>
+    <p>Personas are a tool for creating a design. A persona is <strong>a fake person you use to represent a major user group</strong> for your product.</p><p class="post-only">Let's say you're a library, and you're creating a form to get people to sign up for an online account. You would create personas based on your current users, and any group that you want to target as a user (maybe you've got an ad campaign to drive new users to the website, for example).</p>
+    <p class="post-only">Based on the information you have, you might create personas for an elderly person, a parent with children, and a student. </p>
 </section>
 <section>
     <blockquote>
@@ -243,32 +256,34 @@
             <li>A quote that sums up what matters most to the persona as it relates to your site </li>
             <li>Casual pictures representing that user group</li>
         </ul>
-        <footer><cite><a href="https://www.usability.gov/how-to-and-tools/methods/personas.html" target="_blank">https://www.usability.gov/how-to-and-tools/methods/personas.html</a></cite></footer>
+        <footer><cite><a href="https://www.usability.gov/how-to-and-tools/methods/personas.html" target="_blank" rel="noreferrer">https://www.usability.gov/how-to-and-tools/methods/personas.html</a></cite></footer>
     </blockquote>
 </section>
 <section>
-    <p>The purpose of making up a fake person, rather than simply pointing to your analytics data, is to facilitate design discussions (particularly with people who don't deal with analytics on the regular).</p>
+    <p>The purpose of making up a fake person, rather than simply pointing to your analytics data, is to <strong>facilitate design discussions</strong> (particularly with people who don't deal with analytics on the regular).</p>
+    <hr>
     <p>The next term, <em>scenarios</em>, is also used during the design phase, but is a crucial element of usability testing.</p>
 </section>
 <section id="scenarios">
     <h3>Scenarios</h3>
-    <p>Now that you've got an idea of who is using your site, you can go a step further and write down WHAT they're using the site for - these are called Scenarios. A Scenario is a set of tasks required to accomplish a user's goal.</p>
-    <p class="post-only">Further reading: <a href="https://www.nngroup.com/articles/task-scenarios-usability-testing/" target="_blank">https://www.nngroup.com/articles/task-scenarios-usability-testing/</a></p>
+    <p><span class="post-only">Now that you've got an idea of who is using your site, you can go a step further and write down WHAT they're using the site for - these are called Scenarios. </span>A Scenario is <strong>a set of tasks required to accomplish a user's goal</strong>.</p>
+    <p class="post-only">Further reading: <a href="https://www.nngroup.com/articles/task-scenarios-usability-testing/" target="_blank" rel="noreferrer">https://www.nngroup.com/articles/task-scenarios-usability-testing/</a></p>
     <p class="post-only"><hr>So, with your personas to guide you, you've developed a prototype application. Time to see if your fake people translate to real people - it's time for usability testing! In usability tests, you take your scenarios, and you ask people to try and accomplish the goal of that scenario. Then, you spy on them like a total creep! But it's fine because you have their consent and you're probably giving them $5 and some donuts. When you run your scenario, there are a number of ways that you can get data from the test.</p>
 </section>
 <section id="qualQuant">
     <h3>Qualitative and quantitative data</h3>
-    <figure><img src="/images/data.jpg" alt="Data that doesn't mean anything. So, I guess, qualitative?"></figure>
-    <p>Before we get into methods, let's define the two categories of data that we report. Quantitative and Qualitative, aka quant and qual.</p>
+    <figure class="post-only"><img src="/images/data.jpg" alt="Data that doesn't mean anything. So, I guess, qualitative?"></figure>
+    <p class="post-only">Before we get into methods, let's define the two categories of data that we report. Quantitative and Qualitative, aka quant and qual.</p>
     <p><strong>Quantitative data</strong> is, naturally, data you can quantify. How long does it take to complete the task? How many errors does a user generate, etc. </p>
     <p><strong>Qualitative data</strong> is observational, and, generally, subjective. Is the user struggling to find a UI element? Is there a part of the interface that they seem to enjoy fiddling with? </p>
 </section>
 <section>
-    <p>Quantitative research requires different conditions than qual, for a few reasons. First of all, <strong>to get good quantitative data, you need a large data set</strong>. You'll be running a lot of people through a well-defined and tightly controlled task set. Qualitative data, on the other hand, is gathered in a much looser and more adaptable way. Quantitative research is less common, but provides a business with some all-important numbers. <strong>Qualitative research is more subjective, as it's meant to be exploratory</strong>. Of course, when you're dealing with an organization, they'll still want numbers to supplement all your lovely written summaries and reports.</p>
+    <p>Quantitative research requires different conditions than qual, for a few reasons. First of all, <strong>to get good quantitative data, you need a large data set</strong>. <span class="post-only">You'll be running a lot of people through a well-defined and tightly controlled task set. Qualitative data, on the other hand, is gathered in a much looser and more adaptable way. Quantitative research is less common, but provides a business with some all-important numbers.</span> <strong>Qualitative research is more subjective, as it's meant to be exploratory</strong>. Of course, when you're dealing with an organization, they'll still want numbers to supplement all your lovely written summaries and reports.</p>
 </section>
 <section id="qualQuant">
-    <p>That's where PURE comes in - <strong>Pragmatic Usability Rating by Experts</strong>. This is just a rubric for putting your subjective findings into, so that your hunches and intuition get turned into numbers. You split your scenario into tasks, and your tasks into steps, and give each step a score out of three for how difficult the user found the task, 1 being easy, 3 being difficult.</p>
-    <img src="https://media.nngroup.com/media/editor/2017/04/11/pure-product.png" alt="Examples of PURE evaluations.">
+    <img src="https://media.nngroup.com/media/editor/2017/04/11/pure-product.png" alt="Examples of PURE evaluations." style="float:right;"><p>That's where PURE comes in - <strong>Pragmatic Usability Rating by Experts</strong>.</p><p>This is just a rubric for putting your subjective findings into, so that your hunches and intuition get turned into numbers. You <strong>split your scenario into tasks, and your tasks into steps, and give each step a score out of three</strong> for how difficult the user found the task, 1 being easy, 3 being difficult.</p>
+</section>
+<section>
     <p>Now, there's a whole variety of types of user tests you can do, and if you're a usability expert or UX researcher, part of your job is having your own catalog of tests and deciding which ones are appropriate. </p>
     <hr>
 </section>
@@ -305,7 +320,7 @@
 </section>
 <section id="aoda">
     <h3>AODA</h3>
-    <p>These guidelines are codified in the <a target="_blank" href="https://www.ontario.ca/laws/regulation/110191#BK14">AODA (Access for Ontarians with Disabilities Act) <span class="show-for-sr">Link opens in a new tab</span></a> specs.</p>
+    <p>These guidelines are codified in the <a target="_blank" rel="noreferrer" href="https://www.ontario.ca/laws/regulation/110191#BK14">AODA (Access for Ontarians with Disabilities Act)<span class="show-for-sr"> Link opens in a new tab</span></a> specs.</p>
     <blockquote>
         (4) Designated public sector organizations and large organizations for their internet websites shall meet the requirements of this section <br><br>2. By January 1, 2021, all internet websites and web content must conform with WCAG 2.0 Level AA, other than, <br><br>i. success criteria 1.2.4 Captions (Live), and <br><br>ii. success criteria 1.2.5 Audio Descriptions (Pre-recorded). O. Reg. 191/11, s. 14 (4).</blockquote>
 </section>
@@ -315,7 +330,7 @@
 </section>
 <section id="wai-aria">
     <h3>WAI-ARIA</h3>
-    <p>is also produced by the W3C. It is a set of specifications for techniques to make dynamic content accessible (which helps it <a href="https://www.w3.org/TR/WCAG20-TECHS/aria" target="_blank">comply with the WCAG</a>). It's pretty simple - it's essentially just a specification for a set of attributes in your markup language. The purpose is to fill in a visibility gap created when a scripting language turns static markup into dynamic content. </p>
+    <p>is also produced by the W3C. It is a set of specifications for techniques to make dynamic content accessible (which helps it <a href="https://www.w3.org/TR/WCAG20-TECHS/aria" target="_blank" rel="noreferrer">comply with the WCAG</a>). It's pretty simple - it's essentially just a specification for a set of attributes in your markup language. The purpose is to fill in a visibility gap created when a scripting language turns static markup into dynamic content. </p>
 </section>
 <section>
     <h3>That's all the definitions!</h3>
@@ -323,42 +338,73 @@
 </section>
 <section>
     <h2>Component of the week</h2>
-    <p>The first half of this course is mostly going to be looking at usability testing and best practices, with the second half focussed more on accessibility best practices. But I didn't want to save all the good stuff for last, so each week we'll look at how to make one component or design pattern fully accessible.</p>
-    <p>This week, we turn our spotlight on the <code>&lt;picture&gt;</code> element!</p>
+    <p class="post-only">The first half of this course is mostly going to be looking at usability testing and best practices, with the second half focussed more on accessibility best practices. But I didn't want to save all the good stuff for last, so each week we'll look at how to make one component or design pattern fully accessible.</p>
+    <p>This week, we turn our spotlight on the <code>&lt;img&gt;</code> element!</p>
 </section>
 <section>
-    <p>Our story <a href="https://thehistoryoftheweb.com/the-origin-of-the-img-tag/" target="_blank">begins in 1995<span class="show-for-sr"> Opens in a new tab</span></a>, with the introduction of the humble <code>&lt;img></code> element.</p>
+    <p>Our story <a href="https://thehistoryoftheweb.com/the-origin-of-the-img-tag/" target="_blank" rel="noreferrer">begins in 1995<span class="show-for-sr"> Opens in a new tab</span></a>, with the introduction of the humble <code>&lt;img></code> element.</p>
     <p>Along with it came the <code>alt</code> attribute, for specifying alternative text.</p>
     <p>If people know anything about accessibility on the web, it's probably the <code>alt</code> attribute.</p>
-    <p><u>Things people get wrong about the <code>alt</code> attribute:</u></p>
+</section>
+<section>
+    <p>It's a deceptively simple concept - you have an image, and you provide an alternative to that image in text form.</p>
+    <img src="/images/alternative.jpg" alt="What should the alternative text be?">
+    <hr class="post-">
+</section>
+<section>
+    <p>If you've got an image with text in it - just put the text in the alt attribute.</p>
+    <p>If you've got an image that you can click to <em>do</em> something, describe what happens.</p>
+    <img style="height:5rem" class="float-center" src="/images/play.svg" alt="Play this song (example)">
+    <pre><code class="language-html">&lt;img src="/images/play.svg" 
+    alt="Play the song 'Misty'"></code></pre>
+</section>
+    <hr>
+<section>
+    <h3>"A picture is worth a thousand words... Oh no."</h3>
+    <p>It's our<a href="#team">*</a> responsibility to provide the same information in an alternative format, and that can be a challenge.</p>
+</section>
+<section>
+    <figure><img src="/images/testing.jpg" alt="A graph showing COVID-19 testing in Ontario, having exceeded the April 29 goal of 14,000 per day." class="float-center" style="max-height: 30vh"></figure>
+    <p class="post-only">We need to consider what the primary message of the image is. Graphs and charts are a great example of this. They have a huge volume of information, but to try and capture each data point would result in a volume of text that most users not only don't need, but would negatively affect their experience.</p>
+    <p class="post-only">Instead, we think about what the 'message' of the data is.</p>
+    <pre><code class="language-html">&lt;img src="/images/testing.jpg" 
+        alt="A graph showing COVID-19 testing 
+        in Ontario, having exceeded 
+        the April 29 goal of 14,000 per day." ></code></pre>
+</section>
+    <hr>
+<section>
+    <p><h3>Things people get wrong about the <code>alt</code> attribute:</h3></p>
     <ul>
         <li><em>It's an attribute, not a tag</em> (tags are the opening and closing of an element, but the term 'tag' is often used to refer to elements).</li>
         <li><em>It is not interchangeable with the <code>title</code> attribute.</em> Title attributes are rudimentary tooltips that the HTML spec <a href="https://www.w3.org/TR/html51/dom.html#the-title-attribute">actually discourages you from using<span class="show-for-sr">&nbsp;Opens in a new tab</span></a> <strong>specifically because it's not accessible</strong>. A lot of people are under the mistaken impression that it is an accessibility requirement. It's <strong>the opposite of that</strong>.</li>
+        <li>All images should have alternative text.</li>
+        <li>Not all images need alt attributes.</li>
     </ul>
-    <p>The <code>&lt;img></code> element was all we had for about 14 years. But in 2012, with mobile web browsing becoming a thing, and the introduction of higher resolution "Retina" devices, a more responsive solution was required.</p>
-    <pre><code class="language-html">
-        /* Ta-da! */
-       &lt;picture>
-            &lt;source 
-                media="(max-width: 799px)" 
-                srcset="mobile.webp"
-                type="image/webp">
-            &lt;img 
-                srcset="retina.jpg 2x"
-                src="fallback.jpg" 
-                alt="">
-        &lt;/picture>
-    </code></pre>
-    <p>The <code>picture</code> element does <em>a lot</em> of work to let us accommodate different devices, resolutions, bandwidth (let's not forget that internet access is an accessibility issue!), and browsers.</p>
-    <p>In the middle is our image element. This will work even if <strong>nothing else does</strong>. The <code>picture</code> element isn't supported in old browsers, but <strong>it doesn't matter</strong>, because they'll just display it as a regular <code>img</code> element. We use the <code>img</code> element to display our fallback image, and supply our alt text, which will be used regardless of what image the picture element loads, <u>thus supporting old browsers</u>.</p>
-    <p>We put a <code>srcset</code> attribute on our image element to load a big image if the pixel ratio is <code>2x</code> thus <u>supporting different screen resolutions</u>. <em>Note: for whatever reason, if the srcset is not specified on the image element, you won't get the data-saving aspect of the <code>srcset</code> - the browser will try to load the fallback image as well. You don't want to miss out on an opportunity to provide a good experience for <u>people with limited bandwidth</u>.</em></p>
-    <p>Our <code>source</code> element lets us specify our image type, allowing us to load next-generation image formats like 'webp' (seriously, you should be using webp - you can't get image compression results anywhere <em>near</em> webp compression on other image formats.</p>
-    <p>This is an example of what we call <strong>progressive enhancement</strong>. First you supply the thing that works for everyone (the <code>img</code>) and then you offer the fancy new experience, if it's supported.</p>
-    <p>Finally, the <code>source</code> element has a <code>media</code> attribute, which works just like a CSS media query, allowing us to specify which image should be rendered on which <u>different device widths</u>.</p>
 </section>
 <section>
-    <hr>
-    <p>Depending on how much time we have today, I might pop into this pen I made and show you how to provide people with a good experience even when your images aren't loading.</p><p class="codepen" data-height="965" data-theme-id="dark" data-default-tab="result" data-user="simonborer" data-slug-hash="rNOqJJM" data-preview="true" style="height: 465px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Usability &amp;amp; Accessibility in the &amp;lt;picture&amp;gt; element">
+    <h3>No alternative</h3>
+    <p>Let's talk about those last two points. 
+        <ol><li>All images should have an alt tag. This is so everyone (i.e. the user, your team, Google's web crawler) knows if it's empty, that's <em>on purpose</em>.</li>
+            <li>Some images should have empty alt attributes because the image has no meaning.</li></ol></p>
+</section>
+<section>
+    <img style="height:10rem; transform: rotate(90deg);" src="/images/round-box.png" alt="An example of a decorative image, a transparent box with rounded corners." class="float-center">
+    <p class="post-only">When I was a young web developer, we used images for pretty much <em>any</em> kind of decorative layout. Things like <code>border-radius</code> weren't supported in older browsers, so we rounded corners using images.</p>
+    <p>This image, if used for decoration, <strong>should have an alt attribute, and it should be empty.</strong></p>
+    <pre><code class="language-html">&lt;img src="rounded-box.png" alt=""></code></pre>
+</section>
+<section>
+    <p>The goal of accessibility is to provide all people with the same information. If an image provides no (or redundant) information, then there doesn't need to be a text alternative to that image.</p>
+    <p>What do I mean by redundant? The World Wide Web Consortium provides us with a <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank" rel="noreferrer">very handy decision-tree about what to include in your alt text<span class="show-for-sr"> Opens in a new window</span></a>.</p><p class="post-only">If you read through this (and it's a great thing to bookmark), you'll notice that most images don't need alternative text, <em>provided that the meaning is conveyed in real text nearby</em>.</p>
+</section>
+<section>
+    <hr class="post-only"><p>To sum up, <strong>accessibility is making meaning available</strong>.</p>
+    <p>If your meaning is only available in one form, and that form excludes some people, then create an alternative.</p>
+</section>
+<section>
+    <hr class="post-only">
+    <p>Depending on how much time we have today, I might pop into this pen I made and show you how to provide people with a good experience even when your images aren't loading.</p><p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="simonborer" data-slug-hash="rNOqJJM" data-preview="true" style="height: 465px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Usability &amp;amp; Accessibility in the &amp;lt;picture&amp;gt; element">
   <span>See the Pen <a href="https://codepen.io/simonborer/pen/rNOqJJM">
   Usability &amp; Accessibility in the &lt;picture&gt; element</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -371,42 +417,26 @@
         <li><a href="#theReading">The Reading</a></li>
         <li><a href="#theGroupProject">The Group Project</a></li>
     </ol>
-    <hr>
+</section>
+<section>
+    <hr class="post-only">
     <h3 id="theReading">The Reading (or listening!)</h3>
     <p><strong>Step 1:</strong> Please read or listen to <a href="https://99percentinvisible.org/episode/on-average/">On Average</a> (or both, for the full experience).</p>
     <p><strong>Step 2:</strong> In Blackboard, please submit to me 250-500 words on the following topic: <em>How this article/podcast relates to the work of web development</em>.</p>
     <p>This is due <strong>one week from today</strong>.</p>
+</section>
+<section>
     <h3 id="theGroupProject">The Group Project</h3>
-    <p><strong>Step 1:</strong> Get into groups of 4-5 people.</p>
-    <p><strong>Step 2:</strong> Choose something on the internet (for example, a web page).</p>
-    <p><strong>Step 3:</strong></p>
+    <p><strong>Step 1:</strong> Individually, go to <a href="https://humber.ca" target="_blank" rel="noreferrer">humber.ca<span class="show-for-sr"> Opens in a new window</span></a>.</p>
+    <p><strong>Step 2:</strong> Individually, using the use case <strong>"Get directions to the Usability Lab"</strong>, evaluate the website based Jakob Nielsen's <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noreferrer">10 Usability Heuristics for User Interface Design<span class="show-for-sr"> Opens in a new window</span>.</a> Create a spreadsheet. For each heuristic, provide examples of where this was done well, or needs improvement.</p>
+    <p><strong>Step 3</strong>: Get into groups, and compare notes. Create a spreadsheet of your evaluation <em>based on consensus</em>. What do you all agree was done well, or needs improvement, for each heuristic, with examples.</p>
+    <p><strong>Step 4</strong>: Submit your individual and group spreadsheets via blackboard within the next two weeks.</p>
 </section>
-<section id="heuristicEvaluation">
-    <ol>
-        <li>TODOs</li>
-        <li>Walk through the NN list</li>
-        <li>assign the group project</li>
-        <li>Make things slide-friendly</li>
-        <li>Move to bb</li>
-    </ol>
-    Get into groups, and evaluate a site based on <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">https://www.nngroup.com/articles/ten-usability-heuristics/</a>
-</section>
-<!-- <section id="scenarioWriting">
-    <p>Review <a href="https://www.nngroup.com/articles/task-scenarios-usability-testing/" target="_blank">https://www.nngroup.com/articles/task-scenarios-usability-testing/</a> and Brainstorm task scenarios for a website, i.e. amazon</p>
-</section> -->
-<!-- <section id="page">
-    <h3>Accessibility basics</h3>
-    <p>See also: <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML</a></p>
-    <ul>
-        <li class="fragment">Semantics: Can you use a <code>button</code>?</li>
-        <li class="fragment">Content: Can the <code>button</code> describe its function?</li>
-        <li class="fragment">Focus: If it's not a button, can you trigger it anyway?</li>
-        <li class="fragment">Tables: <code>scope</code> and <code>colspan</code></li>
-        <li class="fragment">Inputs: <code>label</code> for id.</li>
-        <li class="fragment">Images: <code>alt</code> text</li>
-        <li class="fragment">Source order: Javascript, but also CSS (i.e. <code>flex-order</code>)</li>
-    </ul>
-</section> -->
+<footer class="post-only">
+    <section>
+        <h2>Footnotes</h2><span id="team">*</span><small>Well, it's the responsibility of whoever is generating the content, so feel free to tell someone else that it's not the job of a web developer to generate content.</small>
+    </section>
+</footer>
 <section class="slide-only">
     <h3>Thank you!</h3>
 </section></div>
