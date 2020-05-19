@@ -1,7 +1,7 @@
 ---
 title: "Week 5 - Database Design / Midterm Prep"
-date: 2019-10-05T08:47:11+01:00
-publishdate: 2019-09-02T08:47:11+01:00
+date: 2020-06-14T08:47:11+01:00
+publishdate: 2020-06-14T08:47:11+01:00
 featured_image: arch.jpg
 summary: "This week we'll cover the basic steps to design a database; relationships between tables; identify tables and assign columns; identify primary and foreign keys; primary key constraints; foreign key constraints; midterm review."
 today:

@@ -1,6 +1,6 @@
 ---
 title: "Step 1: What are we talking about?"
-date: 2019-09-02T08:47:11+01:00
+date: 2020-05-18T08:47:11+01:00
 featured_image: card-catalogue.jpg
 summary: "Today we're going to look at an overview of the course, define our terms, and start a heuristic evaluation."
 ---
@@ -102,10 +102,10 @@ summary: "Today we're going to look at an overview of the course, define our ter
 <section>
     <p>In this course, we will:
         <ul>
-            <li>Read materials related to usability, and reflect on them in the context of our work. <em>(These are the <strong>reading assignments</strong>.)</em></li>
-            <li>Work in a team of 4-5 with fellow experts to evaluate a website based on an industry-standard checklist (a.k.a. a 'heuristic evaluation'). <em>(This is your <strong>group assignment</strong>.)</em></li>
-            <li>Design a usability test for collecting good information about the website, application or component of your choice. <em>(This is <strong>the brief</strong>.)</em></li>
-            <li>Carry out that test with 5 users, observing them using the website (or application, component, etc.) <em>while they are using only a screenreader or keyboard</em> (you'll pick one for all your users), and reporting to the class your findings. <em>(This is <strong>the final report/presentation</strong>.)</em></li>
+            <li class="fragment">Read materials related to usability, and reflect on them in the context of our work. <em>(These are the <strong>reading assignments</strong>.)</em></li>
+            <li class="fragment">Work in a team of 4-5 with fellow experts to evaluate a website based on an industry-standard checklist (a.k.a. a 'heuristic evaluation'). <em>(This is your <strong>group assignment</strong>.)</em></li>
+            <li class="fragment">Design a usability test for collecting good information about the website, application or component of your choice. <em>(This is <strong>the brief</strong>.)</em></li>
+            <li class="fragment">Carry out that test with 5 users, observing them using the website (or application, component, etc.) <em>while they are using only a screenreader or keyboard</em> (you'll pick one for all your users), and reporting to the class your findings. <em>(This is <strong>the final report/presentation</strong>.)</em></li>
         </ul>
     </p>
 </section>

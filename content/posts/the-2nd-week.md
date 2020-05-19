@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Collecting data"
-date: 2019-09-10T08:47:11+01:00
-publishdate: 2019-09-02T08:47:11+01:00
+date: 2020-05-25T08:47:11+01:00
+publishdate: 2020-05-25T08:47:11+01:00
 summary: ""
 featured_image: rpg.jpg
 ---

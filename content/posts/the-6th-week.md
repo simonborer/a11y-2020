@@ -1,7 +1,7 @@
 ---
 title: "Week 6 - Midterm Review; Live Application"
-date: 2019-10-14T08:47:11+01:00
-publishdate: 2019-11-02T08:47:11+01:00
+date: 2020-06-21T08:47:11+01:00
+publishdate: 2020-06-21T08:47:11+01:00
 featured_image: space-time.jpg
 summary: "This week we'll review the midterm, and work with date/time data; various data types used in MySQL."
 ---

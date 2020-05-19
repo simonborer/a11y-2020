@@ -1,7 +1,7 @@
 ---
 title: "Week 7... Plus Week 8?"
-date: 2019-10-15T08:47:11+01:00
-publishdate: 2019-11-02T08:47:11+01:00
+date: 2020-06-30T08:47:11+01:00
+publishdate: 2020-06-30T08:47:11+01:00
 featured_image: groundhog.jpg
 summary: "This week I've combined last year's week seven and eight"
 ---
