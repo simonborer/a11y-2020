@@ -1,0 +1,33 @@
+## What is it?
+
+The first week, we're going to learn WHAT usability is (and isn't), including what accessibility is. We'll also learn how to perform a heuristic evaluation.
+
+The second week, we'll learn HOW to define users and tasks, and how auditing accessibility lets us understand different user interactions.
+
+## How does it work?
+
+The third week, we'll learn how the DOM API enables accessibility features, and how to write about users, tasks, personas, and task analysis.
+
+The fourth week we'll learn about dark patterns, linting, and we'll look at some examples of accessible components.
+
+## How do I do it?
+
+The fifth week we'll talk about how to write a report, and what it means to 'evangelize'.
+
+The sixth week we'll talk about accessibility on mobile devices, take a deep dive into WAI-ARIA, look at accessibility in JS frameworks.
+
+
+
+The 1st and 5th weeks, you'll be assigned a reading. You'll read it, and write a reflection on it. Somewhere between half a page and a page. By reflection, I don't mean a summary, I mean making a connection between this piece of writing, and your role as someone who makes stuff on the internet. These reflections will be worth a combined 5% of your mark.
+
+On the third week, you'll be asked to submit a group project. You'll be in groups of 4-5 people, and you'll evaluate something (a web page, component, or application) based on a 10-point checklist that will be provided to you. Pretty straightforward.
+
+The following week, the 4th in the course, you'll submit a brief, which is to say, a plan for doing usability testing. I'm going to teach you all the things that need to be in the plan.
+
+Over the following three weeks, you'll carry out the plan. You'll get users to use things while you watch and ask follow up questions. Based on the data you generate from working with multiple users, you'll come up with recommendations about how to improve whatever it is that you're testing.
+
+Finally, on the 7th week you'll present your findings and recommendations to the class.
+
+
+
+

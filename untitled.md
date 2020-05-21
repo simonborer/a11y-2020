@@ -12,12 +12,12 @@ wk 1
 		PURE
 	heuristic eval
 		norm/neil
-	user task scenario
-	static html access
 wk 2
 	what goes into a test plan
 	basic template + not so basic
 	who is the user?
+	user task scenario
+	static html access
 	the open internet
 	users at cross-purposes
 	bias
