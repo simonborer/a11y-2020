@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Accessibility &amp; Usability 2020</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 May 2020 08:47:11 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2020 08:47:11 +0100</lastBuildDate>
     
 	<atom:link href="https://a11y2020.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Step 2: Collecting data</title>
+      <link>https://a11y2020.ca/posts/the-2nd-week/</link>
+      <pubDate>Sat, 23 May 2020 08:47:11 +0100</pubDate>
+      
+      <guid>https://a11y2020.ca/posts/the-2nd-week/</guid>
+      <description>In which we learn what goes into a test plan, how to control the browser with your keyboard, what dark patterns are, and how to use a test script.</description>
+    </item>
     
     <item>
       <title>Step 1: What are we talking about?</title>

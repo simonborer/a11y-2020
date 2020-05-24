@@ -20,199 +20,393 @@
 	
 <div class="reveal">
   <div class="slides">
-    <section class="slide-only">
-        <h2>Here's what we're going today</h2>
-        <ol>
-            <li>Theory
-                <ol>
-                    <li>End user</li>
-                    <li>The open web</li>
-                    <li>Subjectivity</li>
-                    <li>Test script</li>
-                </ol>
-            </li>
-        </ol>
-    </section>
-    <section id="lastWeek" class="slide-only">
-                <h3>Last Week</h3>
-                <ol>
-                    <li class="fragment">Accessibility is a good idea, and also it&#39;s the law.</li>
-                    <li class="fragment">Usability is not the same as a bunch of other stuff (but it&#39;s close)</li>
-                    <li class="fragment">&#39;Heuristic evaluation&#39; is just a fancy way of saying &#39;checklist of good ideas&#39;</li>
-                    <li class="fragment">Personas and Scenarios are tools for usability design and evaluation</li>
-                    <li class="fragment">Two kinds of data: quantitative and qualitative</li>
-                    <li class="fragment">Basic accessibility is basic</li>
-                </ol>
-    </section>
-    <section class="slide-only">
-                <h3>What did you think of the reading?</h3>
-    </section>
     <section>
-                <h3>What goes into a test plan?</h3>
-                <p>A test plan what you submit to get approval for the plan and/or buy-in from your team. You can always make adjustments to go above and beyond! Remember, qualitative data is exploratory.</p>
-                <p>A comprehensive template is available at <a href='https://www.usability.gov/how-to-and-tools/resources/templates/usability-test-plan-template.html' target='_blank'>https://www.usability.gov/how-to-and-tools/resources/templates/usability-test-plan-template.html</a></p>
-    </section>
-    <section>
-                <h3>Test plan template - the basics</h3>
-                <ol>
-                    <li class="fragment">Objective/Scope/Questions: what are you going to accomplish? What are you NOT going to accomplish? What are you trying to find out in order to accomplish your objective?</li>
-                    <li class="fragment">Participants: who is going to take the test (and why have you selected them)?</li>
-                    <li class="fragment">Methods: how are you going to generate data to answer your questions?</li>
-                    <li class="fragment">Metrics: how are you going to measure your data?</li>
-                </ol>
-    </section>
-    <section>
-                <h3>Test plan template - not basic, but good to have</h3>
-                <ol>
-                    <li class="fragment">Executive summary: the whole plan, but in a couple paragraphs.</li>
-                    <li class="fragment">Schedule and location</li>
-                    <li class="fragment">Equipment</li>
-                    <li class="fragment">Scenarios</li>
-                    <li class="fragment">Roles: who&#39;s doing what?</li>
-                </ol>
-    </section>
-    <section class="slide-only">
-                <h3>Let`s break some of these down</h3>
-    </section>
-    <section>
-                <h3>Objective/Scope</h3>
-                <p>You're probably not going to do a comprehensive usability test on a large website. You can test a set of features, or you can test for a set of issues. Define what these are and why you're addressing them.</p>
-    </section>
-    <section>
-                <h3>Questions</h3>
-                <p>Can users find <em>X</em>? Does <em>A</em> work better than <em>B</em>? Do users learn the interface in under <em>Y</em> amount of time?</p>
-    </section>
-    <section>
-                <h3>Participants: Some magic numbers</h3>
-                <p>Jakob Nielsen reports the ROI thresholds in different usability testing methods:</p>
-                <table>
-                    <tr>
-                        <td>Quantitative</td>
-                        <td>>20</td>
-                    </tr>
-                    <tr>
-                        <td>Card sorting</td>
-                        <td>>15</td>
-                    </tr>
-                    <tr>
-                        <td>Eyetracking</td>
-                        <td>39</td>
-                    </tr>
-                    <tr>
-                        <td>Heuristics</td>
-                        <td>4 experts</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Qualitative</strong></td>
-                        <td><strong>5</strong></td>
-                    </tr>
-                </table>
-    </section>
-    <section>
-                <h3>Methods</h3>
-                <p>Define your procedure, testing type, tools, and tasks.</p>
-                <p>Testing type may be heuristics (don't forget to say <a href='http://www.wqusability.com/articles/getting-started.html' target='_blank'>which ones!</a>), eyetracking, discovery (finding problems), benchmark (evaluating solutions), moderated, remote, system usability scale (survey), 5-second, First-click, etc., etc., etc.</p>
-    </section>
-    <section>
-                <h3>Metrics</h3>
-                <p>What is the data you'll be collecting? How should it be measured? How can you be sure it fully answers your questions?</p>
-                <p>This is probably the <strong>most important part of your plan</strong>.</p>
-    </section>
-    <section>
-                <h3>Metrics - examples</h3>
-                <p>
-                    <ul>
-                        <li><strong>Successful Task Completion</strong></li>
-                        <li><strong>Critical Errors</strong></li>
-                        <li><strong>Non-Critical Errors</strong></li>
-                        <li><strong>Error-Free Rate</strong> Error-free rate is the percentage of test participants who complete the task without any errors (critical or non-critical errors).</li>
-                        <li><strong>Time On Task</strong></li>
-                        <li><strong>Subjective Measures</strong> These evaluations are self-reported participant ratings for satisfaction, ease of use, ease of finding information, etc where participants rate the measure on a 5 to 7-point <a href='https://en.wikipedia.org/wiki/Likert_scale' target='_blank'>Likert scale</a>.</li>
-                        <li><strong>Likes, Dislikes and Recommendations</strong> Participants provide what they liked most about the site, what they liked least about the site, and recommendations for improving the site.</li>
-                    </ul>
-                </p>
-                <p>Source: <a href='https://www.usability.gov/how-to-and-tools/methods/planning-usability-testing.html' target='_blank'>https://www.usability.gov/how-to-and-tools/methods/planning-usability-testing.html</a></p>
-    </section>
-    <section>
-                <h3>Examples</h3>
-                <ul>
-                    <li class="fragment"><a href="http://danielleklein.ca/wp-content/uploads/2016/08/Usability-test-plan-CSI.pdf" target="_blank">Centre for Social Innovation website</a></li>
-                    <li class="fragment"><a href="https://static1.squarespace.com/static/55c3cc6be4b0ae48388c8605/t/57706d692994cae381d96fb5/1466985833818/lmb_usability_test_plan.pdf" target="_blank">Mobile app test plan</a></li>
-                    <li class="fragment"><a href="http://booksite.mkp.com/barnum/testingessentials/pdfs/BWB_test_plan.pdf" target="_blank">Better World Books website</a></li>
-                    <li class="fragment">Bonus: <a href="https://medium.com/@userfocus/the-1-page-usability-test-plan-dbc8c3d7fb54" target="_blank">Cheat Sheet</a></li>
-                </ul>
-    </section>
-    <section class="slide-only">
-                <h3>An activity!</h3>
-    </section>
-    <section>
-                <h3>Who is the user?</h3>
-                <p>You are in the strange position of making things that strangers will use. Some of these strangers may take it apart and put it back together. Some of these strangers will be malicious, some will be children, some will be clueless. Some of these strangers won't be human.</p>
-                <p>SEO is just usability for bots. Design patterns, OOP and code comments are usability for other programmers (or yourself, later).</p>
-    </section>
-    <section>
-                <h3>The internet is open</h3>
-                <p>We work on an open platform. The beautiful thing about the internet is that it is a (nearly) global public space built on open access (e.g. Net Neutrality), standards and specifications. This comes with the responsibility, though, that you create services that are meant to be consumed by clients that haven't even been invented yet.</p>
-                <p>You will work with (and by with, I mean for) people who do not understand the difference between accessing a pdf and opening a webpage.</p>
-                <p>Having an open spec markup language is the backbone of the information age.</p>
-    </section>
-    <section>
-                <h3>Firefox gets most of their money from...</h3>
-                <p class="fragment">Google</p>
-                <h3 class="fragment">Wait, why?</h3>
-                <p class="fragment">Google's business model depends on the open web. It has made a multi-billion dollar bet that the best place to be is not in a "walled garden", but as the concierge to the innovations afforded by a democratized space.</p>
-    </section>
-    <section>
-                <h3>You will need to advocate for answering hard questions</h3>
-                <p>For those people who do not understand HTML vs PDF, you will need to impress on them that the internet is a place with a multitude of users, and that's not changing anytime soon. You will need to advocate for creating a service rather than an interactive paper flyer.</p>
-                <p>This distinction is important because it acknowledges your many types of end user - from the dev/content/QA team, to Google's web crawler, to hackers, to archive.org, to Pocket and Instapaper, to screen readers, to everybody.</p>
-    </section>
-    <section>
-                <h3>Users at cross-purposes</h3>
-                <blockquote>I’m dyslexic, and one of the recommendations for reducing visual stress that I’ve found tremendously helpful is low contrast between text and background color. This, though, often means failing to meet accessibility requirements for people who are visually impaired... Consider:
-                    <ul>
-                        <li>Designing for one-handed mobile use raises problems because right-handedness is the default—but 10 percent of the population is left handed.</li>
-                        <li>Giving users a magnified detailed view on hover can create a mobile hover trap that obscures other content.</li>
-                        <li>Links must use something other than color to denote their “linkyness.” Underlines are used most often and are easily understood, but they can interfere with descenders and make it harder for people to recognize word shapes.</li>
-                    </ul>
-                    <br>
-                    <cite>Eleanor Ratliff, <a href="http://alistapart.com/article/accessibility-whack-a-mole" target="_blank">http://alistapart.com/article/accessibility-whack-a-mole</a></cite>
-                </blockquote>
-    </section>
-    <section>
-                <h3>Your job is not to write code - it is to solve problems</h3>
-                <p>All the easy code has been written already. Don't worry, there are (for the time being), still plenty of jobs writing boring code. But that is less true than it was ten years ago, and will be less true in another ten. You need to think of yourself as someone who can solve the problem of 'How can we best make this work for everyone who needs it?'</p>
-                <p>Last week we contrasted accessibility with usability by saying that usability is accessibility for a set audience, but accessibility legislation still limits that audience by defining it. You should always be open to expanding your definition of the end user.</p>
-    </section>
-    <section>
-                <h3>Youtube stumbled on an audience</h3>
-                <p>A few years ago, the Youtube dev team gave themselves a page-weight budget of 800kb. They optimized every conceivable aspect of the site. They predicted that they could get the average load time below 1s. When they released their new, lightning fast code, their average load times tripled.</p>
-                <p>There were millions of users in the global south who suddenly were able to watch videos without the page timing out. The team had stumbled onto a massive audience they didn't know they had simply by taking best practices seriously.</p>
-                <p>Do what you can for those you're aware of, and keep looking for those you aren't.</p>
-    </section>
-    <section>
-                <h3>You are biased (don&#39;t worry, everybody is)</h3>
-                <p>You are not aware of everyone, and worse yet, you are not aware of yourself. You are not objective. That's ok.</p>
-                <p><a href='https://vtechworks.lib.vt.edu/handle/10919/26477' target='_blank'>In “Usability Problem Description and the Evaluator Effect in Usability Testing”</a> a study by Miranda G. Capra at Virginia Tech, she found that 44 usability practitioners’ evaluations reported problems that overlapped by only 22 percent.</p>
-                <p>Confirmation bias is likely going to be your biggest issue to watch out for, in yourself and other members of your team. It can occur in planning (how you phrase your questions), testing (how you interact with a subject), and analysis (how you interpret the data).</p>
-    </section>
-    <section>
-                <h3>You are less biased when you work together</h3>
-                <p>Capra found that '[a]dding a second evaluator results in a 30-43% increase in problem detection'.</p>
-                <p><span class='slide-only fragment'>Your assignments are not group work, but your results will be better if you trade responsibilities.</span></p>
-    </section>
-    <section>
-                <h3>You are less biased when you stick to the script</h3>
-                <p>A key reason we write our test plan is for transparency. We need to make our work reviewable so that our unconscious biases can be recognized. The more we can script, the better.</p>
-                <p>Steve Krug is one of the big names in usability, and he has given us a wonderful sample script to work from. Let`s take a look at it: <a href='https://www.sensible.com/downloads/test-script.pdf' target='_blank'>https://www.sensible.com/downloads/test-script.pdf</a>.</p>
-    </section>
-    <section>
-                <h3>Auditing accessibility</h3>
-                <p>The W3 provide us with a wonderful list of different accessibility auditing tools, in a wide variety of languages: <a href='https://www.w3.org/WAI/ER/tools/?q=command-line-tool' target='_blank'>https://www.w3.org/WAI/ER/tools/?q=command-line-tool</a>.</p>
-                <p>The most commonly used one is the <a href='http://wave.webaim.org/extension/' target='_blank'>WAVE Browser extension</a></p>
-                <p>Chrome also has an accessibility audit built in. Go to the devtools > audits > Perform an audit and deselect everything except 'Accessibility'.</p>
-                <p>Using either of these tools, run an audit and raise your hand when you find something you don't understand.</p>
-    </section>
+    <h2>Here's what we're going to talk about today:</h2>
+    <ol>
+        <li class="fragment"><a href="#theBrief">What is <strong>The Brief</strong></a></li>
+        <li class="fragment"><a href="#testPlan">What goes into a test plan</a></li>
+        <li class="fragment"><a href="#keyboardControl">How to control the browser with your keyboard</a></li>
+        <li class="fragment"><a href="#whosTheBoss">Who's the Boss</a></li>
+        <li class="fragment"><a href="#testScript">Test script</a></li>
+        <li class="fragment"><a href="#componentOfTheWeek">Component of the Week: Links</a></li>
+    </ol>
+</section>
+<section id="lastWeek" class="slide-only">
+    <h3>Last Week</h3>
+    <ol>
+        <li class="fragment">Accessibility is a good idea, and also it&#39;s the law.</li>
+        <li class="fragment">Usability is not the same as a bunch of other stuff</li>
+        <li class="fragment">&#39;Heuristic evaluation&#39; is just a fancy way of saying &#39;checklist of good ideas&#39;</li>
+        <li class="fragment">Personas and Scenarios are tools for usability design and evaluation</li>
+        <li class="fragment">Two kinds of data: quantitative and qualitative</li>
+    </ol>
+</section>
+<section class="slide-only">
+    <h3>What did you think of the reading?</h3>
+</section>
+<section id="theBrief">
+    <h2>The Brief</h2>
+    <p>This week you are being assigned <strong>The Brief</strong>, a.k.a a test plan.</p>
+    <img src="/images/tremors.jpg" alt="Screenshot from the excellent Kevin Bacon movie 'Tremors', wherein Fred Ward is assuring us that there is a plan.">
+    <p>This is your 2nd major assignment, due June 10th (2 weeks from now).</p>
+    <p>Your final assignment will be to do usability testing and report your findings. This assignment is your plan for that testing.</p>
+    <p>Today we'll learn what goes in that plan, and why.</p>
+    <h3>The thing you're testing</h3>
+    <p>The <em>thing</em> you are testing is up to you.</p> 
+    <div class="callout"><strong>However</strong> I strongly recommend you test something <em>you are building/have built</em>, as you will gain insights into your own assumptions about the user.</div>
+    <h3>What <em>about</em> the thing is being tested? What are you not testing?</h3>
+    <p>The <em>scope</em> of what you are testing is going to be partly pre-defined, and partially negotiable.</p>
+    <ul>
+        <li>You must test 5 people; either 5 classmates or 5 people outside the class, <strong>not a mix of the two</strong>.</li>
+        <li>If testing your classmates, they must use a screenreader.</li>
+        <li>If testing people outside the class, they must only use a keyboard (no mouse).</li>
+        <li>As part of feedback on your brief, I will discuss with you whether your scope is too large (you're testing too many things).</li>
+    </ul>
+</section>
+<section id="testPlan">
+    <h2>What goes into a test plan?</h2>
+    <p>The goal of a test plan is to <strong>convince people it's a good plan</strong>.</p>
+    <p><img src="/images/ghostbusters.jpg" alt="The scene from Ghostbusters where Bill Murray is excited about the plan."></p>
+    <p>In the workplace, a test plan is what you submit to get approval for the plan and/or buy-in from your team. You can always make adjustments to go above and beyond!</p>
+    <p><strong>Everything that you write in your test plan needs to have a 'why' explained.</strong></p>
+    <p class="callout">If you want to see a test plan with <em>all</em> the bells and whistles, a comprehensive template is available at <a href='https://www.usability.gov/how-to-and-tools/resources/templates/usability-test-plan-template.html' target='_blank'>Usability.gov</a></p>
+</section>
+<section>
+    <h2>Here are the things you need in your test plan.</h2>
+    <h3>The Basics</h3>
+    <ol>
+        <li class="fragment"><strong><a href="#objective">Objective/Scope/Questions</a></strong>: what are you going to accomplish? What are you NOT going to accomplish? What are you trying to find out in order to accomplish your objective?</li>
+        <li class="fragment"><strong><a href="#participants">Participants</a></strong>: who is going to take the test (and why have you selected them)?</li>
+        <li class="fragment"><strong><a href="#methods">Methods</a></strong>: how are you going to generate data to answer your questions?</li>
+        <li class="fragment"><strong><a href="#metrics">Metrics</a></strong>: how are you going to measure your data?</li>
+    </ol>
+</section>
+<section>
+    <h3>A step beyond the basics</h3>
+    <ol>
+        <li class="fragment"><strong>Executive summary</strong>: the whole plan, summarized in a couple paragraphs.</li>
+        <li class="fragment"><strong>Schedule and location</strong></li>
+        <li class="fragment"><strong>Equipment</strong></li>
+        <li class="fragment"><strong>Scenarios</strong></li>
+    </ol>
+</section>
+<section class="slide-only">
+    <h3>Let's break some of these down</h3>
+</section>
+<section id="objective">
+    <h3>Objective/Scope</h3>
+    <p>You're probably not going to do a full, comprehensive usability test on a large website. You can test a set of features, or you can test for a set of issues. Define what these are and why you're investigating them.</p>
+</section>
+<section>
+    <h3>Questions</h3>
+    <p>Can users find <em>X</em>? Does <em>A</em> work better than <em>B</em>? Do users learn the interface in under <em>Y</em> amount of time?</p>
+    <p>You need to explain what questions you're trying to answer, and <strong>why they matter</strong>.</p>
+    <p>A common analytics metric is the amount of time a user spends on a page. Why does this matter? <strong>It depends on the objectives of the site.</strong> Google wants users to spend a minimal amount of time on Google - it means the user has probably quickly found what they were looking for. The New York Times, on the other hand, wants users to spend a lot of time on their site, reading their content.</p>
+    <p>When you define your questions, you must also explain why they are relevant to the product owner's interests.</p>
+</section>
+<section id="participants">
+    <h3>Participants: Some magic numbers</h3>
+    <p>What are the demographics of people you're testing? How many people are you testing?</p>
+    <p>Jakob Nielsen reports the ROI thresholds in different usability testing methods:</p>
+    <table>
+        <tr>
+            <td>Quantitative</td>
+            <td>>20</td>
+        </tr>
+        <tr>
+            <td>Card sorting</td>
+            <td>>15</td>
+        </tr>
+        <tr>
+            <td>Eyetracking</td>
+            <td>39</td>
+        </tr>
+        <tr>
+            <td>Heuristics</td>
+            <td>4 experts</td>
+        </tr>
+        <tr>
+            <td><strong>Qualitative</strong></td>
+            <td><strong>5</strong></td>
+        </tr>
+    </table>
+    <p>Again, remember the <strong>purpose of the test plan</strong> - to make the argument that <em>your</em> tests will yield results that matter. So why are you testing the people you're testing?</p>
+</section>
+<section id="methods">
+    <h3>Methods</h3>
+    <p>Define your procedure, testing type, tools, and tasks.</p>
+    <p>Make sure to include browser, screen-recording software, hardware and operating system details! These matter when trying to get good data.</p>
+    <p>Testing types and tools include:</p>
+    <ul>
+        <li>heuristics (don't forget to say which heuristics - as we learned, there are many different heuristic checklists),</li>
+        <li>eyetracking (not recommended - I haven't found a webcam-based eyetracking solution that wasn't super janky, and, as we'll see shortly, you need <strong>a lot</strong> of users for your data to hold up),</li>
+        <li>discovery (finding problems by observing users pursue loosely defined goals),</li>
+        <li>benchmark (testing out how well solutions perform),</li>
+        <li>moderated/unmoderated (are you talking the user through the test? or just leaving them alone and recording?)</li>
+        <li>remote/on-site</li>
+        <li><a href="https://fivesecondtest.com/" target="_blank">5-second<span class="show-for-sr"> Opens in a new window</span></a></li>
+        <li><a href="https://usabilityhub.com/guides/first-click-testing" target="_blank">First-click testing<span class="show-for-sr"> Opens in a new window</span></a></li>
+        <li>etc., etc., etc.</li>
+    </ul>
+    <div class="callout">There are <em>so many</em> different kinds of tests out there. Don't start planning with the test. Start by deciding <strong>what question you want answered</strong>, and then figure out how to answer it.</div>
+</section>
+<section id="metrics">
+    <h3>Metrics</h3>
+    <p>What is the data you'll be collecting? How should it be measured? How can you be sure it fully answers your questions?</p>
+    <p>This is probably the <strong>most important part of your plan</strong>.</p>
+</section>
+<section>
+    <h3>Metrics - examples</h3>
+    <p>
+        <ul>
+            <li><strong>Successful Task Completion</strong></li>
+            <li><strong>Critical Errors</strong></li>
+            <li><strong>Non-Critical Errors</strong></li>
+            <li><strong>Error-Free Rate</strong> Error-free rate is the percentage of test participants who complete the task without any errors (critical or non-critical errors).</li>
+            <li><strong>Time On Task</strong></li>
+            <li><strong>Subjective Measures</strong> These evaluations are self-reported participant ratings for satisfaction, ease of use, ease of finding information, etc where participants rate the measure on a 5 to 7-point <a href='https://en.wikipedia.org/wiki/Likert_scale' target='_blank'>Likert scale</a>. A good, focussed example of this is the <a href="https://www.usabilitest.com/system-usability-scale" target="_blank">system usability scale<span class="show-for-sr"> Opens in a new window</span></a></li>
+            <li><strong>Likes, Dislikes and Recommendations</strong> Participants provide what they liked most about the site, what they liked least about the site, and recommendations for improving the site.</li>
+        </ul>
+    </p>
+</section>
+<section>
+    <h3>Sections you may want to include:</h3>
+    <ol>
+        <li class="fragment"><strong>Executive summary</strong>: the whole plan, summarized in a couple paragraphs. This should be the last thing you write. If you can provide an effective, accurate summary, you've probably done a good job overall.</li>
+        <li class="fragment"><strong>Schedule and location</strong>: Since you'll likely be doing this testing remotely, this probably isn't super important to have documented, <em>but</em> you'll need to figure this out at some point anyway.</li>
+        <li class="fragment"><strong>Equipment</strong>: If you're using anything more elaborate than the items listed in the 'methods' section, you'll likely want to make note of it.</li>
+        <li class="fragment"><strong>Scenarios</strong>: I only listed this as 'may want to include' (rather than 'must-have', because not all testing types require scenarios. That being said <strong>I'm pretty darn sure you'll all want to write out your scenarios.</strong><p>As I'm sure you'll remember from last week, scenarios are the tasks & goals that your users will try to complete.</p></li>
+    </ol>
+</section>
+<section>
+    <h3>Examples of test plans</h3>
+    <ul>
+        <li class="fragment"><a href="http://danielleklein.ca/wp-content/uploads/2016/08/Usability-test-plan-CSI.pdf" target="_blank">Centre for Social Innovation website<span class="show-for-sr"> Opens in a new window</span></a></li>
+        <li class="fragment"><a href="https://gonzalesnick.com/wp-content/uploads/2019/08/lmb_usability_test_plan.pdf" target="_blank">Mobile app test plan<span class="show-for-sr"> Opens in a new window</span></a></li>
+        <li class="fragment"><a href="http://booksite.mkp.com/barnum/testingessentials/pdfs/BWB_test_plan.pdf" target="_blank">Better World Books website<span class="show-for-sr"> Opens in a new window</span></a></li>
+        <li class="fragment">Bonus: <a href="https://medium.com/@userfocus/the-1-page-usability-test-plan-dbc8c3d7fb54" target="_blank">Cheat Sheet<span class="show-for-sr"> Opens in a new window</span></a></li>
+    </ul>
+</section>
+<hr>
+<section id="keyboardControl">
+    <h2>Learning to use the keyboard</h2>
+    <table class="text-center"><thead><tr>
+            <th>Command</th>
+            <th>Mac Shortcut</th>
+            <th>Windows Shortcut</th>
+        </tr></thead>
+        <tbody><tr>
+            <td>Scroll up/down</td>
+            <td colspan="2"><code>⇧ / ⇩</code></td>
+        </tr>
+        <tr>
+            <td>Previous page</td>
+            <td><code>Cmd+⇦</code></td>
+            <td><code>Alt+⇦</code></td>
+        </tr>
+        <tr>
+            <td>Next page</td>
+            <td><code>Cmd+⇨</code></td>
+            <td><code>Alt+⇨</code></td>
+        </tr>
+        <tr>
+            <td>Change focus to next focussable element</td>
+            <td colspan="2"><code>Tab</code></td>
+        </tr>
+        <tr>
+            <td>Change focus to previous focussable element</td>
+            <td colspan="2"><code>Shift + Tab</code></td>
+        </tr>
+        <tr>
+            <td>Click on focussed element (i.e. link, submit)</td>
+            <td><code>Return</code></td>
+            <td><code>Enter</code></td>
+        </tr>
+        <tr>
+            <td>Change the value of a form element (i.e. dropdown)</td>
+            <td colspan="2"><code>⇧ / ⇩</code></td>
+        </tr>
+</tbody>
+</table>
+</section>
+<section>
+    <h3>An activity</h3>
+    <ol>
+        <li>Go to <a href="https://toronto.ca" target="_blank">toronto.ca<span class="show-for-sr"> Opens in a new window</span></a></li>
+        <li>Get to the section with the breadcrumbs "City of Toronto / Business & Economy/ Industry Sector Support / Film / Plan Your Shoot / Letters of Notification"</li>
+        <li>Find the phone number for the Toronto Film, Television & Digital Media Office.</li>
+    </ol>
+ </section>
+ <section><p class="callout">If you like using the browser with the keyboard, you may enjoy what is probably <a href="https://github.com/philc/vimium" target="_blank">my favourite browser extension<span class="show-for-sr"> Opens in a new window</span></a>.</p></section>
+ <hr>
+<section id="whosTheBoss">
+    <h2>Who's the boss?</h2>
+    <img src="/images/whos-the-boss.jpg" alt="Who's the Boss? Angela. The answer is Angela." style="width:100%;">
+    <hr>
+    <p>When creating a test plan, we must ask the right questions. The right questions can tell us how to improve things. In order to ask the right questions, you must first know <strong>who are you trying to improve things for.</strong></p>
+    <img src="/images/modal.png" alt="A terrible pop-up">
+    <p>In the above image, someone has asked the question <em>"How do we increase our newsletter subscriptions?"</em></p>
+    <p>And the answer is <em>"A pop-up will increase our newsletter subscriptions by 5%".</em></p>
+    <p>No one asked the question <em>"Will 95% of our users hate their experience?"</em></p>
+    <p>Just to take this one step further, I want to talk about something called 'dark patterns'.</p>
+</section>
+<section>
+    <h3>Dark Patterns</h3>
+    <p>Dark patterns are design patterns that are meant to manipulate the user.</p>
+    <p>Dark patterns are not bad design - they are good design for bad reasons.</p>
+</section>
+<section>
+    <table cellspacing="0" style="font-size:1.25rem">
+        <tbody>
+            <tr>
+                <td>Psychological Insight</td>
+                <td>Applied Honestly (benefits users)</td>
+                <td>Applied Deceptively (benefits business)</td>
+            </tr>
+            <tr>
+                <td>“We don’t read pages. We scan them” —Steve Krug</td>
+                <td><strong>Aid rapid comprehension:</strong> ensure key content is shown in headings, subheadings (etc), using a strong visual hierarchy.</td>
+                <td><strong>Hide key information:</strong>
+                    Bury facts within paragraphs of text, so some users will proceed without fully understanding the transaction.</td>
+            </tr>
+            <tr>
+                <td>“People tend to stick to the defaults” —Jakob Nielsen</td>
+                <td><strong>Prevent mistakes:</strong>
+                    Default to the option that’s safest for the user. In important contexts, don’t use defaults and require the user to make an explicit choice.</td>
+                <td><strong>Benefit from mistakes:</strong>
+                    Ensure default options benefit the business, even if this means some users convert without meaning to.</td>
+            </tr>
+            <tr>
+                <td>“People will do things that they see other people are doing” —Robert Cialdini</td>
+                <td><strong>Show unedited feedback:</strong>
+                    Allow real customers to share their experiences, so they can make accurate pre-purchase evaluations.</td>
+                <td><strong>Bury negative feedback:</strong>
+                    Hand-pick positive feedback and display it prominently. Bury negative feedback so it is hard to find.</td>
+            </tr>
+        </tbody>
+    </table>
+    <blockquote><cite><a href="https://alistapart.com/article/dark-patterns-deception-vs.-honesty-in-ui-design" target="_blank">A List Apart: Honesty in UI Design<span class="show-for-sr"> Opens in a new window</span></a></cite></blockquote>
+    <p>Dark patterns test <em>really</em> well.</p>
+    <p>Dark patterns could be in legacy code, they could be given to you to develop, or they could even come from you.</p>
+    <p>This type of design happens because decisions are being made based on metrics, not a focus on the end user. Whether the company is malicious, or just lazy, doesn't really matter to the end user. But if you see this type of design happening regularly at your work, it might be time to look for a new job.</p>
+</section>
+<section>
+    <p>You need to write your usability plan so that you <strong>justify all your choices to the product owner</strong>.</p>
+    <p>On rare occasions, the product owner will have interests that won't be apparent to the user (for example, <em>Do customers notice if we move to cheaper hosting?</em>). If your product owner has interests that conflict with the user, you should run the other way.</p>
+</section>
+<section><h2>Helping one another</h2></section>
+<section>
+    <h3>You are biased (don&#39;t worry, everybody is)</h3>
+    <p>This is an individual assignment. You will write your test plan alone. You will present your test results alone.</p>
+    <p>I want you to consider <em>performing</em> the tests with a helper.</p>
+    <p>You are not aware of everyone, and worse yet, you are not aware of yourself. You are not objective. That's ok.</p>
+    <p>In “<a href='https://vtechworks.lib.vt.edu/handle/10919/26477' target='_blank'>Usability Problem Description and the Evaluator Effect in Usability Testing</a>” a study by Miranda G. Capra at Virginia Tech, she found that 44 usability practitioners’ evaluations reported problems that overlapped by only 22 percent.</p>
+    <p>Confirmation bias is likely going to be your biggest issue to watch out for, in yourself and other members of your team. It can occur in planning (how you phrase your questions), testing (how you interact with a subject), and analysis (how you interpret the data).</p>
+</section>
+<section>
+    <h3>You are less biased when you work together</h3>
+    <p>Capra found that '[a]dding a second evaluator results in a 30-43% increase in problem detection'.</p>
+    <p><span class='slide-only fragment'>Your assignments are not group work, but your results will be better if you trade responsibilities.</span></p>
+</section>
+<section>
+    <h3>You are less biased when you stick to the script</h3>
+    <p>A key reason we write our test plan is for transparency. We need to make our work reviewable so that our unconscious biases can be recognized. The more we can script, the better.</p>
+    <p>Steve Krug is one of the big names in usability, and he has given us a wonderful sample script to work from. Let`s take a look <a href='/supplemental/test-script.html' target='_blank'>Steve Krug's sample script<span class="show-for-sr"> Opens in a new window</span></a>.</p>
+</section>
+<section>
+    <h2>An activity</h2>
+    <p>Get together in pairs, and read the script to one another.</p>
+    <p>Answer the following questions:</p>
+    <ul>
+        <li>How will this script need to be adapted for remote testing?</li>
+        <li>What is the purpose of questions like "what’s the split between email and browsing [in your weekly internet usage]"?</li>
+        <li>Why do we need to assure the user "we’re testing the <em>site</em>, not you"?</li>
+        <li>What type of data is being collected here? Quantitative? Qualitative?</li>
+        <li>Find four examples of the types of data that could be collected in this user test.</li>
+        <li>What would you change in this script? Why?</li>
+    </ul>
+</section>
+ <section id="componentOfTheWeek">
+     <h2>Component of the Week: Links</h2>
+     <p>Ah, the hyperlink: the core concept of the <a href="https://en.wikipedia.org/wiki/Hypertext">World Wide Web</a>.</p>
+     <pre><code class="language-html">&lt;a href="the internet">You're welcome.&lt;/a></code></pre>
+     <p>Simple and straightforward, but so ubiquitous and flexible as to invite abuse, and therefore, inaccessibility.</p>
+     <p>As I'm sure you've heard, one of the cornerstones of accessibility is <strong>semantic markup</strong>. In other words, <em>use elements for their intended use</em>. We'll better understand the purpose of an anchor tag shortly.</p>
+     <p>There are only a couple of accessibility mistakes you can make with an anchor tag, while still using it semantically.</p>
+     <p>One mistake I made for years: <strong>the text of a link should not be a URL</strong>. Many popular screenreaders <em>will not allow the user to skip while it reads the text of a link</em>.</p>
+     <pre><code class="language-html">&lt;a href="guesswhat.co.uk">
+https://www.guesswhat.co.uk/I/sound/super/
+annoying.php?so=don-t&do=this&to=your&user=ok&lt;/a></code></pre>
+<pre><code class="language-html">&lt;a href="guesswhat.co.uk">
+You know what? Large volumes of text inside 
+links are also not a great idea. We can't put long, 
+rambling text in our links like we used to, 
+but we have our ways. One trick is to tell 'em stories 
+that don't go anywhere - like the time I caught the 
+ferry over to Shelbyville. I needed a new heel for my 
+shoe, so, I decided to go to Morganville, which is 
+what they called Shelbyville in those days. So I tied 
+an onion to my belt, which was the style at the time. 
+Now, to take the ferry cost a nickel, and in those 
+days, nickels had pictures of bumblebees on 'em. Give 
+me five bees for a quarter, you'd say. Now where were 
+we? Oh yeah: the important thing was I had an onion on 
+my belt, which was the style at the time. They didn't 
+have white onions because of the war. The only thing 
+you could get was those big yellow ones...&lt;/a></code></pre>
+      <p>Another thing to keep in mind is that links are an in-page navigational tool. When using the keyboard to navigate a page, the user can hit the tab button to go to each interactive element in sequence. This means that if the context for a link comes before that link, people using screenreaders will have not context for that link. Stuff like this is really unhelpful:</p>
+      <pre><code class="language-html">&lt;a href="/somewhere-else">Read more&lt;/a></code></pre>
+      <p>That being said, just like with images, screenreaders will inform the user that what they're focussed on is a link, so it's redundant to tell them:</p>
+      <pre><code class="language-html">&lt;a href="https://en.wikipedia.org/wiki/Redundancy">
+Link to Read More about Redundancy&lt;/a></code></pre>
+      <p>And finally, shifting a user into a new window or tab can be disorienting if you don't give them a heads-up.</p>
+      <pre><code class="language-html">&lt;a 
+    href="https://en.wikipedia.org/wiki/Tab_(interface)" 
+    target="_blank">Read about Tabs on Wikipedia
+    &lt;span style="font-size: 0"> Opens in a new tab&lt;/span>
+&lt;/a></code></pre>
+    <p>Let's see what happens when we start to get "creative" with links:</p>
+    <pre><code class="language-html">// Links must be recognizable
+&lt;a style="text-decoration:none;">
+I need a non-colour visual indicator&lt;/a></code></pre>
+<pre><code class="language-html">// There is a temptation to use links as buttons.
+// That's bad, because the user is told it's a link.
+&lt;a onclick="tooLazyToStyleAButton()">
+Why can't buttons be buttons?&lt;/a></code></pre>
+<pre><code class="language-html">// But I want my image to be linked!
+&lt;a href="/image-destination">
+    &lt;img src="this-totally-works.jpg"
+        alt="The user will be read the alt text 
+        as the link text!" />
+&lt;/a></code></pre>
+<pre><code class="language-html">// 
+// If you have something that behaves like a link
+// but for some very good, very important reason cannot 
+// be an anchor, you can use the 'role' attribute
+// 
+// 'role' is an ARIA attribute, which we'll dive
+// much deeper into in the second half of the term
+// but notice what it does here - 
+// when HTML isn't semantic, it provides the 
+// information that WOULD have come from the 
+// semantic element.
+// 
+&lt;style>
+[role="link"] {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+[role="link"]:focus {
+  outline: 1px dotted black;
+}
+&lt;/style>
+&lt;div 
+     role="link"       
+     onclick="window.open('https://google.com')">Link
+&lt;/div></code></pre>
+ </section>
+
   </div>
 </div>
 

@@ -30,13 +30,12 @@ summary: "This week we'll cover coding INNER JOINs to retrieve rows from multipl
         </li>
     </ol>
 </section>
-<section class="slide-only">
-    <h3>Midterm Assignment</h3>
-    <p>See: <a href='/a11y/assignments/midterm.html' target='_blank'>your midterm</a>.</p>
-</section>
-<section class="slide-only">
-    <h3>OCAS is go</h3>
-    <p>We will be testing the application process at <a href='https://www.ontariocolleges.ca/en' target='_blank'>https://www.ontariocolleges.ca/en</a>. We will be doing this as part of our lab time. You can make it the subject of your midterm/final assignment <em>if you want</em>.</p>
+<section>
+    <h3>Auditing accessibility</h3>
+    <p>The W3 provide us with a wonderful list of different accessibility auditing tools, in a wide variety of languages: <a href='https://www.w3.org/WAI/ER/tools/?q=command-line-tool' target='_blank'>https://www.w3.org/WAI/ER/tools/?q=command-line-tool</a>.</p>
+    <p>The most commonly used one is the <a href='http://wave.webaim.org/extension/' target='_blank'>WAVE Browser extension</a></p>
+    <p>Chrome also has an accessibility audit built in. Go to the devtools > audits > Perform an audit and deselect everything except 'Accessibility'.</p>
+    <p>Using either of these tools, run an audit and raise your hand when you find something you don't understand.</p>
 </section>
 <section class="slide-only">
     <h3>Things that have come up</h3>
