@@ -248,41 +248,7 @@ summary: "This week I've combined last year's week seven and eight"
     <p>All three frameworks aggressively re-render the DOM - that's kind of the point.</p>
     <p>Be aware that changes to the URL, and rendering of the virtual DOM can wreak havoc on focus. Each framework has methods for mitigating this with programmatic focus control: <a href='https://simplyaccessible.com/article/react-a11y/' target='_blank'>refs in React</a>; <a href='https://www.npmjs.com/package/vue-focus' target='_blank'>vue-focus in Vue</a>; <a href='https://docs.angularjs.org/api/ng/directive/ngFocus' target='_blank'>ngFocus in Angular</a>. Make sure you're familiar with the appropriate technique.</p>
 </section>
-<section>
-    <h3>Presentations - turning data into stories</h3>
-    <p>Right now you're generating data. Your work for your final assignment is <ol>
-            <li>understand the data</li>
-            <li>generate and compare solutions</li>
-            <li>tell a story</li>
-        </ol>
-    </p>
-</section>
-<section>
-    <h3>Presentations - understanding the data</h3>
-    <p>First, think about what kind of data you're looking at. Is it quantitative? If so, compare it to a) industry standard benchmarks, and b) the needs of the client. Is the pageload time >2 seconds? Does your gazeplot completely miss the big sales banner?</p>
-    <p>If it's qualitative, really listen to what people have told you (verbally or otherwise), and be careful not to project your own assumptions. Think about it individually and collectively - was something annoying, but only to one person? Was some UI element a little bit frustrating for every single user?</p>
-    <p>Don't forget, 'what worked' can be as important as 'what didn't'.</p>
-</section>
-<section>
-    <h3>Presentations - solutions</h3>
-    <p>Now that you've understood your data, it's time to generate some solutions.</p>
-    <p>Keep solutions specific and positive - 'don't use hamburger menus' isn't an action, it's a non-action.</p>
-    <p>The gold standard is 'elegance', which is just a fancy way of saying 'cheap, fast, easy and effective'.</p>
-    <p>Most solutions won't be elegant though. It's up to you to be mindful of how resource-heavy your solutions are - and how certain you are of their efficacy.</p>
-</section>
-<section>
-    <p>The more uncertain you are of a solution, the more you'll need to be prepared to present multiple options, and to speak to the pros and cons of each one.</p>
-    <p>Consider laying out your solutions in a chart graded for issue severity and actionability.</p>
-</section>
-<section>
-    <h3>Presentations - telling a story</h3>
-    <p>The point of all this is to give people something they can use. Data is boring. If your report puts them to sleep, they won't use it. Anecdotes are fun, but lack credibility. People won't use your report if they don't feel they can trust it.</p>
-    <p>Use enough data to build a credible story, but focus on appealing to the things that people really pay attention to.</p>
-</section>
-<section>
-    <p>Be funny. Be informal. Think of your report as having <a href='http://channel101.wikia.com/wiki/Story_Structure_101:_Super_Basic_Shit' target='_blank'>a beginning, middle, and end</a>. Tell the story of the website, the testing, the results, and the solutions. And yes, even the data.</p>
-    <p>The best way to do this is to focus on people. Talk about yourself, the participants, the website's audience, the client. That's the only real way to help us all figure out why the data matters.</p>
-</section>
+
 <section class="slide-only">
         <h2>Here's what we're going today</h2>
         <ol>

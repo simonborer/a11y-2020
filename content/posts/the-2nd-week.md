@@ -4,10 +4,6 @@ date: 2020-05-23T08:47:11+01:00
 publishdate: 2020-05-23T08:47:11+01:00
 summary: "In which we learn what goes into a test plan, how to control the browser with your keyboard, what dark patterns are, and how to use a test script."
 featured_image: hold-me-closer.jpg
-todo:
-    - slides
-    - screenreader stuff for lab
-    - assignment/notes on bb
 ---
 <section>
     <h2>Here's what we're going to talk about today:</h2>

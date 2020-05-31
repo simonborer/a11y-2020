@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="visible" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>This page is inaccessible</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html {
+        height: 100%;
+    }
+    body {
+        margin: auto;
+        max-width: 36rem;
+        min-height: 100%;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        background:#181010;
+        font-size: 0;
+    }
+
+    [aria-hidden="true"] {
+        font-weight: 100;
+        font-size: 100px;
+        margin: auto;
+        font-family: sans-serif;
+        text-align: center;
+        color:#baa69e;
+    }
+    *:not(.visible) {
+        position: absolute!important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        border: 0;
+    }
+    </style>
+</head>
+
+<body class="visible">
+    <header class="visible">
+        <div aria-hidden="true" class="visible">Please enable your screenreader.</div>
+        <nav>
+            <ul>
+                <li><a href="#theSilverJews">The Silver Jews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>These are a few of my favourite things.</h1>
+        <h2 id="theSilverJews">The Silver Jews</h2>
+        <p>A beautiful mess of indie rock, country-rock and lo-fi with lyrics both witty and profound, the Silver Jews were formed in 1989 by writer/musician David Berman with his friends, guitarist/singer Stephen Malkmus and drummer Bob Nastanovich. The trio performed together as Ectoslavia when they studied at the University of Virginia; after graduation, they moved to New York and shared an apartment. Dubbing themselves the Silver Jews -- after the Silver Apples, the Silver Beatles, and slang for blonde-haired Jewish people -- they played noisy, often improvised songs, mostly for the sheer enjoyment they got out of playing together after a hard day's work. At the time, Berman and Malkmus were guards at an art museum and Nastanovich was a bus driver. After work, they would record songs into people's answering machines, but even after the band's sonics improved, the basic idea of friends playing together in a spontaneous way became the Silver Jews' trademark style.</p>
+    </main>
+    <footer>
+        <form action="mailto:simon.borer@gmail.com">
+            <label for="emailId">Tell me your email</label>
+            <input id="emailId" type="email" required />
+            <button type="submit">Send email</button>
+        </form>
+    </footer>
+</body>
+
+</html>

@@ -11,16 +11,20 @@ blockquote {
     color: #575757;
     padding-bottom: .5rem;
     padding-top: 1rem;
+
     & footer {
         padding: 1rem;
     }
+
     & p {
         color: #575757;
-        & + footer {
+
+        &+footer {
             padding-top: 0;
         }
     }
 }
+
 h1,
 h2 {
     font-weight: 700;
@@ -41,7 +45,8 @@ h2 {
 
 h3 {
     margin-top: 2rem;
-    hr + & {
+
+    hr+& {
         margin-top: 1rem;
     }
 }
@@ -53,6 +58,7 @@ td {
 a {
     color: #005186;
 }
+
 .code-examples {
     margin-top: 3rem;
 }
@@ -160,7 +166,8 @@ figcaption {
 
 .page-list {
     margin: 2rem 0 4rem;
-    box-shadow: 0 0 6px rgba(35,43,43,.5);
+    box-shadow: 0 0 6px rgba(35, 43, 43, .5);
+
     &__link {
         margin-top: 1rem;
         margin-right: .5rem;
@@ -181,9 +188,11 @@ figcaption {
             text-decoration: underline;
         }
     }
+
     &__links {
         padding: 0 1.5rem;
     }
+
     &__heading {
         margin: 0;
         padding: 1rem;
@@ -326,4 +335,13 @@ ol ol li {
 
 .list-2-col {
     columns: 2;
+}
+
+.nested-list {
+    & ul {
+        list-style-type: circle;
+        & ul {
+            list-style-type: square;
+        }
+    }
 }
