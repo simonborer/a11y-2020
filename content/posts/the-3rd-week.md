@@ -13,7 +13,7 @@ summary: "What to do with your data: collecting, compiling, analyzing, reporting
         <li class="fragment"><a href="#analysis">Data analysis</a></li>
         <li class="fragment"><a href="#reporting">Data reporting</a></li>
         <li class="fragment"><a href="#presenting">Data presenting</a></li>
-        <li class="fragment"><a href="componentOfTheWeek">Component of the Week</a></li>
+        <li class="fragment"><a href="#componentOfTheWeek">Component of the Week</a></li>
     </ol>
 </section>
 <section>
