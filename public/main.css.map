@@ -1,12 +1,12 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Volumes/sg/projects/a11y-2020",
+	"sourceRoot": "/Volumes/sg/Projects/a11y-2020",
 	"sources": [
 		"themes/blnk/assets/sass/main.scss",
-		"../../projects/a11y-2020/themes/blnk/assets/sass/_foundation.min.css",
-		"../../projects/a11y-2020/themes/blnk/assets/sass/_prism.css",
-		"../../projects/a11y-2020/themes/blnk/assets/sass/_style.scss"
+		"themes/blnk/assets/sass/_foundation.min.css",
+		"themes/blnk/assets/sass/_prism.css",
+		"themes/blnk/assets/sass/_style.scss"
 	],
 	"sourcesContent": [
 		"// Foundation\n@import 'foundation.min';\n\n@import 'prism';\n\n// Site specific styles\n@import 'style';",
