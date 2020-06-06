@@ -86,62 +86,7 @@
     <p>A surprising number of examples of the <code>label</code> element use the same <code>id</code> and <code>name</code> attributes, which is confusing.</p>
     <p>The <code>for</code> attribute of your <code>label</code> element refers to the <code>id</code> of the labelled element.</p>
 </section>
-<section>
-    <h3>The DOM API</h3>
-    <p>Both 'DOM' and 'API' are acronyms that get thrown around a lot. Let's quickly make sure we all know what they mean.</p>
-    <p>An <strong>Application Programming Interface</strong> is a user interface, where the user is a person writing a computer script. It provides you information and functionality from the document or application that you're interacting with.</p>
-    <p>The <strong>Document Object Model</strong> is an API that represents an HTML (or XML) document as a traversable tree structure. The elements (and attributes, including text content) within that structure are referred to as 'nodes'.</p>
-</section>
-<section>
-    <p>There are different kinds of attributes we can assign to DOM nodes. There are native attributes, which are provided by the HTML spec, e.g. <code>class</code>, <code>alt</code>, <code>target</code>. There are data attributes (added in HTML5), which are user-customizable. And there are ARIA attributes.</p>
-    <p>ARIA (Accessible Rich Internet Applications) provides contextual information about if and how DOM nodes can update, and what happens when they do.</p>
-</section>
-<section>
-    <h3>When to use ARIA</h3>
-    <ol>
-        <li class="fragment">There is a DOM node (including text) that can or does update without a page refresh being triggered, and</li>
-        <li class="fragment">There is no native semantics or attribute available.</li>
-    </ol>
-</section>
-<section>
-    <h3>Don&#39;t be redundant</h3>
-    <p><code>div[role='button']</code> is not redundant, but <code>button[role='button']</code> <em>is</em> redundant.</p>
-</section>
-<section>
-    <h3>Want to be safe?</h3>
-    <p>TEST</p>
-    <p>I can't emphasize enough how important it is to test. That's why there are QA departments. It is wonderful to follow best practices, but even when specification documentation is perfect (it's not), and even when you limit your scope to the latest versions of a few popular clients (don't), and even when your linters catch all the edge cases (they won't), you still makes mistakes.</p>
-</section>
-<section>
-    <h3>What ARIA attributes?</h3>
-    <p>You can find a pretty comprehensive list at <a href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques'>https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques</a></p>
-    <p>There are a lot, but you should know about the <code>role</code> attribute, which labels interactive elements, including tabs, search, form, and grid; and state attributes including <code>aria-live</code>, <code>aria-expanded</code>, and <code>aria-hidden</code> (which differs from the native <code>hidden</code> attribute).</p>
-</section>
-<section>
-    <h3>Showing &amp; hiding</h3>
-    <p>
-        <p data-height="463" data-theme-id="0" data-slug-hash="xjBoWv" data-default-tab="result" data-user="simonborer" data-embed-version="2" data-pen-title="Hiding Techniques" class="codepen">See the Pen <a href="https://codepen.io/simonborer/pen/xjBoWv/">Hiding Techniques</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-    </p>
-</section>
-<section>
-    <h3>Accessible tabs are &lt;em&gt;hard&lt;/em&gt;</h3>
-    <p>
-        <p data-height="265" data-theme-id="0" data-slug-hash="pVBoQx" data-default-tab="js,result" data-user="simonborer" data-embed-version="2" data-pen-title="pVBoQx" class="codepen">See the Pen <a href="https://codepen.io/simonborer/pen/pVBoQx/">pVBoQx</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-    </p>
-</section>
-<section>
-    <h3>Tabindex</h3>
-    <p><code>tabindex</code> is an attribute that specifies <em>focusability</em>. Focus is usually stepped through with the <code>tab</code> key, hence the name.</p>
-    <p><code>tabindex="-1"</code> is focusable, but not sequentially. As in, you can`t tab to it.</p>
-    <p><code>tabindex="0"</code> means that the element is focusable in the normal tab sequence.</p>
-    <p><code>tabindex="1"</code>, or any other positive value, means that this element takes precedence over any other element without a declared tabindex. If you are using this, that`s a bad sign.</p>
-</section>
-<section>
-    <p>Remember not to confuse the visual order with the DOM order :)</p>
-    <p>Declaring a tabindex value can affect scrolling behaviour on child elements. For examples, see <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">https://jsfiddle.net/jainakshay/0b2q4Lgv/</a></p>
-</section>
+
 <section>
     <h3>Persona creation process</h3>
     <ol>
@@ -188,7 +133,8 @@
 <section>
     <h3>Task analysis topics</h3>
     <p>With a partner, perform a task analysis of their journey to class today. Use your judgement in determining the level of detail that is appropriate to find efficiences in their journey. Was their journey optimal?</p>
-</section></div>
+</section>
+</div>
 									
 				</div>
 			</div>
