@@ -1,0 +1,3 @@
+[submodule "fix-my-a11y"]
+	path = content/supplemental/fix-my-a11y
+	url = https://github.com/simonborer/fix-my-a11y.git

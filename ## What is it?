@@ -39,3 +39,24 @@ Finally, on the 7th week you'll present your findings and recommendations to the
 4 Best practices: The DOM and assistive devices
 5 Best practices: Content & inputs
 6 Best practices: Navigation
+
+
+4 
+TOOLS: lighthouse & a11y
+TARGETS: Content & Navigation
+TOPICS: 
+- the dom and wai-aria
+- types of assistive devices (DOOM lol)
+
+5
+TOOLS: linting a11y
+TARGETS: Inputs
+TOPICS: 
+- a11y on mobile
+- evangelism
+
+6
+TOOLS: why you can't do automated testing for a11y
+TARGETS: State
+TOPICS: 
+- a11y in JS frameworks
