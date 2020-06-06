@@ -17,10 +17,7 @@
       <pubDate>Wed, 03 Jun 2020 08:47:11 +0100</pubDate>
       
       <guid>https://a11y2020.ca/posts/the-4th-week/</guid>
-      <description>Here&#39;s what we&#39;re going today  Praxis  Linting! An accessible accordion      Accessibility review Accessibility is both a philosophy and a legal requirement.
-Philosophy: removing barriers and creating equity.
-Law: The Access for Ontarians with Disabilities Act, in accordance with the Canadian Charter of Rights and Freedoms, mandates a level of WCAG compliance.
-  WCAG compliance mandates semantics, content, proper source order, text alternatives to visual information, accomodations for colour-blindness and low visual acuity, keyboard-only functionality, and the use of the WAI-ARIA specification.</description>
+      <description>Today we&amp;rsquo;ll dive into accessibility, looking at the DOM, assistive devices, accessible content, and automated auditing.</description>
     </item>
     
     <item>

@@ -5,6 +5,51 @@ publishdate: 2020-06-30T08:47:11+01:00
 featured_image: groundhog.jpg
 summary: "This week I've combined last year's week seven and eight"
 ---
+<section>
+    <h3>The internet is open</h3>
+    <p>We work on an open platform. The beautiful thing about the internet is that it is a (nearly) global public space built on open access (e.g. Net Neutrality), standards and specifications. This comes with the responsibility, though, that you create services that are meant to be consumed by clients that haven't even been invented yet.</p>
+    <p>You will work with (and by with, I mean for) people who do not understand the difference between accessing a pdf and opening a webpage.</p>
+    <p>Having an open spec markup language is the backbone of the information age.</p>
+</section>
+<section>
+    <h3>Firefox gets most of their money from...</h3>
+    <p class="fragment">Google</p>
+    <h3 class="fragment">Wait, why?</h3>
+    <p class="fragment">Google's business model depends on the open web. It has made a multi-billion dollar bet that the best place to be is not in a "walled garden", but as the concierge to the innovations afforded by a democratized space.</p>
+</section>
+<section>
+    <h3>You will need to advocate for answering hard questions</h3>
+    <p>For those people who do not understand HTML vs PDF, you will need to impress on them that the internet is a place with a multitude of users, and that's not changing anytime soon. You will need to advocate for creating a service rather than an interactive paper flyer.</p>
+    <p>This distinction is important because it acknowledges your many types of end user - from the dev/content/QA team, to Google's web crawler, to hackers, to archive.org, to Pocket and Instapaper, to screen readers, to everybody.</p>
+</section>
+<section>
+    <h3>Users at cross-purposes</h3>
+    <blockquote>I’m dyslexic, and one of the recommendations for reducing visual stress that I’ve found tremendously helpful is low contrast between text and background color. This, though, often means failing to meet accessibility requirements for people who are visually impaired... Consider:
+        <ul>
+            <li>Designing for one-handed mobile use raises problems because right-handedness is the default—but 10 percent of the population is left handed.</li>
+            <li>Giving users a magnified detailed view on hover can create a mobile hover trap that obscures other content.</li>
+            <li>Links must use something other than color to denote their “linkyness.” Underlines are used most often and are easily understood, but they can interfere with descenders and make it harder for people to recognize word shapes.</li>
+        </ul>
+        <br>
+        <cite>Eleanor Ratliff, <a href="http://alistapart.com/article/accessibility-whack-a-mole" target="_blank">http://alistapart.com/article/accessibility-whack-a-mole</a></cite>
+    </blockquote>
+</section>
+<section>
+    <h3>Your job is not to write code - it is to solve problems</h3>
+    <p>All the easy code has been written already. Don't worry, there are (for the time being), still plenty of jobs writing boring code. But that is less true than it was ten years ago, and will be less true in another ten. You need to think of yourself as someone who can solve the problem of 'How can we best make this work for everyone who needs it?'</p>
+    <p>Last week we contrasted accessibility with usability by saying that usability is accessibility for a set audience, but accessibility legislation still limits that audience by defining it. You should always be open to expanding your definition of the end user.</p>
+</section>
+<section>
+    <h3>Youtube stumbled on an audience</h3>
+    <p>A few years ago, the Youtube dev team gave themselves a page-weight budget of 800kb. They optimized every conceivable aspect of the site. They predicted that they could get the average load time below 1s. When they released their new, lightning fast code, their average load times tripled.</p>
+    <p>There were millions of users in the global south who suddenly were able to watch videos without the page timing out. The team had stumbled onto a massive audience they didn't know they had simply by taking best practices seriously.</p>
+    <p>Do what you can for those you're aware of, and keep looking for those you aren't.</p>
+</section>
+<section>
+    <h3>Ok, so who is the user?</h3>
+    <p>You are in the strange position of making things that strangers will use. Some of these strangers may take it apart and put it back together. Some of these strangers will be malicious, some will be children, some will be clueless. Some of these strangers won't be human.</p>
+    <p>SEO is just usability for bots. Design patterns, OOP and code comments are usability for other programmers (or yourself, later).</p>
+</section>
 <section class="slide-only">
     <h2>Here's what we're going today</h2>
     <ol>
@@ -32,81 +77,7 @@ summary: "This week I've combined last year's week seven and eight"
             <p>Tudor Whiteley will be coming in at noon today to meet you and address any questions you have in regards to the desktop+mouse testing.</p>
 </section>
 
-<section>
-    <h3>Accessibility in Front-end JS Frameworks</h3>
-    <p>Today we're going to look at <a href='https://stateofjs.com/2017/front-end/results' target='_blank'>the big three</a>.</p>
-    <p>Let's keep in mind that >4% of users in the WebAIM survey were using IE 6, 7 or 8.</p>
-    <p>
-        <table>
-            <caption>Browser support of javascript frameworks</caption>
-            <tbody>
-                <tr>
-                    <td>Vue</td>
-                    <td>ES5-compliant browsers - IE9+</td>
-                </tr>
-                <tr>
-                    <td>React</td>
-                    <td>ES5-compliant browsers - IE9 and IE10 require polyfills</td>
-                </tr>
-                <tr>
-                    <td>Angular</td>
-                    <td>Modern browsers. Safari 7 & 8, IE9, 10 & 11, Android 4.1+ require polyfills.</td>
-                </tr>
-            </tbody>
-        </table>
-    </p>
-</section>
-<section>
-    <h3>Progressive enhancement</h3>
-    <p>Within the last year, we've seen companies like Airbnb and Groupon tell Firefox and Safari users that they are 'optimized for Chrome' when their sites failed.</p>
-    <p>What if your website, to borrow a phrase, just worked?</p>
-    <p>Consider delivering your content in plain HTML, and then 'mustard-cutting' to deliver your CSS and Javascript.</p>
-</section>
-<section>
-    <h3>Internet Explorer refuses to die.</h3>
-    <p><a href='https://netmarketshare.com/browser-market-share.aspx' target='_blank'>Internet Explorer market share is >12%.</a> That's more than Firefox. That's more than Edge, Safari and Opera combined.</p>
-    <p>Internet Explorer fails to support <em>hundreds</em> of features that Chrome has implemented.</p>
-    <p>Progressive enhancement is how we build for an internet that is increasingly fractured.</p>
-    <p>Polyfills, autoprefixer, caniuse, modernizr; these are great things. Consider, though, simply delivering content that any client can access as a Minimum Viable Product.</p>
-    <p>A List Apart has <a href='http://alistapart.com/article/the-slow-death-of-internet-explorer-and-future-of-progressive-enhancement' target='_blank'>a wonderful article</a> with some recommendations on how to mustard cut for both CSS and Javascript.</p>
-</section>
-<section>
-    <h3>What are you using your framework for?</h3>
-    <p>Is it as a static site generator? Cool. Render on the server. Serving static HTML is waaaay faster.</p>
-</section>
-<section>
-    <h3>Let&#39;s assume...</h3>
-    <p>Let's assume you've got your fallbacks and polyfills in place. Let's assume SSR isn't an option. How do we make Vue, React and Angular accessible?</p>
-</section>
-<section>
-    <h3>Accessibility in Angular</h3>
-    <p>AngularJS 1.7 shipped with a module called ngAria which created hooks for some aria roles. Angular 2+ seems to not have anything similar. You're on your own!</p>
-</section>
-<section>
-    <h3>Accessibility in React</h3>
-    <p>React seems to be a lot more on top of accessibility. They even bother to mention it in <a href='https://reactjs.org/docs/accessibility.html' target='_blank'>their docs</a>!</p>
-    <p>Aria attributes are supported in JSX (but note that they're lowercased instead of camelcased like most other attributes).</p>
-</section>
-<section>
-    <h3>A few gotchas with React</h3>
-    <p>JSX has a tendency to break semantics though, especially with lists and tables, so get familiar with <Fragment>s and <></> syntax.</p>
-    <p>The `for` attribute, used with labels, is written as `htmlFor` in JSX</p>
-</section>
-<section>
-    <h3>React A11y</h3>
-    <p><a href='https://github.com/reactjs/react-a11y' target='_blank'>react-a11y</a> is a promising looking tool for warning about potential accessibility issues in your React components.</p>
-</section>
-<section>
-    <h3>Accessibility in Vue</h3>
-    <p>Vue doesn't have any <a href='https://github.com/vuejs/vuejs.org/issues/974' target='_blank'>accessibility documentation... yet</a>.</p>
-    <p>Emily Mears has written <a href='https://medium.com/@emilymears/getting-started-with-web-accessibility-in-vue-17e2c4ea0842' target='_blank'>a pretty great article</a> about accessibility in Vue. The main challenges are held in common with React - updating meta, handling focus and implementing aria.</p>
-    <p>Vue is pretty great as a framework - it's easier to pick up and understand than other frameworks, it scales much more gracefully than React, and only updates the components that need re-rendering.</p>
-</section>
-<section>
-    <h3>Controlling focus in client-side frameworks</h3>
-    <p>All three frameworks aggressively re-render the DOM - that's kind of the point.</p>
-    <p>Be aware that changes to the URL, and rendering of the virtual DOM can wreak havoc on focus. Each framework has methods for mitigating this with programmatic focus control: <a href='https://simplyaccessible.com/article/react-a11y/' target='_blank'>refs in React</a>; <a href='https://www.npmjs.com/package/vue-focus' target='_blank'>vue-focus in Vue</a>; <a href='https://docs.angularjs.org/api/ng/directive/ngFocus' target='_blank'>ngFocus in Angular</a>. Make sure you're familiar with the appropriate technique.</p>
-</section>
+
 
 <section class="slide-only">
         <h2>Here's what we're going today</h2>

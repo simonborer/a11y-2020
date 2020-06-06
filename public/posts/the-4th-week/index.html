@@ -27,7 +27,7 @@
 	
 	<main class="post">
 		<article>
-			<div class="hero hero--page" style="background-image:url('/images/confused.png')">
+			<div class="hero hero--page" style="background-image:url('/images/gadget.jpg')">
 				<nav class="page-nav">
 					<a class="button small primary page-nav__link" href="https://a11y2020.ca">Home</a>
 					
@@ -38,74 +38,133 @@
 			</div>
 			<div class="grid-container">
 				<div class="grid-x">
-					<div class="cell large-6 large-offset-3 medium-10 medium-offset-1"><section class="slide-only">
-    <h2>Here's what we're going today</h2>
+					<div class="cell large-6 large-offset-3 medium-10 medium-offset-1"><section>
+    <h2>Here's what we're going to talk about today:</h2>
     <ol>
-        <li>Praxis
-            <ol>
-                <li>Linting!</li>
-                <li>An accessible accordion</li>
-            </ol>
-        </li>
+        <li class="fragment"><a href="#overview">Accessibility overview</a></li>
+        <li class="fragment"><a href="#content">Content</a></li>
+        <li class="fragment"><a href="#DOM">What is the DOM</a></li>
+        <li class="fragment"><a href="#devices">Assistive devices</a></li>
+        <li class="fragment"><a href="#auditing">Auditing</a></li>
     </ol>
 </section>
-   <section>
-        <h3>Accessibility review</h3>
-        <p>Accessibility is both a philosophy and a legal requirement.</p>
-        <p><strong>Philosophy</strong>: removing barriers and creating equity.</p>
-        <p><strong>Law</strong>: The Access for Ontarians with Disabilities Act, in accordance with the Canadian Charter of Rights and Freedoms, mandates a level of WCAG compliance.</p>
-    </section>
-    <section>
-        <p>WCAG compliance mandates semantics, content, proper source order, text alternatives to visual information, accomodations for colour-blindness and low visual acuity, keyboard-only functionality, and the use of the WAI-ARIA specification.</p>
-    </section>
-    <section>
-        <p><strong>Semantics</strong> in HTML refers to using native elements and attributes for their defined purpose.</p>
-        <p>A correct <strong>source order</strong> means that the visual flow of the document matches the source code.</p>
-        <p><strong>Text alternatives</strong> are provided when information is presented visually - this includes images, graphs, charts and tables, but also cases where elements have implicit functions based on the visual design, i.e. buttons within a form.</p>
-    </section>
-    <section>
-        <p>We can provide alternatives to this visual information with <code>alt</code> tags for graphic content, <code>scope</code> and <code>caption</code> for tables, and <code>label</code>s or screen reader-specific content for inputs, buttons and links.</p>
-        <p>We must also keep in mind that our elements are often used as navigational landmarks for people using non-visual clients, including headers for document structure.</p>
-    </section>
-    <section>
-        <p>Accessible <strong>content</strong> means...</p>
-        <ol>
-            <li class="fragment">Unique page titles (as it can be difficult to assess if the page has actually changed otherwise)</li>
-            <li class="fragment">Concise link text (as screen readers read them in their entirety)</li>
-            <li class="fragment">Accessible information about link behaviour</li>
-            <li class="fragment">Skippable navigation</li>
-            <li class="fragment">Captions and transcriptions that contain all relevant visual information</li>
-            <li class="fragment">Verbose error messages (that capture focus), and</li>
-            <li class="fragment">Using words rather than ASCII symbols</li>
-        </ol>
-    </section>
-    <section>
-        <p>Because not all visually impairments require the use of a screenreader, we provide <strong>alternatives to colour cues</strong> for people with colour-blindness (i.e. focus outline, proper labelling), and for people with reduced visual abilities we check our <strong>colour contrast ratios</strong> and test our websites for up to <strong>200% zoom</strong>.</p>
-    </section>
-    <section>
-        <p>For people with motor-impairment issues, we ensure that we do not disable the native functionality of our proper semantic HTML, and where native functionality is not available, we create <strong>keyboard events</strong> to supplement our click events.</p>
-        <p>We also maintain our tab order by having our source order properly represented.</p>
-        <p>On those rare occasions where our visual order and source order are in conflict, we can control focus with Javascript.</p>
-        <p>Where we want to make an element focusable that does not have native focusability, we can use the <code>tabindex='0'</code> attribute value.</p>
-    </section>
-    <section>
-        <p>The <strong>WAI-ARIA</strong> specification allows us to supplement our HTML elements, widgets and document presentation by defining roles and properties for screenreader users.</p>
-        <p>This is especially important when updating content on the page without a location change or page refresh, which is a common practice when using modern front-end javascript frameworks, such as Angular, React, and Vue.</p>
-    </section>
-    <section>
-        <p>Of course we keep in mind that all these standards apply whether on a desktop or mobile device, with a few special considerations for mobile, including...</p>
-        <ol>
-            <li class="fragment">Maintaining keyboard functionality</li>
-            <li class="fragment">Supporting different orientations</li>
-            <li class="fragment">Touch target size and spacing</li>
-            <li class="fragment">Gesture alternatives, and </li>
-            <li class="fragment">Appropriate virtual keyboard data types.</li>
-        </ol>
-    </section>
-    <section>
-        <p>In order to enforce accessibility compliance and best practices, we need to help our team mates understand these techniques. We can encourage our team to use <strong>manual testing tools</strong> like the WAVE browser plugin, incorporate <strong>linting</strong> into our build process and <strong>auditing</strong> into our deployment or site monitoring</p>
-        <p>Additionally, because some accessibility techniques, especially ARIA, are context-dependent, automated enforcement can be a challenge. Manual <strong>code review</strong> is an essential part of making our whole team stronger and our product better.</p>
-    </section>
+<section id="overview">
+    <h3>Accessibility overview</h3>
+    <p>Accessibility is both a philosophy, and a legal requirement.</p>
+    <p><strong>Philosophy</strong>: universal design, removing barriers and creating equity.</p>
+    <p><strong>Law</strong>: The Access for Ontarians with Disabilities Act, in accordance with the Canadian Charter of Rights and Freedoms, mandates a level of <abbr title="Web consortium accessibility guidelines">WCAG</abbr> compliance.</p>
+</section>
+<section>
+    <p>WCAG compliance mandates semantics, content, proper source order, text alternatives to visual information, accomodations for colour-blindness and low visual acuity, keyboard-only functionality, and the use of the WAI-ARIA specification.</p>
+</section>
+<section>
+    <p><strong>Semantics</strong> in HTML refers to using native elements and attributes for their defined purpose.</p>
+    <p>A correct <strong>source order</strong> means that the visual flow of the document matches the source code.</p>
+    <p><strong>Text alternatives</strong> are provided when information is presented visually - this includes images, graphs, charts and tables, but also cases where elements have implicit functions based on the visual design, i.e. buttons within a form.</p>
+</section>
+<section>
+    <p>We can provide alternatives to this visual information with <code>alt</code> tags for graphic content, <code>scope</code> and <code>caption</code> for tables, and <code>label</code>s or screen reader-specific content for inputs, buttons and links.</p>
+    <p>We must also keep in mind that our elements are often used as navigational landmarks for people using non-visual clients, including headers for document structure.</p>
+</section>
+<section>
+    <p>Because not all visual impairments require the use of a screenreader, we provide <strong>alternatives to colour cues</strong> for people with colour-blindness (i.e. focus outline, proper labelling), and for people with reduced visual abilities we check our <strong>colour contrast ratios</strong> and test our websites for up to <strong>200% zoom</strong>.</p>
+</section>
+<section>
+    <p>For people with motor-impairment issues, we ensure that we do not disable the native functionality of our proper semantic HTML, and where native functionality is not available, we create <strong>keyboard events</strong> to supplement our click events.</p>
+    <p>We also maintain our tab order by having our source order properly represented.</p>
+    <p>On those rare occasions where our visual order and source order are in conflict, we can control focus with Javascript.</p>
+    <p>Where we want to make an element focusable that does not have native focusability, we can use the <code>tabindex='0'</code> attribute value.</p>
+</section>
+<section>
+    <p>The <strong><abbr title="Web Accessibility Initiative ">WAI-ARIA</abbr></strong> specification allows us to supplement our HTML elements, widgets and document presentation by defining roles and properties for screenreader users.</p>
+    <p>This is especially important when updating content on the page without a location change or page refresh, which is a common practice when using modern front-end javascript frameworks, such as Angular, React, and Vue.</p>
+</section>
+<section>
+    <p>Of course we keep in mind that all these standards apply whether on a desktop or mobile device, with a few special considerations for mobile, including...</p>
+    <ol>
+        <li class="fragment">Maintaining keyboard functionality</li>
+        <li class="fragment">Supporting different orientations</li>
+        <li class="fragment">Touch target size and spacing</li>
+        <li class="fragment">Gesture alternatives, and </li>
+        <li class="fragment">Appropriate virtual keyboard data types.</li>
+    </ol>
+</section>
+<section>
+    <p>In order to enforce accessibility compliance and best practices, we need to help our team mates understand these techniques. We can encourage our team to use <strong>manual testing tools</strong> like the aXe browser plugin, incorporate <strong>linting</strong> into our build process and <strong>auditing</strong> into our deployment or site monitoring</p>
+    <p>Additionally, because some accessibility techniques, especially ARIA, are context-dependent, automated enforcement can be a challenge. Manual <strong>code review</strong> is an essential part of making our whole team stronger and our product better.</p>
+</section>
+<section>
+    <h3>Don&#39;t be redundant</h3>
+    <p><code>div[role='button']</code> is not redundant, but <code>button[role='button']</code> <em>is</em> redundant.</p>
+</section>
+<section>
+    <h3>Want to be safe?</h3>
+    <p>TEST</p>
+    <p>I can't emphasize enough how important it is to test. That's why there are QA departments. It is wonderful to follow best practices, but even when specification documentation is perfect (it's not), and even when you limit your scope to the latest versions of a few popular clients (don't), and even when your linters catch all the edge cases (they won't), you still makes mistakes.</p>
+</section>
+<section>
+    <h3>Tabindex</h3>
+    <p><code>tabindex</code> is an attribute that specifies <em>focusability</em>. Focus is usually stepped through with the <code>tab</code> key, hence the name.</p>
+    <p><code>tabindex="-1"</code> is focusable, but not sequentially. As in, you can`t tab to it.</p>
+    <p><code>tabindex="0"</code> means that the element is focusable in the normal tab sequence.</p>
+    <p><code>tabindex="1"</code>, or any other positive value, means that this element takes precedence over any other element without a declared tabindex. If you are using this, that`s a bad sign.</p>
+</section>
+<section>
+    <p>Remember not to confuse the visual order with the DOM order :)</p>
+    <p>Declaring a tabindex value can affect scrolling behaviour on child elements. For examples, see <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">https://jsfiddle.net/jainakshay/0b2q4Lgv/</a></p>
+</section>
+<section id="content">
+    <p>Accessible <strong>content</strong> means...</p>
+    <ol>
+        <li class="fragment">Unique page titles (as it can be difficult to assess if the page has actually changed otherwise)</li>
+        <li class="fragment">Concise link text (as screen readers read them in their entirety)</li>
+        <li class="fragment">Text-based information about link behaviour</li>
+        <li class="fragment">Skippable navigation</li>
+        <li class="fragment">Captions and transcriptions that contain all relevant visual information</li>
+        <li class="fragment">Verbose error messages (that capture focus), and</li>
+        <li class="fragment">Using words rather than ASCII symbols</li>
+    </ol>
+</section>
+<section>
+    <h3>Accessible content - page titles</h3>
+    <p>Page title should be unique and descriptive. If it's page 2 of 3, say so.</p>
+</section>
+<section>
+    <h3>Accessible content - headings</h3>
+    <p>Headings should structure your document. Think of the way your information is structured - it's very rarely appropriate to have just an h1 and then p tags all the way down. Headings should provide meaning and context.</p>
+</section>
+<section>
+    <h3>Accessible content - alt text</h3>
+    <p>Alternative text should be your best effort to convey <em>all</em> of the relevant information in the image - no more, no less. This gets tricky when you get into things like graphs. Think of how WebAIM approached it in our reading this week.</p>
+</section>
+<section>
+    <h3>Accessible content - transcripts and captions</h3>
+    <p>Audio and video need transcriptions and/or captions. Keep an ear out for sounds that convey relevant information, and make sure they're included - not just the words.</p>
+</section>
+<section>
+    <h3>Accessible content - beware things that look like text</h3>
+    <p>Be on the lookout for images with embedded text, or worse - OCR-resistant PDFs.</p>
+</section>
+<section>
+    <h3>Accessible content - ASCII</h3>
+    <p>Think about what this sounds like: ¯\_(ツ)_/¯.</p>
+    <p>For the same reason, write "16 to 17 years old" instead of "16-17 years old".</p>
+</section>
+<section>
+    <h3>Accessible content - links</h3>
+    <p>Via <a href='https://www.sitepoint.com/15-rules-making-accessible-links/' target='_blank'>sitepoint</a></p>
+    <ol>
+        <li class="fragment">Don&#39;t say they&#39;re links - the screenreader tells you</li>
+        <li class="fragment">Don&#39;t capitalize - screenreaders will read them out letter by letter</li>
+        <li class="fragment">Don&#39;t make the link text the url</li>
+        <li class="fragment">Keep links short - screenreaders won&#39;t skip them.</li>
+        <li class="fragment">Identify link behaviour - i.e. downloads, new windows, anchor links</li>
+        <li class="fragment">Don&#39;t embed link types identifications in your CSS</li>
+        <li class="fragment">Don&#39;t abuse javascript to do link-ish things with elements that aren&#39;t links (anchors or area tags)</li>
+        <li class="fragment">If an image is inside an anchor tag, it&#39;s alt text should refer to the link behaviour, as well as the image&#39;s information.</li>
+        <li class="fragment">Empty or broken links are just mean.</li>
+    </ol>
+</section>
 <section>
     <h3>The DOM API</h3>
     <p>Both 'DOM' and 'API' are acronyms that get thrown around a lot. Let's quickly make sure we all know what they mean.</p>
@@ -123,15 +182,7 @@
         <li class="fragment">There is no native semantics or attribute available.</li>
     </ol>
 </section>
-<section>
-    <h3>Don&#39;t be redundant</h3>
-    <p><code>div[role='button']</code> is not redundant, but <code>button[role='button']</code> <em>is</em> redundant.</p>
-</section>
-<section>
-    <h3>Want to be safe?</h3>
-    <p>TEST</p>
-    <p>I can't emphasize enough how important it is to test. That's why there are QA departments. It is wonderful to follow best practices, but even when specification documentation is perfect (it's not), and even when you limit your scope to the latest versions of a few popular clients (don't), and even when your linters catch all the edge cases (they won't), you still makes mistakes.</p>
-</section>
+
 <section>
     <h3>What ARIA attributes?</h3>
     <p>You can find a pretty comprehensive list at <a href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques'>https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques</a></p>
@@ -144,24 +195,7 @@
         <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
     </p>
 </section>
-<section>
-    <h3>Accessible tabs are &lt;em&gt;hard&lt;/em&gt;</h3>
-    <p>
-        <p data-height="265" data-theme-id="0" data-slug-hash="pVBoQx" data-default-tab="js,result" data-user="simonborer" data-embed-version="2" data-pen-title="pVBoQx" class="codepen">See the Pen <a href="https://codepen.io/simonborer/pen/pVBoQx/">pVBoQx</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-    </p>
-</section>
-<section>
-    <h3>Tabindex</h3>
-    <p><code>tabindex</code> is an attribute that specifies <em>focusability</em>. Focus is usually stepped through with the <code>tab</code> key, hence the name.</p>
-    <p><code>tabindex="-1"</code> is focusable, but not sequentially. As in, you can`t tab to it.</p>
-    <p><code>tabindex="0"</code> means that the element is focusable in the normal tab sequence.</p>
-    <p><code>tabindex="1"</code>, or any other positive value, means that this element takes precedence over any other element without a declared tabindex. If you are using this, that`s a bad sign.</p>
-</section>
-<section>
-    <p>Remember not to confuse the visual order with the DOM order :)</p>
-    <p>Declaring a tabindex value can affect scrolling behaviour on child elements. For examples, see <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">https://jsfiddle.net/jainakshay/0b2q4Lgv/</a></p>
-</section>
+
 <section>
     <h3>WAI-ARIA deep dive</h3>
     <p>As we covered earlier, WAI-ARIA, a.k.a. ARIA, is a specification from the W3C that uses element attributes to supplement existing semantics <ol>
@@ -303,88 +337,6 @@
 <section>
     <p><code>aria-owns={id}</code> Defines a parent-child relationship when one isn't semantically apparent. To understand how this is different from <code>aria-controls</code>, imagine a carousel. The arrows on the left and right would have <code>aria-controls</code> attributes. The dots at the bottom that correlate to individual slides would have <code>aria-owns</code> attributes.</p>
     <p><code>role="article|listitem|menuitem|option|radio|tab" aria-setsize={integer} aria-posinset={integer}</code> Only required when not all elements from the set are included in the DOM.</p>
-</section>
-<section>
-    <h3>Hooray for linting!</h3>
-    <p>Clone <a href="https://github.com/simonborer/a11y-linting" target='_blank'>https://github.com/simonborer/a11y-linting</a></p>
-</section>
-<section>
-    <p>We will be looking at both an html linter (<code>htmllint</code>) and a command line auditing tool (<code>lighthouse</code>).</p>
-</section>
-<section>
-    <h3>HTMLLint</h3>
-    <ol>
-        <li class="fragment">Open the project in your text editor</li>
-        <li class="fragment">Look at package.json under &#34;dependencies&#34; and &#34;devDependencies&#34;</li>
-        <li class="fragment">Open your command line client</li>
-        <li class="fragment">Go to the project folder</li>
-        <li class="fragment">Run &lt;code&gt;npm install&lt;/code&gt;</li>
-    </ol>
-</section>
-<section>
-    <ol>
-        <li class="fragment">Look at package.json under &#34;scripts&#34; - this is where we define the node scripts the will get called by &lt;code&gt;npm run&lt;/code&gt;</li>
-        <li class="fragment">&lt;code&gt;npm run build&lt;/code&gt;</li>
-        <li class="fragment">htmllint options are defined in .htmllintrc - try getting rid of one of the tag bans to clear an error</li>
-        <li class="fragment">Now try fixing the html to clear the rest</li>
-        <li class="fragment">Tell me why we put htmllint under the &#34;build&#34; script</li>
-    </ol>
-</section>
-<section>
-    <h3>Lighthouse CLI</h3>
-    <ol>
-        <li class="fragment">Look at package.json under &#34;scripts&#34;, at the &#34;audit&#34; script. Read me this script in non-technical terms.</li>
-        <li class="fragment">Run &lt;code&gt;npm run audit&lt;/code&gt; and view the output file.</li>
-    </ol>
-</section>
-<section>
-    <h3>Exercise: an accessible accordion</h3>
-    <p>Build an accessible accordion and submit it as a pull request. Feel free to pair-program.</p>
-</section>
-<section>
-    <h3>The internet is open</h3>
-    <p>We work on an open platform. The beautiful thing about the internet is that it is a (nearly) global public space built on open access (e.g. Net Neutrality), standards and specifications. This comes with the responsibility, though, that you create services that are meant to be consumed by clients that haven't even been invented yet.</p>
-    <p>You will work with (and by with, I mean for) people who do not understand the difference between accessing a pdf and opening a webpage.</p>
-    <p>Having an open spec markup language is the backbone of the information age.</p>
-</section>
-<section>
-    <h3>Firefox gets most of their money from...</h3>
-    <p class="fragment">Google</p>
-    <h3 class="fragment">Wait, why?</h3>
-    <p class="fragment">Google's business model depends on the open web. It has made a multi-billion dollar bet that the best place to be is not in a "walled garden", but as the concierge to the innovations afforded by a democratized space.</p>
-</section>
-<section>
-    <h3>You will need to advocate for answering hard questions</h3>
-    <p>For those people who do not understand HTML vs PDF, you will need to impress on them that the internet is a place with a multitude of users, and that's not changing anytime soon. You will need to advocate for creating a service rather than an interactive paper flyer.</p>
-    <p>This distinction is important because it acknowledges your many types of end user - from the dev/content/QA team, to Google's web crawler, to hackers, to archive.org, to Pocket and Instapaper, to screen readers, to everybody.</p>
-</section>
-<section>
-    <h3>Users at cross-purposes</h3>
-    <blockquote>I’m dyslexic, and one of the recommendations for reducing visual stress that I’ve found tremendously helpful is low contrast between text and background color. This, though, often means failing to meet accessibility requirements for people who are visually impaired... Consider:
-        <ul>
-            <li>Designing for one-handed mobile use raises problems because right-handedness is the default—but 10 percent of the population is left handed.</li>
-            <li>Giving users a magnified detailed view on hover can create a mobile hover trap that obscures other content.</li>
-            <li>Links must use something other than color to denote their “linkyness.” Underlines are used most often and are easily understood, but they can interfere with descenders and make it harder for people to recognize word shapes.</li>
-        </ul>
-        <br>
-        <cite>Eleanor Ratliff, <a href="http://alistapart.com/article/accessibility-whack-a-mole" target="_blank">http://alistapart.com/article/accessibility-whack-a-mole</a></cite>
-    </blockquote>
-</section>
-<section>
-    <h3>Your job is not to write code - it is to solve problems</h3>
-    <p>All the easy code has been written already. Don't worry, there are (for the time being), still plenty of jobs writing boring code. But that is less true than it was ten years ago, and will be less true in another ten. You need to think of yourself as someone who can solve the problem of 'How can we best make this work for everyone who needs it?'</p>
-    <p>Last week we contrasted accessibility with usability by saying that usability is accessibility for a set audience, but accessibility legislation still limits that audience by defining it. You should always be open to expanding your definition of the end user.</p>
-</section>
-<section>
-    <h3>Youtube stumbled on an audience</h3>
-    <p>A few years ago, the Youtube dev team gave themselves a page-weight budget of 800kb. They optimized every conceivable aspect of the site. They predicted that they could get the average load time below 1s. When they released their new, lightning fast code, their average load times tripled.</p>
-    <p>There were millions of users in the global south who suddenly were able to watch videos without the page timing out. The team had stumbled onto a massive audience they didn't know they had simply by taking best practices seriously.</p>
-    <p>Do what you can for those you're aware of, and keep looking for those you aren't.</p>
-</section>
-<section>
-    <h3>Ok, so who is the user?</h3>
-    <p>You are in the strange position of making things that strangers will use. Some of these strangers may take it apart and put it back together. Some of these strangers will be malicious, some will be children, some will be clueless. Some of these strangers won't be human.</p>
-    <p>SEO is just usability for bots. Design patterns, OOP and code comments are usability for other programmers (or yourself, later).</p>
 </section>
 </div>
 									

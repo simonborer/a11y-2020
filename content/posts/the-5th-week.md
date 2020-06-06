@@ -3,18 +3,73 @@ title: "Week 5 - Database Design / Midterm Prep"
 date: 2020-06-14T08:47:11+01:00
 publishdate: 2020-06-14T08:47:11+01:00
 featured_image: arch.jpg
-summary: "This week we'll cover the basic steps to design a database; relationships between tables; identify tables and assign columns; identify primary and foreign keys; primary key constraints; foreign key constraints; midterm review."
-today:
-  -
-    title: Steps to designing a database
-    id: design
-  -
-    title: Midterm prep
-    id: midterm
-  -
-    title: Assignment
-    id: lab
+summary: "This week we'll cover accessible inputs; accessibility on mobile devices; evangelism"
 ---
+<section>
+    <h3>Hooray for linting!</h3>
+    <p>Clone <a href="https://github.com/simonborer/a11y-linting" target='_blank'>https://github.com/simonborer/a11y-linting</a></p>
+</section>
+<section>
+    <p>We will be looking at both an html linter (<code>htmllint</code>) and a command line auditing tool (<code>lighthouse</code>).</p>
+</section>
+<section>
+    <h3>HTMLLint</h3>
+    <ol>
+        <li class="fragment">Open the project in your text editor</li>
+        <li class="fragment">Look at package.json under &#34;dependencies&#34; and &#34;devDependencies&#34;</li>
+        <li class="fragment">Open your command line client</li>
+        <li class="fragment">Go to the project folder</li>
+        <li class="fragment">Run &lt;code&gt;npm install&lt;/code&gt;</li>
+    </ol>
+</section>
+<section>
+    <ol>
+        <li class="fragment">Look at package.json under &#34;scripts&#34; - this is where we define the node scripts the will get called by &lt;code&gt;npm run&lt;/code&gt;</li>
+        <li class="fragment">&lt;code&gt;npm run build&lt;/code&gt;</li>
+        <li class="fragment">htmllint options are defined in .htmllintrc - try getting rid of one of the tag bans to clear an error</li>
+        <li class="fragment">Now try fixing the html to clear the rest</li>
+        <li class="fragment">Tell me why we put htmllint under the &#34;build&#34; script</li>
+    </ol>
+</section>
+<section>
+    <h3>Lighthouse CLI</h3>
+    <ol>
+        <li class="fragment">Look at package.json under &#34;scripts&#34;, at the &#34;audit&#34; script. Read me this script in non-technical terms.</li>
+        <li class="fragment">Run &lt;code&gt;npm run audit&lt;/code&gt; and view the output file.</li>
+    </ol>
+</section>
+<section>
+    <h3>Exercise: an accessible accordion</h3>
+    <p>Build an accessible accordion and submit it as a pull request. Feel free to pair-program.</p>
+</section>
+<section>
+    <h3>Accessible content - form labels, instructions and errors</h3>
+    <p>Be very clear about what's expected of a user, and how errors should be resolved. A red asterisk appearing suddenly adjacent to an input isn't helpful to everyone.</p>
+</section>
+<section>
+    <h3>Mobile accessibility</h3>
+    <p>The WCAG has <a href='https://www.w3.org/TR/IMPLEMENTING-UAAG20/mobile' target='_blank'>multiple documents</a> on <a href='https://www.w3.org/TR/mobile-accessibility-mapping/'>how accessibility standards translate to mobile</a>.</p>
+    <p>It's mostly along the lines of 'don't try to cram your whole desktop site onto mobile', and 'just make sure that you're doing what you do on desktop', but with a few extra cautions.</p>
+</section>
+<section>
+    <ol>
+        <li class="fragment">Take special pains to test resizing up to 200%.</li>
+        <li class="fragment">You definitely still have to have keyboard-only controls</li>
+        <li class="fragment">Touch targets are at least 9mm x 9mm, with adequate space between them (without magnification)</li>
+        <li class="fragment">Use mouseup or touchend events so that users can change their minds</li>
+    </ol>
+</section>
+<section>
+    <ol>
+        <li class="fragment">Gestures should be kept simple, and have alternatives</li>
+        <li class="fragment">Support either orientation</li>
+        <li class="fragment">Put important elements above the fold</li>
+        <li class="fragment">Provide easily discoverable instructions</li>
+        <li class="fragment">Set the keyboard to the type of data entry required</li>
+        <li class="fragment">No scrolljacking</li>
+        <li class="fragment">Show focus</li>
+    </ol>
+</section>
 <section class="slide-only">
     <h2>Here's what we're going today</h2>
     <ol>

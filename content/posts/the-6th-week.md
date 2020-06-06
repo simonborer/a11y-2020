@@ -1,10 +1,17 @@
 ---
-title: "Week 6 - Midterm Review; Live Application"
+title: "Step 6 - State change & frameworks"
 date: 2020-06-21T08:47:11+01:00
 publishdate: 2020-06-21T08:47:11+01:00
 featured_image: space-time.jpg
-summary: "This week we'll review the midterm, and work with date/time data; various data types used in MySQL."
+summary: "This week we'll look at accessibility when state changes, and accessibility in Javascript application frameworks"
 ---
+<section>
+    <h3>Accessible tabs are &lt;em&gt;hard&lt;/em&gt;</h3>
+    <p>
+        <p data-height="265" data-theme-id="0" data-slug-hash="pVBoQx" data-default-tab="js,result" data-user="simonborer" data-embed-version="2" data-pen-title="pVBoQx" class="codepen">See the Pen <a href="https://codepen.io/simonborer/pen/pVBoQx/">pVBoQx</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </p>
+</section>
 <section class="slide-only">
     <h2>Here's what we're going today</h2>
     <ol>
@@ -174,70 +181,77 @@ summary: "This week we'll review the midterm, and work with date/time data; vari
             <p>Please go to <a href='http://etc.ch/Yfga' target='_blank'>the quiz</a></p>
 </section>
 <section>
-    <h3>Mobile accessibility</h3>
-    <p>The WCAG has <a href='https://www.w3.org/TR/IMPLEMENTING-UAAG20/mobile' target='_blank'>multiple documents</a> on <a href='https://www.w3.org/TR/mobile-accessibility-mapping/'>how accessibility standards translate to mobile</a>.</p>
-    <p>It's mostly along the lines of 'don't try to cram your whole desktop site onto mobile', and 'just make sure that you're doing what you do on desktop', but with a few extra cautions.</p>
+    <h3>Accessibility in Front-end JS Frameworks</h3>
+    <p>Today we're going to look at <a href='https://stateofjs.com/2017/front-end/results' target='_blank'>the big three</a>.</p>
+    <p>Let's keep in mind that >4% of users in the WebAIM survey were using IE 6, 7 or 8.</p>
+    <p>
+        <table>
+            <caption>Browser support of javascript frameworks</caption>
+            <tbody>
+                <tr>
+                    <td>Vue</td>
+                    <td>ES5-compliant browsers - IE9+</td>
+                </tr>
+                <tr>
+                    <td>React</td>
+                    <td>ES5-compliant browsers - IE9 and IE10 require polyfills</td>
+                </tr>
+                <tr>
+                    <td>Angular</td>
+                    <td>Modern browsers. Safari 7 & 8, IE9, 10 & 11, Android 4.1+ require polyfills.</td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
 </section>
 <section>
-    <ol>
-        <li class="fragment">Take special pains to test resizing up to 200%.</li>
-        <li class="fragment">You definitely still have to have keyboard-only controls</li>
-        <li class="fragment">Touch targets are at least 9mm x 9mm, with adequate space between them (without magnification)</li>
-        <li class="fragment">Use mouseup or touchend events so that users can change their minds</li>
-    </ol>
+    <h3>Progressive enhancement</h3>
+    <p>Within the last year, we've seen companies like Airbnb and Groupon tell Firefox and Safari users that they are 'optimized for Chrome' when their sites failed.</p>
+    <p>What if your website, to borrow a phrase, just worked?</p>
+    <p>Consider delivering your content in plain HTML, and then 'mustard-cutting' to deliver your CSS and Javascript.</p>
 </section>
 <section>
-    <ol>
-        <li class="fragment">Gestures should be kept simple, and have alternatives</li>
-        <li class="fragment">Support either orientation</li>
-        <li class="fragment">Put important elements above the fold</li>
-        <li class="fragment">Provide easily discoverable instructions</li>
-        <li class="fragment">Set the keyboard to the type of data entry required</li>
-        <li class="fragment">No scrolljacking</li>
-        <li class="fragment">Show focus</li>
-    </ol>
+    <h3>Internet Explorer refuses to die.</h3>
+    <p><a href='https://netmarketshare.com/browser-market-share.aspx' target='_blank'>Internet Explorer market share is >12%.</a> That's more than Firefox. That's more than Edge, Safari and Opera combined.</p>
+    <p>Internet Explorer fails to support <em>hundreds</em> of features that Chrome has implemented.</p>
+    <p>Progressive enhancement is how we build for an internet that is increasingly fractured.</p>
+    <p>Polyfills, autoprefixer, caniuse, modernizr; these are great things. Consider, though, simply delivering content that any client can access as a Minimum Viable Product.</p>
+    <p>A List Apart has <a href='http://alistapart.com/article/the-slow-death-of-internet-explorer-and-future-of-progressive-enhancement' target='_blank'>a wonderful article</a> with some recommendations on how to mustard cut for both CSS and Javascript.</p>
 </section>
 <section>
-    <h3>Accessible content - page titles</h3>
-    <p>Page title should be unique and descriptive. If it's page 2 of 3, say so.</p>
+    <h3>What are you using your framework for?</h3>
+    <p>Is it as a static site generator? Cool. Render on the server. Serving static HTML is waaaay faster.</p>
 </section>
 <section>
-    <h3>Accessible content - headings</h3>
-    <p>Headings should structure your document. Think of the way your information is structured - it's very rarely appropriate to have just an h1 and then p tags all the way down. Headings should provide meaning and context.</p>
+    <h3>Let&#39;s assume...</h3>
+    <p>Let's assume you've got your fallbacks and polyfills in place. Let's assume SSR isn't an option. How do we make Vue, React and Angular accessible?</p>
 </section>
 <section>
-    <h3>Accessible content - alt text</h3>
-    <p>Alternative text should be your best effort to convey <em>all</em> of the relevant information in the image - no more, no less. This gets tricky when you get into things like graphs. Think of how WebAIM approached it in our reading this week.</p>
+    <h3>Accessibility in Angular</h3>
+    <p>AngularJS 1.7 shipped with a module called ngAria which created hooks for some aria roles. Angular 2+ seems to not have anything similar. You're on your own!</p>
 </section>
 <section>
-    <h3>Accessible content - transcripts and captions</h3>
-    <p>Audio and video need transcriptions and/or captions. Keep an ear out for sounds that convey relevant information, and make sure they're included - not just the words.</p>
+    <h3>Accessibility in React</h3>
+    <p>React seems to be a lot more on top of accessibility. They even bother to mention it in <a href='https://reactjs.org/docs/accessibility.html' target='_blank'>their docs</a>!</p>
+    <p>Aria attributes are supported in JSX (but note that they're lowercased instead of camelcased like most other attributes).</p>
 </section>
 <section>
-    <h3>Accessible content - form labels, instructions and errors</h3>
-    <p>Be very clear about what's expected of a user, and how errors should be resolved. A red asterisk appearing suddenly adjacent to an input isn't helpful to everyone.</p>
+    <h3>A few gotchas with React</h3>
+    <p>JSX has a tendency to break semantics though, especially with lists and tables, so get familiar with <Fragment>s and <></> syntax.</p>
+    <p>The `for` attribute, used with labels, is written as `htmlFor` in JSX</p>
 </section>
 <section>
-    <h3>Accessible content - beware things that look like text</h3>
-    <p>Be on the lookout for images with embedded text, or worse - OCR-resistant PDFs.</p>
+    <h3>React A11y</h3>
+    <p><a href='https://github.com/reactjs/react-a11y' target='_blank'>react-a11y</a> is a promising looking tool for warning about potential accessibility issues in your React components.</p>
 </section>
 <section>
-    <h3>Accessible content - ASCII</h3>
-    <p>Think about what this sounds like: ¯\_(ツ)_/¯.</p>
-    <p>For the same reason, write "16 to 17 years old" instead of "16-17 years old".</p>
+    <h3>Accessibility in Vue</h3>
+    <p>Vue doesn't have any <a href='https://github.com/vuejs/vuejs.org/issues/974' target='_blank'>accessibility documentation... yet</a>.</p>
+    <p>Emily Mears has written <a href='https://medium.com/@emilymears/getting-started-with-web-accessibility-in-vue-17e2c4ea0842' target='_blank'>a pretty great article</a> about accessibility in Vue. The main challenges are held in common with React - updating meta, handling focus and implementing aria.</p>
+    <p>Vue is pretty great as a framework - it's easier to pick up and understand than other frameworks, it scales much more gracefully than React, and only updates the components that need re-rendering.</p>
 </section>
 <section>
-    <h3>Accessible content - links</h3>
-    <p>Via <a href='https://www.sitepoint.com/15-rules-making-accessible-links/' target='_blank'>sitepoint</a></p>
-    <ol>
-        <li class="fragment">Don&#39;t say they&#39;re links - the screenreader tells you</li>
-        <li class="fragment">Don&#39;t capitalize - screenreaders will read them out letter by letter</li>
-        <li class="fragment">Don&#39;t make the link text the url</li>
-        <li class="fragment">Keep links short - screenreaders won&#39;t skip them.</li>
-        <li class="fragment">Identify link behaviour - i.e. downloads, new windows, anchor links</li>
-        <li class="fragment">Don&#39;t embed link types identifications in your CSS</li>
-        <li class="fragment">Don&#39;t abuse javascript to do link-ish things with elements that aren&#39;t links (anchors or area tags)</li>
-        <li class="fragment">If an image is inside an anchor tag, it&#39;s alt text should refer to the link behaviour, as well as the image&#39;s information.</li>
-        <li class="fragment">Empty or broken links are just mean.</li>
-    </ol>
+    <h3>Controlling focus in client-side frameworks</h3>
+    <p>All three frameworks aggressively re-render the DOM - that's kind of the point.</p>
+    <p>Be aware that changes to the URL, and rendering of the virtual DOM can wreak havoc on focus. Each framework has methods for mitigating this with programmatic focus control: <a href='https://simplyaccessible.com/article/react-a11y/' target='_blank'>refs in React</a>; <a href='https://www.npmjs.com/package/vue-focus' target='_blank'>vue-focus in Vue</a>; <a href='https://docs.angularjs.org/api/ng/directive/ngFocus' target='_blank'>ngFocus in Angular</a>. Make sure you're familiar with the appropriate technique.</p>
 </section>
