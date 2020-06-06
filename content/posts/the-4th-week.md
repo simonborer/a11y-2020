@@ -16,18 +16,23 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
     </ol>
 </section>
 <section id="overview">
-    <h3>Accessibility overview</h3>
+    <h2>Accessibility overview</h2>
     <p>Accessibility is both a philosophy, and a legal requirement.</p>
     <p><strong>Philosophy</strong>: universal design, removing barriers and creating equity.</p>
     <p><strong>Law</strong>: The Access for Ontarians with Disabilities Act, in accordance with the Canadian Charter of Rights and Freedoms, mandates a level of <abbr title="Web consortium accessibility guidelines">WCAG</abbr> compliance.</p>
 </section>
 <section>
+    <h3>How we follow the WCAG guidelines</h3>
     <p>WCAG compliance mandates semantics, content, proper source order, text alternatives to visual information, accomodations for colour-blindness and low visual acuity, keyboard-only functionality, and the use of the WAI-ARIA specification.</p>
 </section>
 <section>
     <p><strong>Semantics</strong> in HTML refers to using native elements and attributes for their defined purpose.</p>
     <p>A correct <strong>source order</strong> means that the visual flow of the document matches the source code.</p>
-    <p><strong>Text alternatives</strong> are provided when information is presented visually - this includes images, graphs, charts and tables, but also cases where elements have implicit functions based on the visual design, i.e. buttons within a form.</p>
+    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="simonborer" data-slug-hash="eYJNEEV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="eYJNEEV">
+    </p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <p style="margin-top:2rem;"><strong>Text alternatives</strong> are provided when information is presented visually - this includes images, graphs, charts and tables, but also cases where elements have implicit functions based on the visual design, i.e. buttons within a form.</p>
+    <p class="callout">Refer back to our <a href="https://a11y2020.ca/posts/the-1st-week#componentOfTheWeek" target="_blank">Week 1 "Component of the Week"<span class="show-for-sr"> Opens in a new window</span></a> for a refresher on text alternatives.</p>
 </section>
 <section>
     <p>We can provide alternatives to this visual information with <code>alt</code> tags for graphic content, <code>scope</code> and <code>caption</code> for tables, and <code>label</code>s or screen reader-specific content for inputs, buttons and links.</p>
@@ -35,11 +40,17 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
 </section>
 <section>
     <p>Because not all visual impairments require the use of a screenreader, we provide <strong>alternatives to colour cues</strong> for people with colour-blindness (i.e. focus outline, proper labelling), and for people with reduced visual abilities we check our <strong>colour contrast ratios</strong> and test our websites for up to <strong>200% zoom</strong>.</p>
+    <figure>
+        <img src="/images/color-checker.png" alt="">
+        <figcaption>Not sure if you color contrast is up to snuff? The quickest way to check is by clicking on the text's "colour sample" in your browser tools.</figcaption>
+    </figure>
 </section>
 <section>
     <p>For people with motor-impairment issues, we ensure that we do not disable the native functionality of our proper semantic HTML, and where native functionality is not available, we create <strong>keyboard events</strong> to supplement our click events.</p>
     <p>We also maintain our tab order by having our source order properly represented.</p>
     <p>On those rare occasions where our visual order and source order are in conflict, we can control focus with Javascript.</p>
+    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="simonborer" data-slug-hash="gOPpxmb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="gOPpxmb"></p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
     <p>Where we want to make an element focusable that does not have native focusability, we can use the <code>tabindex='0'</code> attribute value.</p>
 </section>
 <section>
@@ -57,7 +68,7 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
     </ol>
 </section>
 <section>
-    <p>In order to enforce accessibility compliance and best practices, we need to help our team mates understand these techniques. We can encourage our team to use <strong>manual testing tools</strong> like the aXe browser plugin, incorporate <strong>linting</strong> into our build process and <strong>auditing</strong> into our deployment or site monitoring</p>
+    <p>In order to enforce accessibility compliance and best practices, we need to help our team mates understand these techniques. We can encourage our team to use <strong>manual testing tools</strong> like the <a href="https://www.deque.com/axe/" target="_blank">aXe browser plugin<span class="show-for-sr"> Opens in a new window</span></a>, incorporate <strong>linting</strong> into our build process and <strong>auditing</strong> into our deployment or site monitoring</p>
     <p>Additionally, because some accessibility techniques, especially ARIA, are context-dependent, automated enforcement can be a challenge. Manual <strong>code review</strong> is an essential part of making our whole team stronger and our product better.</p>
 </section>
 <section>
@@ -81,6 +92,7 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
     <p>Declaring a tabindex value can affect scrolling behaviour on child elements. For examples, see <a href="https://jsfiddle.net/jainakshay/0b2q4Lgv/">https://jsfiddle.net/jainakshay/0b2q4Lgv/</a></p>
 </section>
 <section id="content">
+    <h2>Making content accessible</h2>
     <p>Accessible <strong>content</strong> means...</p>
     <ol>
         <li class="fragment">Unique page titles (as it can be difficult to assess if the page has actually changed otherwise)</li>
@@ -132,8 +144,8 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
         <li class="fragment">Empty or broken links are just mean.</li>
     </ol>
 </section>
-<section>
-    <h3>The DOM API</h3>
+<section id="DOM">
+    <h2>The DOM API</h2>
     <p>Both 'DOM' and 'API' are acronyms that get thrown around a lot. Let's quickly make sure we all know what they mean.</p>
     <p>An <strong>Application Programming Interface</strong> is a user interface, where the user is a person writing a computer script. It provides you information and functionality from the document or application that you're interacting with.</p>
     <p>The <strong>Document Object Model</strong> is an API that represents an HTML (or XML) document as a traversable tree structure. The elements (and attributes, including text content) within that structure are referred to as 'nodes'.</p>
@@ -142,14 +154,13 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
     <p>There are different kinds of attributes we can assign to DOM nodes. There are native attributes, which are provided by the HTML spec, e.g. <code>class</code>, <code>alt</code>, <code>target</code>. There are data attributes (added in HTML5), which are user-customizable. And there are ARIA attributes.</p>
     <p>ARIA (Accessible Rich Internet Applications) provides contextual information about if and how DOM nodes can update, and what happens when they do.</p>
 </section>
-<section>
+<section id="">
     <h3>When to use ARIA</h3>
     <ol>
         <li class="fragment">There is a DOM node (including text) that can or does update without a page refresh being triggered, and</li>
         <li class="fragment">There is no native semantics or attribute available.</li>
     </ol>
 </section>
-
 <section>
     <h3>What ARIA attributes?</h3>
     <p>You can find a pretty comprehensive list at <a href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques'>https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques</a></p>
@@ -162,8 +173,6 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
         <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
     </p>
 </section>
-
-
 <section>
     <h3>WAI-ARIA deep dive</h3>
     <p>As we covered earlier, WAI-ARIA, a.k.a. ARIA, is a specification from the W3C that uses element attributes to supplement existing semantics <ol>
@@ -306,4 +315,3 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
     <p><code>aria-owns={id}</code> Defines a parent-child relationship when one isn't semantically apparent. To understand how this is different from <code>aria-controls</code>, imagine a carousel. The arrows on the left and right would have <code>aria-controls</code> attributes. The dots at the bottom that correlate to individual slides would have <code>aria-owns</code> attributes.</p>
     <p><code>role="article|listitem|menuitem|option|radio|tab" aria-setsize={integer} aria-posinset={integer}</code> Only required when not all elements from the set are included in the DOM.</p>
 </section>
-

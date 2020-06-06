@@ -303,7 +303,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
     <h3>That's all the definitions!</h3>
     <p>Now for the fun stuff.</p>
 </section>
-<section>
+<section id="componentOfTheWeek">
     <h2>Component of the week</h2>
     <p class="post-only">The first half of this course is mostly going to be looking at usability testing and best practices, with the second half focussed more on accessibility best practices. But I didn't want to save all the good stuff for last, so each week we'll look at how to make one component or design pattern fully accessible.</p>
     <p>This week, we turn our spotlight on the <code>&lt;img&gt;</code> element!</p>
