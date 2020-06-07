@@ -404,96 +404,94 @@
         <li>What would you change in this script? Why?</li>
     </ul>
 </section>
- 
-
-<p><section id="componentOfTheWeek">
+ <section id="componentOfTheWeek">
      <h2>Component of the Week: Links</h2>
      <p>Ah, the hyperlink: the core concept of the <a href="https://en.wikipedia.org/wiki/Hypertext">World Wide Web</a>.</p>
-     <pre><code class="language-html">&lt;a href=&ldquo;the internet&rdquo;&gt;You&rsquo;re welcome.&lt;/a&gt;</code></pre>
+     <pre><code class="language-html">&lt;a href="the internet">You're welcome.&lt;/a></code></pre>
      <p>Simple and straightforward, but so ubiquitous and flexible as to invite abuse, and therefore, inaccessibility.</p>
-     <p>As I&rsquo;m sure you&rsquo;ve heard, one of the cornerstones of accessibility is <strong>semantic markup</strong>. In other words, <em>use elements for their intended use</em>. We&rsquo;ll better understand the purpose of an anchor tag shortly.</p>
+     <p>As I'm sure you've heard, one of the cornerstones of accessibility is <strong>semantic markup</strong>. In other words, <em>use elements for their intended use</em>. We'll better understand the purpose of an anchor tag shortly.</p>
 </section>
 <section>
      <p>There are only a couple of accessibility mistakes you can make with an anchor tag, while still using it semantically.</p>
      <p>One mistake I made for years: <strong>the text of a link should not be a URL</strong>. Many popular screenreaders <em>will not allow the user to skip while it reads the text of a link</em>.</p>
-     <pre><code class="language-html">&lt;a href=&ldquo;guesswhat.co.uk&rdquo;&gt;
-<a href="https://www.guesswhat.co.uk/I/sound/super/">https://www.guesswhat.co.uk/I/sound/super/</a>
-annoying.php?so=don-t&amp;do=this&amp;to=your&amp;user=ok&lt;/a&gt;</code></pre>
-<pre class="post-only"><code class="language-html">&lt;a href=&ldquo;guesswhat.co.uk&rdquo;&gt;
-You know what? Large volumes of text inside
-links are also not a great idea. We can&rsquo;t put long,
-rambling text in our links like we used to,
-but we have our ways. One trick is to tell &lsquo;em stories
-that don&rsquo;t go anywhere - like the time I caught the
-ferry over to Shelbyville. I needed a new heel for my
-shoe, so, I decided to go to Morganville, which is
-what they called Shelbyville in those days. So I tied
-an onion to my belt, which was the style at the time.
-Now, to take the ferry cost a nickel, and in those
-days, nickels had pictures of bumblebees on &lsquo;em. Give
-me five bees for a quarter, you&rsquo;d say. Now where were
-we? Oh yeah: the important thing was I had an onion on
-my belt, which was the style at the time. They didn&rsquo;t
-have white onions because of the war. The only thing
-you could get was those big yellow ones&hellip;&lt;/a&gt;</code></pre>
+     <pre><code class="language-html">&lt;a href="guesswhat.co.uk">
+https://www.guesswhat.co.uk/I/sound/super/
+annoying.php?so=don-t&do=this&to=your&user=ok&lt;/a></code></pre>
+<pre class="post-only"><code class="language-html">&lt;a href="guesswhat.co.uk">
+You know what? Large volumes of text inside 
+links are also not a great idea. We can't put long, 
+rambling text in our links like we used to, 
+but we have our ways. One trick is to tell 'em stories 
+that don't go anywhere - like the time I caught the 
+ferry over to Shelbyville. I needed a new heel for my 
+shoe, so, I decided to go to Morganville, which is 
+what they called Shelbyville in those days. So I tied 
+an onion to my belt, which was the style at the time. 
+Now, to take the ferry cost a nickel, and in those 
+days, nickels had pictures of bumblebees on 'em. Give 
+me five bees for a quarter, you'd say. Now where were 
+we? Oh yeah: the important thing was I had an onion on 
+my belt, which was the style at the time. They didn't 
+have white onions because of the war. The only thing 
+you could get was those big yellow ones...&lt;/a></code></pre>
 </section>
 <section>
       <p>Another thing to keep in mind is that links are an in-page navigational tool. When using the keyboard to navigate a page, the user can hit the tab button to go to each interactive element in sequence. This means that if the context for a link comes before that link, people using screenreaders will have not context for that link. Stuff like this is really unhelpful:</p>
-      <pre><code class="language-html">&lt;a href=&ldquo;/somewhere-else&rdquo;&gt;Read more&lt;/a&gt;</code></pre>
+      <pre><code class="language-html">&lt;a href="/somewhere-else">Read more&lt;/a></code></pre>
 </section>
 <section>
-      <p>That being said, just like with images, screenreaders will inform the user that what they&rsquo;re focussed on is a link, so it&rsquo;s redundant to tell them:</p>
-      <pre><code class="language-html">&lt;a href=&ldquo;<a href="https://en.wikipedia.org/wiki/Redundancy&quot;&gt;">https://en.wikipedia.org/wiki/Redundancy&quot;&gt;</a>
-Link to Read More about Redundancy&lt;/a&gt;</code></pre>
+      <p>That being said, just like with images, screenreaders will inform the user that what they're focussed on is a link, so it's redundant to tell them:</p>
+      <pre><code class="language-html">&lt;a href="https://en.wikipedia.org/wiki/Redundancy">
+Link to Read More about Redundancy&lt;/a></code></pre>
 </section>
 <section>
-      <p>And finally, shifting a user into a new window or tab can be disorienting if you don&rsquo;t give them a heads-up.</p>
-      <pre><code class="language-html">&lt;a
-href=&ldquo;<a href="https://en.wikipedia.org/wiki/Tab_(interface)&quot;">https://en.wikipedia.org/wiki/Tab_(interface)&quot;</a>
-target=&rdquo;_blank&rdquo;&gt;Read about Tabs on Wikipedia
-&lt;span style=&ldquo;font-size: 0&rdquo;&gt; Opens in a new tab&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+      <p>And finally, shifting a user into a new window or tab can be disorienting if you don't give them a heads-up.</p>
+      <pre><code class="language-html">&lt;a 
+href="https://en.wikipedia.org/wiki/Tab_(interface)" 
+target="_blank">Read about Tabs on Wikipedia
+&lt;span style="font-size: 0"> Opens in a new tab&lt;/span>
+&lt;/a></code></pre>
 </section>
 <section>
-    <p>Let&rsquo;s see what happens when we start to get &ldquo;creative&rdquo; with links:</p>
+    <p>Let's see what happens when we start to get "creative" with links:</p>
     <pre><code class="language-html">// Links must be recognizable
-&lt;a style=&ldquo;text-decoration:none;&ldquo;&gt;
-I need a non-colour visual indicator&lt;/a&gt;</code></pre>
+&lt;a style="text-decoration:none;">
+I need a non-colour visual indicator&lt;/a></code></pre>
 </section>
 <section>
 <pre><code class="language-html">// There is a temptation to use links as buttons.
-// That&rsquo;s bad, because the user is told it&rsquo;s a link.
-&lt;a onclick=&ldquo;tooLazyToStyleAButton()&rdquo;&gt;
-Why can&rsquo;t buttons be buttons?&lt;/a&gt;</code></pre>
+// That's bad, because the user is told it's a link.
+&lt;a onclick="tooLazyToStyleAButton()">
+Why can't buttons be buttons?&lt;/a></code></pre>
 </section>
 <section>
 <pre><code class="language-html">// But I want my image to be linked!
-&lt;a href=&ldquo;/image-destination&rdquo;&gt;
-    &lt;img src=&ldquo;this-totally-works.jpg&rdquo;
-        alt=&ldquo;The user will be read the alt text
-        as the link text!&rdquo; /&gt;
-&lt;/a&gt;</code></pre>
+&lt;a href="/image-destination">
+    &lt;img src="this-totally-works.jpg"
+        alt="The user will be read the alt text 
+        as the link text!" />
+&lt;/a></code></pre>
 </section>
 <section>
 <pre><code class="language-html" style="font-size: 1rem;line-height: 1.2">// If you have something that behaves like a link
-// but for some very good, very important reason
-// cannot be an anchor, you can use the &lsquo;role&rsquo;
+// but for some very good, very important reason 
+// cannot be an anchor, you can use the 'role' 
 // attribute
-//
-// &lsquo;role&rsquo; is an ARIA attribute, which we&rsquo;ll dive
+// 
+// 'role' is an ARIA attribute, which we'll dive
 // much deeper into in the second half of the term
-// but notice what it does here -
-// when HTML isn&rsquo;t semantic, it provides the
-// information that WOULD have come from the
+// but notice what it does here - 
+// when HTML isn't semantic, it provides the 
+// information that WOULD have come from the 
 // semantic element.
-//
-&lt;style&gt;
-[role=&ldquo;link&rdquo;] { color: blue; text-decoration: underline; cursor: pointer; }
-[role=&ldquo;link&rdquo;]:focus { outline: 1px dotted black;}
-&lt;/style&gt;
-&lt;div role=&ldquo;link&rdquo; onclick=&ldquo;window.open(&lsquo;<a href="https://google.com')&quot;&gt;Link">https://google.com')&quot;&gt;Link</a>
-&lt;/div&gt;</code></pre>
- </section></p>
+// 
+&lt;style>
+[role="link"] { color: blue; text-decoration: underline; cursor: pointer; }
+[role="link"]:focus { outline: 1px dotted black;}
+&lt;/style>
+&lt;div role="link" onclick="window.open('https://google.com')">Link
+&lt;/div></code></pre>
+ </section>
 </div>
 									
 				</div>
