@@ -7,7 +7,7 @@ featured_image: hold-me-closer.jpg
 ---
 <section>
     <h2>Here's what we're going to talk about today:</h2>
-    <ol>
+    <ol role="directory">
         <li class="fragment"><a href="#theBrief">What is <strong>The Brief</strong></a></li>
         <li class="fragment"><a href="#testPlan">What goes into a test plan</a></li>
         <li class="fragment"><a href="#keyboardControl">How to control the browser with your keyboard</a></li>

@@ -7,7 +7,7 @@ summary: "Today we'll dive into accessibility, looking at the DOM, assistive dev
 ---
 <section>
     <h2>Here's what we're going to talk about today:</h2>
-    <ol>
+    <ol role="directory">
         <li class="fragment"><a href="#overview">Accessibility overview</a></li>
         <li class="fragment"><a href="#devices">Assistive devices</a></li>
         <li class="fragment"><a href="#DOM">What is the DOM</a></li>

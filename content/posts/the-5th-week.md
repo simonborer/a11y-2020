@@ -1,47 +1,10 @@
 ---
 title: "Week 5 - Database Design / Midterm Prep"
-date: 2020-06-14T08:47:11+01:00
-publishdate: 2020-06-14T08:47:11+01:00
+date: 2020-06-10T08:47:11+01:00
+publishdate: 2020-06-10T08:47:11+01:00
 featured_image: arch.jpg
 summary: "This week we'll cover accessible inputs; accessibility on mobile devices; evangelism"
 ---
-<section>
-    <h3>Hooray for linting!</h3>
-    <p>Clone <a href="https://github.com/simonborer/a11y-linting" target='_blank'>https://github.com/simonborer/a11y-linting</a></p>
-</section>
-<section>
-    <p>We will be looking at both an html linter (<code>htmllint</code>) and a command line auditing tool (<code>lighthouse</code>).</p>
-</section>
-<section>
-    <h3>HTMLLint</h3>
-    <ol>
-        <li class="fragment">Open the project in your text editor</li>
-        <li class="fragment">Look at package.json under &#34;dependencies&#34; and &#34;devDependencies&#34;</li>
-        <li class="fragment">Open your command line client</li>
-        <li class="fragment">Go to the project folder</li>
-        <li class="fragment">Run &lt;code&gt;npm install&lt;/code&gt;</li>
-    </ol>
-</section>
-<section>
-    <ol>
-        <li class="fragment">Look at package.json under &#34;scripts&#34; - this is where we define the node scripts the will get called by &lt;code&gt;npm run&lt;/code&gt;</li>
-        <li class="fragment">&lt;code&gt;npm run build&lt;/code&gt;</li>
-        <li class="fragment">htmllint options are defined in .htmllintrc - try getting rid of one of the tag bans to clear an error</li>
-        <li class="fragment">Now try fixing the html to clear the rest</li>
-        <li class="fragment">Tell me why we put htmllint under the &#34;build&#34; script</li>
-    </ol>
-</section>
-<section>
-    <h3>Lighthouse CLI</h3>
-    <ol>
-        <li class="fragment">Look at package.json under &#34;scripts&#34;, at the &#34;audit&#34; script. Read me this script in non-technical terms.</li>
-        <li class="fragment">Run &lt;code&gt;npm run audit&lt;/code&gt; and view the output file.</li>
-    </ol>
-</section>
-<section>
-    <h3>Exercise: an accessible accordion</h3>
-    <p>Build an accessible accordion and submit it as a pull request. Feel free to pair-program.</p>
-</section>
 <section>
     <h3>Accessible content - form labels, instructions and errors</h3>
     <p>Be very clear about what's expected of a user, and how errors should be resolved. A red asterisk appearing suddenly adjacent to an input isn't helpful to everyone.</p>
@@ -70,50 +33,6 @@ summary: "This week we'll cover accessible inputs; accessibility on mobile devic
         <li class="fragment">Show focus</li>
     </ol>
 </section>
-<section class="slide-only">
-    <h2>Here's what we're going today</h2>
-    <ol>
-        <li>Great news!</li>
-        <li>Midterms</li>
-        <li>Theory
-            <ol>
-                <li>How to write a usability report</li>
-                <li>A game :)</li>
-                <li>Evangelism</li>
-                <li>Workflow</li>
-            </ol>
-        </li>
-        <li>Praxis
-            <ol>
-                <li>OCAS</li>
-                <li>Your weekly reading</li>
-            </ol>
-        </li>
-    </ol>
-</section>
-<section class="slide-only">
-    <div class="grid-x">
-        <div class="cell large-6 large-offset-3 medium-10 medium-offset-1">
-            <h3>Great news!</h3>
-            <p><img src="https://cdn.insidetimmies.com/wp-content/uploads/2014/06/image.jpg" alt="Timbits" style="max-height: 20rem"><br>We're getting paid (in food) to do that test we talked about last week.</p>
-</section>
-<section class="slide-only">
-    <div class="grid-x">
-        <div class="cell large-6 large-offset-3 medium-10 medium-offset-1">
-            <h3>Midterm stuff people struggled with</h3>
-            <ol>
-                <li class="fragment">On any project, there are client requirements, and there are team standards. In the case of the midterm, the client requirements were my instructions. The team standards are Humber&#39;s rules against plagiarism (among other things).</li>
-                <li class="fragment">The entire first paragraph of the assignment.</li>
-                <li class="fragment">Scope: don&#39;t just factor in all the cool stuff that &lt;em&gt;might&lt;/em&gt; be useful - take a look at the resources you have available and scope for what you can deliver. There&#39;s nothing wrong with a narrow scope that provides really crisp data.</li>
-                <li class="fragment">Some people will probably want to change their scope. Or maybe you&#39;re just not happy with your grade. You&#39;ve got a week to resubmit.</li>
-            </ol>
-</section>
-<section class="slide-only">
-    <div class="grid-x">
-        <div class="cell large-6 large-offset-3 medium-10 medium-offset-1">
-            <p>Also, please have all your first-term reading assignments in by this time next week. That's the cut-off.</p>
-</section>
-
 <section class="slide-only">
     <div class="grid-x">
         <div class="cell large-6 large-offset-3 medium-10 medium-offset-1">
@@ -214,6 +133,8 @@ summary: "This week we'll cover accessible inputs; accessibility on mobile devic
                 <li class="fragment">Assumptions did you make?</li>
                 <li class="fragment">What would you do differently?</li>
             </ol>
+        </div>
+    </div>
 </section>
 <section>
     <h3>Evangelism</h3>
@@ -252,7 +173,7 @@ summary: "This week we'll cover accessible inputs; accessibility on mobile devic
 </section>
 <section>
     <p>Remember that the spec tells us that we should use native semantics when they are available.</p>
-    <p>If it's a button, use a < button>.</p>
+    <p>If it's a button, use a &lt;button&gt;.</p>
 </section>
 <section>
     <h3>ARIA roles</h3>
@@ -260,75 +181,200 @@ summary: "This week we'll cover accessible inputs; accessibility on mobile devic
     <p>The role attribute identifies the element to the screenreader, but it <em>does not</em> recreate the native functionality. That's on you.</p>
 </section>
 <section>
-    <h3>role=&#34;button&#34;</h3>
-    <p>Let's say, for whatever reason, you need to make a button out of something that's not < button>,
-            < input type='button' />,
-            < input type='submit' />,
-            < input type='reset' /> or
-            < input type='image' />.</p>
+    <h3>role="button"</h3>
+    <p>Let's say, for whatever reason, you need to make a button out of something that's not &lt;button&gt;,
+            &lt;input type='button' /&gt;,
+            &lt;input type='submit' /&gt;,
+            &lt;input type='reset' /&gt; or
+            &lt;input type='image' /&gt;.</p>
     <p><code>role='button'</code> identifies any element as a button to a screenreader. Use this in conjunction with <code>tabindex='0'</code> - the role itself does not make the element focusable.</p>
     <p>Remember, too, that a native HTML button will fire an onclick event when space or enter are pressed - so you're also responsible for recreating that native functionality.</p>
 </section>
 <section>
-    <h3>More roles! - widgets</h3>
-    <p><code>checkbox</code></p>
-    <p><code>dialog</code> (this can be a modal, or not)</p>
-    <p><code>link</code></p>
-    <p><code>log</code> (i.e. a chat log)</p>
-    <p><code>marquee</code> (like a <code>log</code>, but not vital or linear, i.e. a carousel or stock ticker)</p>
-    <p><code>progressbar</code></p>
-    <p><code>radio</code></p>
-    <p><code>scrollbar</code></p>
+    <h3>A list of roles you won't need (if you're coding semantically, and not supporting anything below IE10)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>role value</th>
+                <th>native element</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>article</code></td>
+                <td><code>&lt;article>&lt;/article></code></td>
+            </tr>
+            <tr>
+                <td><code>banner</code></td>
+                <td><code>&lt;header>&lt;/header></code></td>
+            </tr>
+            <tr>
+                <td><code>checkbox</code> (or <code>switch</code> if the values are on/off)</td>
+                <td><code>&lt;input type="checkbox" /></code></td>
+            </tr>
+            <tr>
+                <td><code>complementary</code></td>
+                <td><code>&lt;aside>&lt;/aside></code></td>
+            </tr>
+            <tr>
+                <td><code>definition</code></td>
+                <td><code>&lt;dfn>&lt;/dfn></code></td>
+            </tr>
+            <tr>
+                <td><code>form</code></td>
+                <td><code>&lt;form>&lt;form></code></td>
+            </tr>
+            <tr>
+                <td><code>heading</code></td>
+                <td><code>&lt;h1>&lt;/h1></code> to <code>&lt;h6>&lt;/h6></code>; can also extend semantics thusly: <code>&lt;div role="heading" aria-level="7"></code></td>
+            </tr>
+            <tr>
+                <td><code>img</code></td>
+                <td><code>&lt;img src="" alt="" /></code></td>
+            </tr>
+            <tr>
+                <td><code>link</code></td>
+                <td><code>&lt;a href="">&lt;/a></code></td>
+            </tr>
+            <tr>
+                <td><code>listbox</code></td>
+                <td><code>&lt;select>&lt;option value="dog">Dog&lt;/option>&lt;/select></code></td>
+            </tr>
+            <tr>
+                <td><code>listitem</code> (with <code>list</code>)</td>
+                <td><code>&lt;li>&lt;/li></code></td>
+            </tr>
+            <tr>
+                <td><code>main</code></td>
+                <td><code>&lt;main>&lt;main></code></td>
+            </tr>
+            <tr>
+                <td><code>math</code></td>
+                <td><code>&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;/math></code></td>
+            </tr>
+            <tr>
+                <td><code>navigation</code></td>
+                <td><code>&lt;nav>&lt;nav></code></td>
+            </tr>
+            <tr>
+                <td><code>progressbar</code></td>
+                <td><code>&lt;progress max="100" value="70">70%&lt;/progress></code></td>
+            </tr>
+            <tr>
+                <td><code>radio</code> (with <code>radiogroup</code>)</td>
+                <td><code>&lt;input type="radio" name="a-group" value="choice"></code></td>
+            </tr>
+            <tr>
+                <td><code>scrollbar</code></td>
+                <td>CSS: <code>overflow: auto;</code></td>
+            </tr>
+            <tr>
+                <td><code>search</code></td>
+                <td><code>&lt;input type="search" /></code></td>
+            </tr>
+            <tr>
+                <td><code>slider</code></td>
+                <td><code>&lt;input type="range" min="0" max="11" /></code></td>
+            </tr>
+            <tr>
+                <td><code>spinbutton</code></td>
+                <td><code>&lt;input type="number" min="10" max="100" /></code></td>
+            </tr>
+            <tr>
+                <td><code>textbox</code></td>
+                <td><code>&lt;textarea>&lt;/textarea></code></td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 <section>
-    <p><code>slider</code> (i.e. a range slider or volume control)</p>
-    <p><code>spinbutton</code> (a value selection input with up and down arrows)</p>
-    <p><code>status</code> (a status update message, i.e. `your changes have been saved`</p>
-    <p><code>tablist</code> > <code>tab</code> + <code>tabpanel</code></p>
-    <p><code>grid</code> > <code>row</code> > <code>rowheader</code> + <code>cell</code> + <code>columnheader</code></p>
-    <p><code>menubar</code> > <code>menu</code> > <code>menuitem</code> + <code>menuitemcheckbox</code></p>
-    <p><code>textbox</code></p>
-    <p><code>timer</code></p>
-    <p><code>tooltip</code></p>
-</section>
-<section>
-    <p><code>tree</code>/<code>treegrid</code> > <code>treeitem</code></p>
-    <p><code>switch</code> identical to <code>checkbox</code>, but strictly for values of on or off</p>
-    <p><code>listbox</code> > <code>option</code></p>
-    <p><code>radiogroup</code> > <code>radio</code></p>
-</section>
-<section>
-    <h3>Even more roles! - document structure</h3>
-    <p><code>article</code></p>
-    <p><code>definition</code></p>
-    <p><code>directory</code> (i.e. table of contents)</p>
-    <p><code>document</code></p>
-    <p><code>group</code> (of UI elements not in a perceivable page section)</p>
-    <p><code>heading</code></p>
-    <p><code>img</code> (useful in case of background images)</p>
-    <p><code>list</code> > <code>listitem</code></p>
-</section>
-<section>
-    <p><code>math</code> (there is an entire markup language for mathy stuff! it's called <a href='https://www.w3.org/Math/whatIsMathML.html' target='_blank'>MathML</a> and can be called into other markup, like HTML)</p>
-    <p><code>note</code></p>
-    <p><code>presentation</code> - similar in function to aria-hidden; this tells the screenreader that the element is decorative, but <a href='http://john.foliot.ca/aria-hidden/' target='_blank'>support for it on natively focusable elements is interesting</a>.</p>
-    <p><code>region</code></p>
-    <p><code>separator</code></p>
-    <p><code>toolbar</code></p>
-</section>
-<section>
-    <h3>And finally... more roles! - landmarks</h3>
-    <p><code>application</code> - for when your HTML document behaves completely different from a standard html document; probably don't use this. It turns off all standard keyboard shortcuts in most screenreaders.</p>
-    <p><code>banner</code> - analogous to < header>
-    </p>
-    <p><code>complementary</code> - like < aside>
-    </p>
-    <p><code>contentinfo</code> - like < footer>
-    </p>
-    <p><code>form</code></p>
-    <p><code>main</code></p>
-    <p><code>navigation</code></p>
-    <p><code>search</code></p>
+    <h3>A list of roles you probably <em>will</em> need</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>role value</th>
+                <th>component</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>application</code></td>
+                <td>When your HTML document behaves completely different from a standard html document; probably don't use this. It turns off all standard keyboard shortcuts in most screenreaders.</td>
+            </tr>
+            <tr>
+                <td><code>contentinfo</code></td>
+                <td>Information about the document, i.e. copyright.</td>
+            </tr>
+            <tr>
+                <td><code>dialog</code></td>
+                <td>A modal, for example</td>
+            </tr>
+            <tr>
+                <td><code>document</code></td>
+                <td>Puts the assistive technology into 'reading' mode (which it is by default).</td>
+            </tr>
+            <tr>
+                <td><code>grid</code></td>
+                <td>A <em>navigable</em> table, with <code>row</code>, <code>rowheader</code>, <code>cell</code>, and <code>columnheader</code>.</td>
+            </tr>
+            <tr>
+                <td><code>group</code></td>
+                <td>A group of UI elements not in a perceivable page section.</td>
+            </tr>
+            <tr>
+                <td><code>log</code></td>
+                <td>A chat, for example</td>
+            </tr>
+            <tr>
+                <td><code>marquee</code></td>
+                <td>Like a <code>log</code>, but not vital or linear, i.e. a carousel or stock ticker.</td>
+            </tr>
+            <tr>
+                <td><code>menubar</code></td>
+                <td>A menu (not necessarily navigation), with <code>menu</code>, <code>menuitem</code>, and <code>menuitemcheckbox</code>.</td>
+            </tr>
+            <tr>
+                <td><code>note</code></td>
+                <td>A parenthetical, or "callout".</td>
+            </tr>
+            <tr>
+                <td><code>presentation</code></td>
+                <td>Similar in function to aria-hidden,; this role tells the screenreader that the element is decorative, but support for it on natively focusable elements is <a href="http://john.foliot.ca/aria-hidden/" target="_blank">interesting<span class="show-for-sr"> Opens in a new window</span></a>.</p></td>
+            </tr>
+            <tr>
+                <td><code>region</code></td>
+                <td>A landmark, but where no other section/landmark element or role applies.</td>
+            </tr>
+            <tr>
+                <td><code>separator</code></td>
+                <td>Just a dividing line, like an <code>&lt;hr></code>, but also makes allowances for an interactive "splitter".</td>
+            </tr>
+            <tr>
+                <td><code>status</code></td>
+                <td>A status update message, i.e. "your changes have been saved".</td>
+            </tr>
+            <tr>
+                <td><code>tablist</code></td>
+                <td>A group of tabs, with the roles <code>tab</code> (for the tab triggers), and <code>tabpanel</code> (for the content revealed by the tab triggers).</td>
+            </tr>
+            <tr>
+                <td><code>timer</code></td>
+                <td>A time keeping element.</td>
+            </tr>
+            <tr>
+                <td><code>toolbar</code></td>
+                <td>Same concept as a <code>menubar</code>, except that... well, from what I understand a menubar has words, and a toolbar has icons, but you'd think that would be a moot point, with the icons' alternative text, so...</td>
+            </tr>
+            <tr>
+                <td><code>tooltip</code></td>
+                <td>An element that provides additional information when focussed/hovered.</td>
+            </tr>
+            <tr>
+                <td><code>tree</code></td>
+                <td>With <code>treeitem</code>, describes a navigable tree structure, like folders and files.</td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 <section>
     <h3>Widget attributes</h3>
@@ -384,8 +430,40 @@ summary: "This week we'll cover accessible inputs; accessibility on mobile devic
     <p><code>aria-owns={id}</code> Defines a parent-child relationship when one isn't semantically apparent. To understand how this is different from <code>aria-controls</code>, imagine a carousel. The arrows on the left and right would have <code>aria-controls</code> attributes. The dots at the bottom that correlate to individual slides would have <code>aria-owns</code> attributes.</p>
     <p><code>role="article|listitem|menuitem|option|radio|tab" aria-setsize={integer} aria-posinset={integer}</code> Only required when not all elements from the set are included in the DOM.</p>
 </section>
-<section>
+<!-- <section>
     <h3>Praxis: Listening to your reading</h3>
     <p>Your reading this week is <a href='https://webaim.org/projects/screenreadersurvey7/'>https://webaim.org/projects/screenreadersurvey7/</a></p>
     <p>If you have headphones with you, please read it with either <a href='https://www.nvaccess.org/' target='_blank'>NVDA</a> or <a href='https://help.apple.com/voiceover/info/guide/10.12/' target='_blank'>>VoiceOver</a>. Or choose another!</p>
+</section> -->
+<section>
+    <h3>Hooray for linting!</h3>
+    <p>Run this command in your terminal: <pre><code>git clone https://github.com/simonborer/a11y-linting.git</code></pre></p>
+</section>
+<section>
+    <p>We will be looking at both an html linter (<code>htmllint</code>) and a command line auditing tool (<code>lighthouse</code>).</p>
+</section>
+<section>
+    <h3>HTMLLint</h3>
+    <ol>
+        <li class="fragment">Open the project in your text editor</li>
+        <li class="fragment">Look at package.json under "devDependencies"</li>
+        <li class="fragment">In the terminal, <code>cd</code> to the project folder</li>
+        <li class="fragment">Run the command <code>npm install</code></li>
+    </ol>
+</section>
+<section>
+    <ol>
+        <li class="fragment">Look at package.json under "scripts" - this is where we define the node scripts the will get called by <code>npm run</code></li>
+        <li class="fragment"><code>npm run build</code></li>
+        <li class="fragment">htmllint options are defined in .htmllintrc - try getting rid of one of the tag bans to clear an error</li>
+        <li class="fragment">Now try fixing the html to clear the rest</li>
+        <li class="fragment">Tell me why we put htmllint under the "build" script</li>
+    </ol>
+</section>
+<section>
+    <h3>Lighthouse CLI</h3>
+    <ol>
+        <li class="fragment">Look at package.json under "scripts", at the "audit" script. Read me this script in non-technical terms.</li>
+        <li class="fragment">Run <code>npm run audit</code> and view the output file.</li>
+    </ol>
 </section>

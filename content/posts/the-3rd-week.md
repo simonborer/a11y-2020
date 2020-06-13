@@ -7,7 +7,7 @@ summary: "What to do with your data: collecting, compiling, analyzing, reporting
 ---
 <section>
     <h2>Here's what we're going to talk about today:</h2>
-    <ol>
+    <ol role="directory">
         <li class="fragment"><a href="#collection">Data collection</a></li>
         <li class="fragment"><a href="#compilation">Data compilation</a></li>
         <li class="fragment"><a href="#analysis">Data analysis</a></li>

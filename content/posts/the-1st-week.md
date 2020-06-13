@@ -6,7 +6,7 @@ summary: "Today we're going to look at an overview of the course, define our ter
 ---
 <section class="slide-only">
     <h2>Here's what we're going to do today</h2>
-    <ol>
+    <ol role="directory">
         <li class="fragment">Course overview</li>
         <li class="fragment">Define our terms</li>
         <li class="fragment">
