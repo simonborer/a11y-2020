@@ -49,32 +49,34 @@
 </section>
 <section id="evangelism">
     <h2>Evangelism</h2>
-    <p><img src="/images/evangelion.png" alt=""></p>
+    <p><img src="/images/evangelion.png" alt="" style="display: block;max-height: 35vh;margin: 0 auto"></p>
+</section>
+<section>
     <p>You know a lot already. It won't be long until you're working with someone who knows less than you. They will probably be your boss.</p>
-    <p>You'll learn that when you're in a room full of developers, you'll argue differently.</p>
+    <p>When you're in a room full of developers, you'll argue differently.</p>
     <p>You will know how to solve problems. You will know the cutting edge of technology. You will feel the inefficiencies start to weigh on you.</p>
 </section>
 <section>
     <p>What will you do when you're the only person who knows how to make a website accessible?</p>
     <p>What will you do when you're the only person who cares about responsive design? Or load times? Or security?</p>
-    <p>You need to make it so your team understands</p>
+    <p>You need to make it so your team understands.</p>
     <p>You need to make it so your boss doesn't need to understand.</p>
 </section>
 <section>
     <h3>When your team can improve</h3>
     <p>If there are improvements you can make within your team without additional resources, present it as an opportunity to make your lives easier, and/or grow your skillset.</p>
-    <p>But remember, anything that starts with 'If everyone would just...' isn't a solution.</p>
-    <p>Peer review, linting, automation. You need to get your team to agree to be held accountable.</p>
+    <p>But remember, any solution that starts with 'If everyone would just...' isn't a solution.</p>
+    <p>Peer review, linting, automation. A good team holds one another accountable.</p>
 </section>
 <section id="aGame">
     <h2>A game :)</h2>
     <ul>
-        <li class="fragment">In an even number of groups of 3-4...</li>
+        <li class="fragment">In an even number of groups of 3-5...</li>
         <li class="fragment">...you are paired with another group.</li>
         <li class="fragment">Create a scorecard for your group with 4 columns - month, price, profit, and total profit.</li>
         <li class="fragment">Subdivide the latter 3 columns into subcolumns, each labelled alternately &#39;us&#39; and &#39;them&#39;</li>
     </ul>
-    <div>I.E.</div>
+    <div><small>i.e.</small></div>
     <table>
         <thead>
             <tr>
@@ -118,7 +120,7 @@
     </table>
 </section>
 <section>
-    <p>Your group is a business. Each month you set the price on your product. Your costs are absolutely fixed. Bankruptcy is impossible. Your profits are driven entirely by market competition <strong>only with your paired group</strong>.</p>
+    <p>Your group is a business. Each month you set the price on your product. Your expenses are absolutely fixed. Bankruptcy is impossible. Your profits are driven entirely by market competition <strong>only with your paired group</strong>.</p>
     <p>Each month, you must write down 6 figures: what price you chose, what price your competitor chose, what profit you made, what profit they made, what total profit you made, and what total profit they made.</p>
     <p>The goal of the game is to maximize your company's profit.</p>
 </section>
@@ -213,6 +215,8 @@
 <section id="deepDive">
     <h3>WAI-ARIA deep dive</h3>
     <p><figure><img src="/images/jaws.jpeg" alt=""><figcaption>Jaws > JAWS</figcaption></figure></p>
+</section>
+<section>
     <p>As we covered earlier, WAI-ARIA, a.k.a. ARIA, is a specification from the W3C that uses element attributes to supplement existing semantics</p>
     <ol>
         <li>to provide more information about your markup, and</li>
@@ -222,7 +226,7 @@
 </section>
 <section>
     <p>Remember that the spec tells us that we should use native semantics when they are available.</p>
-    <p>If it's a button, use a &lt;button&gt;.</p>
+    <p>If it's a button, use a <code>&lt;button&gt;</code>.</p>
 </section>
 <section>
     <h3>ARIA roles</h3>
@@ -240,7 +244,7 @@
     <p>Remember, too, that a native HTML button will fire an onclick event when space or enter are pressed - so you're also responsible for recreating that native functionality.</p>
 </section> -->
 <section>
-    <h3>A list of roles you won't need (if you're coding semantically, and not supporting anything below IE10)</h3>
+    <h3>A list of roles you won't often need (if you're coding semantically, and not supporting anything below IE10)</h3>
     <table>
         <thead>
             <tr>
@@ -281,6 +285,19 @@
                 <td><code>img</code></td>
                 <td><code>&lt;img src="" alt="" /></code></td>
             </tr>
+        </tbody>
+    </table>
+</section>
+<section>
+    <h3>A list of roles you won't often need (cont'd)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>role value</th>
+                <th>native element</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td><code>link</code></td>
                 <td><code>&lt;a href="">&lt;/a></code></td>
@@ -309,6 +326,19 @@
                 <td><code>progressbar</code></td>
                 <td><code>&lt;progress max="100" value="70">70%&lt;/progress></code></td>
             </tr>
+        </tbody>
+    </table>
+</section>
+<section>
+    <h3>A list of roles you won't often need (cont'd again)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>role value</th>
+                <th>native element</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td><code>radio</code> (with <code>radiogroup</code>)</td>
                 <td><code>&lt;input type="radio" name="a-group" value="choice"></code></td>
@@ -374,6 +404,23 @@
                 <td><code>log</code></td>
                 <td>A chat, for example</td>
             </tr>
+        </tbody>
+    </table>
+</section>
+<section>
+    <h3>More roles you probably <em>will</em> need</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>role value</th>
+                <th>component</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>log</code></td>
+                <td>A chat, for example</td>
+            </tr>
             <tr>
                 <td><code>marquee</code></td>
                 <td>Like a <code>log</code>, but not vital or linear, i.e. a carousel or stock ticker.</td>
@@ -399,6 +446,19 @@
                 <td><code>separator</code></td>
                 <td>Just a dividing line, like an <code>&lt;hr></code>, but also makes allowances for an interactive "splitter".</td>
             </tr>
+        </tbody>
+    </table>
+</section>
+<section>
+    <h3>Even more roles you'll</em> need</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>role value</th>
+                <th>component</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td><code>status</code></td>
                 <td>A status update message, i.e. "your changes have been saved".</td>
@@ -432,15 +492,15 @@
             <th>Widget attributes</th>
         </tr></thead>
         <tbody>    
-            <tr><td><code>role="combobox|textbox" aria-autocomplete="none|inline|list|both"</code></td></tr>
-            <tr><td><code>role="checkbox|switch|(etc.)" aria-checked="true|false|mixed"</code></td></tr>
+            <tr><td><code>aria-autocomplete="none|inline|list|both"</code> (w/ <code>role="combobox|textbox"</code>)</td></tr>
+            <tr><td><code>aria-checked="true|false|mixed"</code> (w/ <code>role="checkbox|switch|(etc.)"</code>)</td></tr>
             <tr><td><code>aria-current="page|step|date|location|time|true|false"</code></td></tr>
             <tr><td><code>aria-disabled="true|false"</code></td></tr>
             <tr><td><code>aria-expanded="true|false"</code></td></tr>
             <tr><td><code>aria-haspopup="true|false|menu|listbox|tree|grid|dialog"</code></td></tr>
             <tr><td><code>aria-hidden="true|false|undefined"</code></td></tr>
             <tr><td><code>aria-invalid="true|false|grammar|spelling"</code></td></tr>
-            <tr><td><code>aria-label={string}</code> only for invisible text</td></tr>
+            <tr><td><code>aria-label={string}</code> (only for invisible text)</td></tr>
         </tbody>
     </table>
 </section>
@@ -452,14 +512,14 @@
             </tr>
         </thead>
         <tbody> 
-            <tr><td><code>role="grid|heading|listitem|row|tablist" aria-level={integer}</code></td></tr>
-            <tr><td><code>role="textbox" aria-multiline="true|false"</code></td></tr>
-            <tr><td><code>role="grid|listbox|tablist|tree" aria-multiselectable="true|false"</code></td></tr>
-            <tr><td><code>role="scrollbar|select|separator|slider|tablist|toolbar" aria-orientation="horizontal|vertical|undefined"</code></td></tr>
-            <tr><td><code>role="button" aria-pressed="true|false|mixed"</code></td></tr>
-            <tr><td><code>role=checkbox|combobox|grid|gridcell| listbox|radiogroup|slider|spinbutton|textbox" aria-readonly="true|false"</code></td></tr>
-            <tr><td><code>role="combobox|gridcell|listbox|radiogroup|spinbutton|textbox|tree" aria-required="true|false"</code></td></tr>
-            <tr><td><code>role="gridcell|option|row|tab" aria-selected="true|false|undefined"</code></td></tr>
+            <tr><td><code>aria-level={integer}</code> (w/ <code>role="grid|heading|listitem|row|tablist"</code>)</td></tr>
+            <tr><td><code>aria-multiline="true|false"</code> (w/ <code>role="textbox"</code>)</td></tr>
+            <tr><td><code>aria-multiselectable="true|false"</code> (w/ <code>role="grid|listbox|tablist|tree"</code>)</td></tr>
+            <tr><td><code>aria-orientation="horizontal|vertical|undefined"</code> (w/ <code>role="scrollbar|select|separator|slider|tablist|toolbar"</code>)</td></tr>
+            <tr><td><code>aria-pressed="true|false|mixed"</code> (w/ <code>role="button"</code>)</td></tr>
+            <tr><td><code>aria-readonly="true|false"</code> (w/ <code>role=checkbox|combobox|grid|gridcell| listbox|radiogroup|slider|spinbutton|textbox"</code>)</td></tr>
+            <tr><td><code>aria-required="true|false"</code> (w/ <code>role="combobox|gridcell|listbox|radiogroup|spinbutton|textbox|tree"</code>)</td></tr>
+            <tr><td><code>aria-selected="true|false|undefined"</code> (w/ <code>role="gridcell|option|row|tab"</code>)</td></tr>
         </tbody>
     </table>
 </section>
@@ -469,9 +529,9 @@
             <th>Widget attributes (continued)</th>
         </tr></thead>
         <tbody> 
-            <tr><td><code>role="columnheader|rowheader" aria-sort="ascending|descending|none|other"</code></td></tr>
-            <tr><td><code>role="range|scrollbar|separator|slider|spinbutton" aria-valuemax={number} aria-valuemin={number} aria-valuenow={number}</code></td></tr>
-            <tr><td><code>role="range|separator" aria-valuetext={string}</code></td></tr>
+            <tr><td><code>aria-sort="ascending|descending|none|other"</code> (w/ <code>role="columnheader|rowheader"</code>)</td></tr>
+            <tr><td><code>aria-valuemax={number} aria-valuemin={number} aria-valuenow={number}</code> (w/ <code>role="range|scrollbar|separator|slider|spinbutton"</code>)</td></tr>
+            <tr><td><code>aria-valuetext={string}</code> (w/ <code>role="range|separator"</code>)</td></tr>
         </tbody>
     </table>
 </section>
@@ -481,10 +541,10 @@
             <th>Live region attributes</th>
         </tr></thead>
         <tbody> 
-            <tr><td><code>aria-live="polite|assertive|off"</code></td></tr>
-            <tr><td><code>aria-live="polite" aria-atomic="true|false"</code></td></tr>
-            <tr><td><code>aria-live="polite" aria-relevant="additions|text|removals|all"</code></td></tr>
-            <tr><td><code>aria-live="assertive" aria-busy="true|false"</code></td></tr>
+            <tr><td><code>aria-live="polite|assertive|off"</code> paired with...</td></tr>
+            <tr><td><code>aria-atomic="true|false"</code></td></tr>
+            <tr><td><code>aria-relevant="additions|text|removals|all"</code></td></tr>
+            <tr><td><code>aria-busy="true|false"</code></td></tr>
         </tbody>
     </table>
 </section>
@@ -547,7 +607,7 @@
 </section>
 <section>
     <h4>Feed</h4>
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="simonborer" data-slug-hash="bGEpXYJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bGEpXYJ">
+    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="simonborer" data-slug-hash="bGEpXYJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bGEpXYJ">
   <span>See the Pen <a href="https://codepen.io/simonborer/pen/bGEpXYJ">
   bGEpXYJ</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -583,7 +643,7 @@
 <section id="linting">
     <h2>Hooray for linting!</h2>
     <p>Run this command in your terminal:
-        <pre><code>git clone https://github.com/simonborer/a11y-linting.git</code></pre>
+        <pre><code style="font-size: .75em">git clone https://github.com/simonborer/a11y-linting.git</code></pre>
     </p>
 </section>
 <section>
