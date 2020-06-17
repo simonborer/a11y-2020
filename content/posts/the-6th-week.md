@@ -6,6 +6,34 @@ featured_image: space-time.jpg
 summary: "This week we'll look at accessibility when state changes, and accessibility in Javascript application frameworks"
 ---
 <section>
+    <h3>Accessible content - form labels, instructions and errors</h3>
+    <p>Be very clear about what's expected of a user, and how errors should be resolved. A red asterisk appearing suddenly adjacent to an input isn't helpful to everyone.</p>
+</section>
+<section>
+    <h3>Mobile accessibility</h3>
+    <p>The WCAG has <a href='https://www.w3.org/TR/IMPLEMENTING-UAAG20/mobile' target='_blank'>multiple documents</a> on <a href='https://www.w3.org/TR/mobile-accessibility-mapping/'>how accessibility standards translate to mobile</a>.</p>
+    <p>It's mostly along the lines of 'don't try to cram your whole desktop site onto mobile', and 'just make sure that you're doing what you do on desktop', but with a few extra cautions.</p>
+</section>
+<section>
+    <ol>
+        <li class="fragment">Take special pains to test resizing up to 200%.</li>
+        <li class="fragment">You definitely still have to have keyboard-only controls</li>
+        <li class="fragment">Touch targets are at least 9mm x 9mm, with adequate space between them (without magnification)</li>
+        <li class="fragment">Use mouseup or touchend events so that users can change their minds</li>
+    </ol>
+</section>
+<section>
+    <ol>
+        <li class="fragment">Gestures should be kept simple, and have alternatives</li>
+        <li class="fragment">Support either orientation</li>
+        <li class="fragment">Put important elements above the fold</li>
+        <li class="fragment">Provide easily discoverable instructions</li>
+        <li class="fragment">Set the keyboard to the type of data entry required</li>
+        <li class="fragment">No scrolljacking</li>
+        <li class="fragment">Show focus</li>
+    </ol>
+</section>
+<section>
     <h3>Accessible tabs are &lt;em&gt;hard&lt;/em&gt;</h3>
     <p>
         <p data-height="265" data-theme-id="0" data-slug-hash="pVBoQx" data-default-tab="js,result" data-user="simonborer" data-embed-version="2" data-pen-title="pVBoQx" class="codepen">See the Pen <a href="https://codepen.io/simonborer/pen/pVBoQx/">pVBoQx</a> by Simon Borer (<a href="https://codepen.io/simonborer">@simonborer</a>) on <a href="https://codepen.io">CodePen</a>.</p>

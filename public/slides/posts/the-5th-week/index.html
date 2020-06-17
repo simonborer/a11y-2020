@@ -1,11 +1,26 @@
----
-title: "Step 5: ARIA; Linting; Evangelism"
-date: 2020-06-10T08:47:11+01:00
-publishdate: 2020-06-10T08:47:11+01:00
-featured_image: light.jpg
-summary: "This week we'll cover accessible inputs and live updates. We'll also look at linting, and talk about evangelism."
----
-<section>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+	<link rel="manifest" href="/images/site.webmanifest">
+	<title>Step 5: ARIA; Linting; Evangelism</title>
+	<meta name="description" content="2020 Humber Accessibility/Usability Course">
+	<meta name="author" content="Simon Borer">
+	
+
+<link rel="stylesheet" href="https://a11y2020.ca/sass/slides/main-slides.min.d26b9a5de1c06942744b70ebf485586c72817171b6f915c6d5be986ecfd9a0a9.css">
+
+</head>
+<body>
+	
+<div class="reveal">
+  <div class="slides">
+    <section>
     <h2>Here's what we're going to talk about today:</h2>
     <ol role="directory">
         <li class="fragment"><a href="#evangelism">Evangelism</a></li>
@@ -483,7 +498,6 @@ summary: "This week we'll cover accessible inputs and live updates. We'll also l
     <tr><td><code>aria-flowto={id}</code> gives the user the option to move to an element, overriding the source order</td></tr> 
     </tbody>
 </table>
-    
 </section>
 <section>
     <table>
@@ -582,3 +596,24 @@ summary: "This week we'll cover accessible inputs and live updates. We'll also l
         <li class="fragment">Run <code>npm run audit</code> and view the output file.</li>
     </ol>
 </section>
+  </div>
+</div>
+
+	
+<script type="text/javascript" src="/js/reveal.js"></script>
+<script>
+Reveal.initialize({
+  dependencies: [{ src: '/js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    {
+      src: '/js/reveal-a11y.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }
+  ]
+});
+</script>
+
+</body>
+</html>
