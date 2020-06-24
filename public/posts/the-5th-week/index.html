@@ -43,8 +43,7 @@
     <ol role="directory">
         <li class="fragment"><a href="#evangelism">Evangelism</a></li>
         <li class="fragment"><a href="#aGame">A Game</a></li>
-        <li class="fragment"><a href="#deepDive">WAI-AIA deep dive</a></li>
-        <li class="fragment"><a href="#linting">Linting</a></li>
+        <li class="fragment"><a href="#deepDive">WAI-ARIA deep dive</a></li>
     </ol>
 </section>
 <section id="evangelism">
@@ -640,40 +639,7 @@
         <li>Use the attributes aria-selected, aria-controls, and aria-labelledby</li>
     </ul>
 </section>
-<section id="linting">
-    <h2>Hooray for linting!</h2>
-    <p>Run this command in your terminal:
-        <pre><code style="font-size: .75em">git clone https://github.com/simonborer/a11y-linting.git</code></pre>
-    </p>
-</section>
-<section>
-    <p>We will be looking at both an html linter (<code>htmllint</code>) and a command line auditing tool (<code>lighthouse</code>).</p>
-</section>
-<section>
-    <h3>HTMLLint</h3>
-    <ol>
-        <li class="fragment">Open the project in your text editor</li>
-        <li class="fragment">Look at package.json under "devDependencies"</li>
-        <li class="fragment">In the terminal, <code>cd</code> to the project folder</li>
-        <li class="fragment">Run the command <code>npm install</code></li>
-    </ol>
-</section>
-<section>
-    <ol>
-        <li class="fragment">Look at package.json under "scripts" - this is where we define the node scripts the will get called by <code>npm run</code></li>
-        <li class="fragment"><code>npm run build</code></li>
-        <li class="fragment">htmllint options are defined in .htmllintrc - try getting rid of one of the tag bans to clear an error</li>
-        <li class="fragment">Now try fixing the html to clear the rest</li>
-        <li class="fragment">Tell me why we put htmllint under the "build" script</li>
-    </ol>
-</section>
-<section>
-    <h3>Lighthouse CLI</h3>
-    <ol>
-        <li class="fragment">Look at package.json under "scripts", at the "audit" script. Read me this script in non-technical terms.</li>
-        <li class="fragment">Run <code>npm run audit</code> and view the output file.</li>
-    </ol>
-</section></div>
+</div>
 									
 				</div>
 			</div>

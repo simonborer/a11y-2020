@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Accessibility &amp; Usability 2020</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2020 08:47:11 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 08:47:11 +0100</lastBuildDate>
     
 	<atom:link href="https://a11y2020.ca/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Step 6 - State change &amp; frameworks</title>
+      <link>https://a11y2020.ca/posts/the-6th-week/</link>
+      <pubDate>Sun, 21 Jun 2020 08:47:11 +0100</pubDate>
+      
+      <guid>https://a11y2020.ca/posts/the-6th-week/</guid>
+      <description>This week we&amp;rsquo;ll look at accessibility when state changes, and accessibility in Javascript application frameworks</description>
+    </item>
     
     <item>
       <title>Step 5: ARIA; Linting; Evangelism</title>

@@ -1,11 +1,26 @@
----
-title: "Step 6 - State change & frameworks"
-date: 2020-06-21T08:47:11+01:00
-publishdate: 2020-06-21T08:47:11+01:00
-featured_image: chili.svg
-summary: "This week we'll look at accessibility when state changes, and accessibility in Javascript application frameworks"
----
-<section>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+	<link rel="manifest" href="/images/site.webmanifest">
+	<title>Step 6 - State change &amp; frameworks</title>
+	<meta name="description" content="2020 Humber Accessibility/Usability Course">
+	<meta name="author" content="Simon Borer">
+	
+
+<link rel="stylesheet" href="https://a11y2020.ca/sass/slides/main-slides.min.d26b9a5de1c06942744b70ebf485586c72817171b6f915c6d5be986ecfd9a0a9.css">
+
+</head>
+<body>
+	
+<div class="reveal">
+  <div class="slides">
+    <section>
     <h2>Here's what we're going to talk about today:</h2>
     <ol role="directory">
         <li class="fragment"><a href="#learnings">Learnings from the test plan</a></li>
@@ -291,3 +306,25 @@ summary: "This week we'll look at accessibility when state changes, and accessib
     <p>Whereas Vue has been the "new kid on the block" framework for a few years now, it tends to be a follower when it comes to accessibility. It has <a href="https://www.digitalocean.com/community/tutorials/vuejs-vuejs-accessible-announcements" target="_blank">an announcer<span class="show-for-sr"> Opens in a new window</span></a> like Angular, and <a href="https://github.com/vue-a11y/vue-axe" target="_blank">aXe-based auditing<span class="show-for-sr"> Opens in a new window</span></a> like React, but neither as well-implemented or mature as the older framework.</p>
     <p>One thing it does have going for it is an <a href="https://github.com/vue-a11y" target="_blank">active accessibility community<span class="show-for-sr"> Opens in a new window</span></a>.</p>
 </section>
+
+  </div>
+</div>
+
+	
+<script type="text/javascript" src="/js/reveal.js"></script>
+<script>
+Reveal.initialize({
+  dependencies: [{ src: '/js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    {
+      src: '/js/reveal-a11y.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }
+  ]
+});
+</script>
+
+</body>
+</html>
