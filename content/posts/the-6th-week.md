@@ -25,8 +25,10 @@ summary: "This week we'll look at accessibility when state changes, and accessib
     <h3>Your audience is not qualified.</h3>
     <p>One misconception I saw repeated often was discussion of how "qualified" your test participants are.</p>
     <p>But your users aren't qualified.</p>
-    <p>Similarly, sometimes a teacher can focus on how their most enthusiastic students are doing.</p>
-    <p>But I think it's important to run a class that's as good for slackers as it for keeners. Which is not to say I want people putting in different levels of effort to get the same grade. Of course not - I still want to reward effort. But I hope to run classes where someone can quickly skim the notes the night before a big assignment and understand the absolute basics.</p>
+</section>
+<section>
+    <p>Similarly, sometimes a teacher can focus on how their most engaged students are doing.</p>
+    <p>But I think it's important to run a class that's as good for people who have minimal time to invest as it for people who have nothing but time. Which is not to say I want people putting in different levels of effort to get the same grade. Of course not - I still want to reward excellence. But I hope to run classes where someone can quickly skim the notes the night before a big assignment after they've put the kids to sleep, and understand the absolute basics.</p>
 </section>
 <section>
     <p>User testing is not about finding the best, most qualified test participants. It is about finding test participants who act and think like your audience will act and think. <strong>The basic features of your website should be easy for everyone.</strong></p>
@@ -45,11 +47,15 @@ summary: "This week we'll look at accessibility when state changes, and accessib
     <p>The purpose of usability testing is to <strong>test your assumptions</strong> and <strong>discover the unexpected</strong>.</p>
 </section>
 <section>
-    <p>Your audience are real human beings, and they will not behave the way you want them to. Your job is to build things based on their needs, not what you <em>hope</em> their needs are.</p>
+    <p>Your audience are real human beings, and they will not behave the way you want them to. Your job is to build things based on their needs & capabilities, not what you <em>hope</em> are their needs & capabilities.</p>
     <iframe width="725" height="400" src="https://www.youtube.com/embed/yBIAwJeUJI0" frameborder="0" allowfullscreen></iframe>
 </section>
 <section>
+    <hr class="post-only">
     <p>A few more things that I saw that could've been improved with some usability principles applied:</p>
+</section>
+<section>
+    <img src="/images/nothing.png" alt="Minimalism requires resources" class="post-only">
     <h3>Aesthetic and minimalist design</h3>
     <ul>
         <li>A 3-page document doesn't need a table of contents</li>
@@ -77,7 +83,7 @@ summary: "This week we'll look at accessibility when state changes, and accessib
 </section>
 <section>
     <ul>
-        <li>Let's say you have 3 users - one using Safari on an iPad, one using Firefox on a PC, and one using Chrome on Mac. They take 30 seconds, 60 seconds, and 90 seconds to complete a task. Are the variations because of the OS? the browser? the device viewport? browser plugins? or are they because of the user demographics? or did you describe the task differently to each user because you didn't write it down for yourself?</p>
+        <li><p>Let's say you have 3 users - one using Safari on an iPad, one using Firefox on a PC, and one using Chrome on Mac. They take 30 seconds, 60 seconds, and 90 seconds to complete a task.</p><p>Are the variations because of the OS? the browser? the device viewport? browser plugins? or are they because of the user demographics? or did you describe the task differently to each user because you didn't write it down for yourself?</p>
         <p>If you want to <strong>learn things about people</strong>, you need to <strong>reduce the variables that aren't behavioural</strong>.</p>
         </li>
     </ul>
@@ -86,6 +92,10 @@ summary: "This week we'll look at accessibility when state changes, and accessib
     <h3>Documentation</h3>
     <ul>
         <li>Many test plans said they would use "subjective measures", without explaining what those measures were. Imagine reading a recipe that said "take a measurement of ingredients and put it in the oven for an amount of time". That would not be a recipe you'd trust!</li>
+    </ul>
+</section>
+<section>
+    <ul>
         <li>Finally, the most important part of a plan is demonstrating why it will succeed. I think perhaps the most popular metric was "time on task". But very few people said why that would produce actionable results. As we discussed, sometimes users take a long time to complete a task because they're enjoying the experience. Many documents made assumptions about how long a task "should" take. To that I say, "who cares"? And if you can't document the answer to that question - "who cares?" - then you need to reconsider your metric.</li>
     </ul>
 </section>
@@ -210,14 +220,14 @@ summary: "This week we'll look at accessibility when state changes, and accessib
 <section>
     <h3>Youtube stumbled on an audience</h3>
     <p>A few years ago, the Youtube dev team gave themselves a page-weight budget of 800kb. They optimized every conceivable aspect of the site. They predicted that they could get the average load time below 1s. When they released their new, lightning fast code, their average load times tripled.</p>
-    <p>There were millions of users in the global south who suddenly were able to watch videos without the page timing out. The team had stumbled onto a massive audience they didn't know they had simply by taking best practices seriously.</p>
+    <p>There were millions of users in the "global south" who suddenly were able to watch videos without the page timing out. The team had stumbled onto a massive audience they didn't know they had simply by taking best practices seriously.</p>
     <p>Do what you can for those you're aware of, and keep looking for those you aren't.</p>
 </section>
 <section>
     <h3>Users at cross-purposes</h3>
     <blockquote>I’m dyslexic, and one of the recommendations for reducing visual stress that I’ve found tremendously helpful is low contrast between text and background color. This, though, often means failing to meet accessibility requirements for people who are visually impaired... Consider:
         <ul>
-            <li>Designing for one-handed mobile use raises problems because right-handedness is the default—but 10 percent of the population is left handed.</li>
+            <li>Designing for one-handed mobile use raises problems because right-handedness is the default — but 10 percent of the population is left handed.</li>
             <li>Giving users a magnified detailed view on hover can create a mobile hover trap that obscures other content.</li>
             <li>Links must use something other than color to denote their “linkyness.” Underlines are used most often and are easily understood, but they can interfere with descenders and make it harder for people to recognize word shapes.</li>
         </ul>
