@@ -146,7 +146,7 @@ summary: "This week we'll look at accessibility when state changes, and accessib
             </tr>
             <tr>
                 <td>Responding to questions</td>
-                <td>10</td>
+                <td>5</td>
                 <td>N/A</td>
             </tr>
         </tbody>
